@@ -65,13 +65,14 @@ main {
 main #studyingMammoth {
   width: 100%;
 }
-#divThree {
+.divThree {
   display: flex;
+  flex-direction: column;
 }
-#divThree div {
+.divThree div {
   margin-left: 50%;
 }
-#divThree li {
+.divThree li {
   margin-top: 0.5rem;
 }
 footer {
