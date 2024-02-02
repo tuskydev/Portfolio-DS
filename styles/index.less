@@ -41,7 +41,7 @@ a {
 }
 
 h1 {
-  font-size: 0 0 calc(2 * @unit-line-height);
+  font-size: calc(2 * @unit-line-height);
   margin-bottom: 3rem;
   letter-spacing: 0;
   font-weight: 400;
@@ -81,13 +81,6 @@ header {
   }
 }
 
-.divTwo {
-  p {
-    margin: 0 0 1rem;
-    max-width: @unit-maxwidth-text;
-  }
-}
-
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -106,6 +99,13 @@ main {
   }
 }
 
+.divTwo {
+  p {
+    margin: 0 0 1rem;
+    max-width: @unit-maxwidth-text;
+  }
+}
+
 .divThree {
   display: flex;
   flex-direction: column;
@@ -115,10 +115,18 @@ main {
   }
 }
 
+.divFour {
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: @unit-line-height;
+  line-height: @unit-line-height;
   height: 100px;
 
   span {
@@ -128,13 +136,11 @@ footer {
       display: flex;
       flex-direction: column;
     }
-  }
-}
 
-.divFour {
-  ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    #emailColophon a {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 

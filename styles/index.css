@@ -30,7 +30,7 @@ a {
   border-bottom: 1px solid #ccd;
 }
 h1 {
-  font-size: 0 0 calc(2 * 1.5em);
+  font-size: calc(2 * 1.5em);
   margin-bottom: 3rem;
   letter-spacing: 0;
   font-weight: 400;
@@ -63,10 +63,6 @@ header #cursiveImg {
   width: 6rem;
   height: 2.2rem;
 }
-.divTwo p {
-  margin: 0 0 1rem;
-  max-width: 35em;
-}
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -82,6 +78,10 @@ main #studyingMammothDiv #studyingMammoth {
   max-width: 28em;
   width: 80%;
 }
+.divTwo p {
+  margin: 0 0 1rem;
+  max-width: 35em;
+}
 .divThree {
   display: flex;
   flex-direction: column;
@@ -89,10 +89,15 @@ main #studyingMammothDiv #studyingMammoth {
 .divThree div {
   margin-left: 50%;
 }
+.divFour ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5em;
+  line-height: 1.5em;
   height: 100px;
 }
 footer span {
@@ -102,9 +107,9 @@ footer span #copyrightDiv {
   display: flex;
   flex-direction: column;
 }
-.divFour ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+footer span #emailColophon a {
+  display: flex;
+  flex-direction: column;
 }
 .noBullets {
   list-style: none;
