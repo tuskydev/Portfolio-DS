@@ -1,0 +1,59 @@
+/* Reset some default browser styles */
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  color: #1e2d1d;
+}
+
+body {
+  background: #f9f7ea;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2.5%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#cursiveImgDiv {
+  width: 100%;
+}
+
+#cursiveImg {
+  width: 6rem;
+  height: 2.2rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+#studyingMammoth {
+  width: 25rem;
+}
+
+footer {
+  display: flex;
+}
+
+.footerDivs {
+  width: 100%;
+}
+.noBullets {
+  list-style: none;
+}
+
+#bulletPoints {
+  display: flex;
+  justify-content: flex-start;
+}
