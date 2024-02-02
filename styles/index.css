@@ -56,12 +56,21 @@ header nav {
   flex-direction: column;
   width: 100%;
 }
+header nav a {
+  border-bottom: none;
+}
 header #cursiveImgDiv {
   width: 100%;
+}
+header #cursiveImgDiv a {
+  border-bottom: none;
 }
 header #cursiveImg {
   width: 5rem;
   height: 2rem;
+}
+header #cursiveImg:hover {
+  filter: hue-rotate(90deg);
 }
 main {
   display: grid;
@@ -76,7 +85,7 @@ main #studyingMammothDiv #studyingMammoth {
   display: block;
   margin: 0 auto;
   max-width: 28em;
-  width: 80%;
+  width: 65%;
 }
 .divTwo p {
   margin: 0 0 1rem;
@@ -117,4 +126,9 @@ footer #copyrightDiv span {
   padding: 0;
   margin: 0;
   width: 100%;
+}
+.hoverHighlightClass:hover {
+  transition: opacity 0.1s;
+  opacity: 0.7;
+  color: #a5af9b;
 }

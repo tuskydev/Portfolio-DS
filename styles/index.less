@@ -69,15 +69,27 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
+
+    a {
+      border-bottom: none;
+    }
   }
 
   #cursiveImgDiv {
     width: 100%;
+
+    a {
+      border-bottom: none;
+    }
   }
 
   #cursiveImg {
     width: 5rem;
     height: 2rem;
+
+    &:hover {
+      filter: hue-rotate(90deg);
+    }
   }
 }
 
@@ -94,7 +106,7 @@ main {
       display: block;
       margin: 0 auto;
       max-width: 28em;
-      width: 80%;
+      width: 65%;
     }
   }
 }
@@ -103,6 +115,9 @@ main {
   p {
     margin: 0 0 1rem;
     max-width: @unit-maxwidth-text;
+
+    a {
+    }
   }
 }
 
@@ -150,4 +165,12 @@ footer {
   padding: 0;
   margin: 0;
   width: 100%;
+}
+
+.hoverHighlightClass {
+  &:hover {
+    transition: opacity 0.1s;
+    opacity: 0.7;
+    color: @highlightColor;
+  }
 }
