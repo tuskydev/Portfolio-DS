@@ -1,20 +1,40 @@
-/* Reset some default browser styles */
+* {
+  outline: 1px solid red;
+  outline-offset: -1px;
+  color: #1e2d1d;
+}
+
 body,
 h1,
 p {
   margin: 0;
   padding: 0;
-  color: #1e2d1d;
 }
 
 body {
   background: #f9f7ea;
+  margin: 1.5em;
 }
 
 header {
   display: flex;
   justify-content: space-around;
-  padding-top: 2.5%;
+  margin-bottom: 7rem;
+}
+
+h1 {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  /* padding: 0;
+  margin: 0;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem; */
+}
+
+.divTwo {
+  /* margin: 0 0 1rem; */
 }
 
 nav {
@@ -39,7 +59,17 @@ main {
 }
 
 #studyingMammoth {
-  width: 25rem;
+  width: 100%;
+}
+
+#divThree {
+  display: flex;
+}
+
+.splitSkillDivs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 footer {
@@ -47,13 +77,35 @@ footer {
 }
 
 .footerDivs {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 .noBullets {
   list-style: none;
+  padding: 0;
+  width: 100%;
 }
 
 #bulletPoints {
   display: flex;
   justify-content: flex-start;
+}
+
+#bulletPoints div {
+  display: flex;
+  align-items: flex-start;
+}
+
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -100px;
+  padding-bottom: 100px;
+}
+footer {
+  height: 100px;
 }
