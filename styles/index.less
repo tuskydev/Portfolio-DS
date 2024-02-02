@@ -3,7 +3,7 @@
 * {
   // outline: 1px solid red;
   // outline-offset: -1px;
-  color: @secondaryColor;
+  color: @mainColor;
 }
 
 html,
@@ -29,7 +29,7 @@ p {
 */
 
 body {
-  background: @primaryColor;
+  background: @backgroundColor;
   margin: 1.5em;
 }
 
@@ -49,13 +49,9 @@ h1 {
 }
 
 .divTwo {
-  * {
-    color: @mainHColor;
-  }
-
   h2 {
     margin: 3rem 0 0 0;
-    color: @secondaryHColor;
+    color: @highlightColor;
   }
 
   p {
@@ -105,27 +101,23 @@ main {
 }
 
 footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
   height: 100px;
+
+  span {
+    padding-top: 2.2rem;
+  }
 }
 
-.footerDivs {
+#copyrightDiv {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
+
 .noBullets {
   list-style: none;
   padding: 0;
   width: 100%;
-}
-
-#bulletPoints {
-  display: flex;
-  justify-content: flex-start;
-}
-
-#bulletPoints div {
-  display: flex;
-  align-items: flex-start;
 }

@@ -1,5 +1,5 @@
 * {
-  color: #1e2d1d;
+  color: #515f44;
 }
 html,
 body {
@@ -34,9 +34,6 @@ header {
 }
 h1 {
   margin-bottom: 3rem;
-}
-.divTwo * {
-  color: #515f44;
 }
 .divTwo h2 {
   margin: 3rem 0 0 0;
@@ -79,24 +76,20 @@ main {
   width: 100%;
 }
 footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
   height: 100px;
 }
-.footerDivs {
+footer span {
+  padding-top: 2.2rem;
+}
+#copyrightDiv {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 .noBullets {
   list-style: none;
   padding: 0;
   width: 100%;
-}
-#bulletPoints {
-  display: flex;
-  justify-content: flex-start;
-}
-#bulletPoints div {
-  display: flex;
-  align-items: flex-start;
 }
