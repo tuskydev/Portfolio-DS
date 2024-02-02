@@ -4,11 +4,13 @@
   // outline: 1px solid red;
   // outline-offset: -1px;
   color: @mainColor;
+  box-sizing: border-box;
 }
 
 html,
 body {
   height: 100%;
+  line-height: @unit-line-height;
 }
 
 .wrapper {
@@ -22,12 +24,6 @@ h1,
 p {
   margin: 0;
   padding: 0;
-}
-
-h2 {
-  margin: 3rem 0 0 0;
-  font-size: 17px;
-  color: @highlightColor;
 }
 
 /*
@@ -45,8 +41,18 @@ a {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 0 0 calc(2 * @unit-line-height);
   margin-bottom: 3rem;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+h2 {
+  margin: calc(2 * @unit-line-height) 0 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: @unit-line-height;
+  color: @highlightColor;
 }
 
 li {
@@ -56,7 +62,7 @@ li {
 header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: @unit-line-height;
   margin-bottom: 7rem;
 
   nav {
@@ -77,21 +83,26 @@ header {
 
 .divTwo {
   p {
-    margin: 0 0 2rem;
-    max-width: 37rem;
+    margin: 0 0 1rem;
+    max-width: @unit-maxwidth-text;
   }
 }
 
 main {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 0.5fr; /* Adjust the row heights as needed */
-  gap: 2rem; /* Add gap between grid items if desired */
+  grid-template-columns: 1fr 1fr;
+  gap: @unit-line-height;
 
-  #studyingMammoth {
+  #studyingMammothDiv {
+    margin: 0 auto;
     width: 100%;
-    // margin: 0 auto;
-    // max-width: 50rem;
+
+    #studyingMammoth {
+      display: block;
+      margin: 0 auto;
+      max-width: 28em;
+      width: 80%;
+    }
   }
 }
 
@@ -107,7 +118,7 @@ main {
 footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  gap: @unit-line-height;
   height: 100px;
 
   span {
