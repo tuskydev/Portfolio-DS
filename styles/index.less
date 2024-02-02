@@ -76,8 +76,8 @@ header {
   }
 
   #cursiveImg {
-    width: 6rem;
-    height: 2.2rem;
+    width: 5rem;
+    height: 2rem;
   }
 }
 
@@ -129,19 +129,20 @@ footer {
   line-height: @unit-line-height;
   height: 100px;
 
-  span {
-    padding-top: 2.2rem;
+  #copyrightDiv {
+    display: flex;
+    flex-direction: column;
 
-    #copyrightDiv {
-      display: flex;
-      flex-direction: column;
-    }
-
-    #emailColophon a {
-      display: flex;
-      flex-direction: column;
+    span {
+      margin-top: 1.2rem;
     }
   }
+}
+
+#emailColophon a {
+  display: flex;
+  flex-direction: column;
+  border-bottom: none;
 }
 
 .noBullets {

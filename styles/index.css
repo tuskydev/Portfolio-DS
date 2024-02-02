@@ -60,8 +60,8 @@ header #cursiveImgDiv {
   width: 100%;
 }
 header #cursiveImg {
-  width: 6rem;
-  height: 2.2rem;
+  width: 5rem;
+  height: 2rem;
 }
 main {
   display: grid;
@@ -100,16 +100,17 @@ footer {
   line-height: 1.5em;
   height: 100px;
 }
-footer span {
-  padding-top: 2.2rem;
-}
-footer span #copyrightDiv {
+footer #copyrightDiv {
   display: flex;
   flex-direction: column;
 }
-footer span #emailColophon a {
+footer #copyrightDiv span {
+  margin-top: 1.2rem;
+}
+#emailColophon a {
   display: flex;
   flex-direction: column;
+  border-bottom: none;
 }
 .noBullets {
   list-style: none;
