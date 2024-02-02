@@ -1,53 +1,21 @@
-# DESCRIPTIVE-TITLE Solo Project 
-### A repo made to test Semantic-UI-React's NPM that has a popup modal that display's necessary info.
+# Data Science Portfolio Website Project 
+### A repo made to broadcast my projects and connect with others!
 
-### Things learned:
-* Learned how to make functionality for className "active" in navs and tabs
-* Sharpened React JSX and CSS Flexbox skills.
-* Learned how to combine two personal Solo Projects to make one dynamic project!
+### Key Takeaways:
+* Optimizing portfolio for search engines (SEO), helping improve potential visitors.
+* Purchasing a domain, setting up hosting, and configuring web servers.
+* Revisiting Web Development skills after a brief hiatus to stay current and refreshed.
 
-### Overall, a productive project which allowed for better understanding of Pop Up Modals.
+### Whether you are a potential employer, collaborator, or just a curious data enthusiast, I hope you find this website informative and engaging.
 
 ## Preview of work done:
-### Image of Pop-up-Bar displaying dynamic info and picures
-![image](https://github.com/tuskydev/EXAMPLE-README-SOLO/assets/52723004/de13c388-6a9c-4a6b-9e84-487e5552207c)
+### Image of AI generated Mammoth, working with ChatGPT proved efficient and worked out great! 
+![image](https://github.com/tuskydev/Portfolio-DS/assets/52723004/b9897b26-fded-46c2-928d-fa8fc846888e)
 
 ### Image of the Pop-up-Bar's integrated and dynamic Carousel 
 ![image](https://user-images.githubusercontent.com/52723004/93537444-7d4e3f00-f919-11ea-94d4-43ab6a3205a9.png)
 
-## KEY NOTES: ONLYADDIFYOUNEEDDISCLAIMERS!!!
-* The first Carousel was made with Bootstrap NPM 
-* The second Carousel was made with Alice-Carousel NPM in a `Class` Component 
-* The third Carousel was made with Alice-Carousel NPM in a `Function` Component 
-
-## Steps to recreate:
-
-### In console:
-`
-npm install semantic-ui-react semantic-ui-css
-`
-
-`
-npm i react-alice-carousel
-`
-
-### Add these lines to the App.js file:
-```
-import {
-  Checkbox,
-  Sidebar,
-} from 'semantic-ui-react';
-import AliceCarousel from 'react-alice-carousel';
-
-import 'semantic-ui-css/semantic.min.css';
-import 'react-alice-carousel/lib/alice-carousel.css';
-```
-
-### Choose any example code from the Docs here and adjust to the best fit.
-`
-https://react.semantic-ui.com/usage
-`
-
-`
-https://www.npmjs.com/package/react-alice-carousel
-`
+## SHOUTOUTS:
+* Huge thanks to, Frank Chimero, for the inspiration for making this website!
+* I borrowed tons of inspo from him and I couldn't have done it without him
+* His links: [LinkedIn](https://www.linkedin.com/in/fchimero/) [Twitter](https://twitter.com/frank_chimero)
