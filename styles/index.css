@@ -18,6 +18,7 @@ p {
 }
 h2 {
   margin: 3rem 0 0 0;
+  font-size: 17px;
   color: #a5af9b;
 }
 /*
@@ -32,7 +33,11 @@ a {
   border-bottom: 1px solid #ccd;
 }
 h1 {
+  font-size: 24px;
   margin-bottom: 3rem;
+}
+li {
+  margin-top: 0.4rem;
 }
 header {
   display: grid;
@@ -58,9 +63,11 @@ header #cursiveImg {
 }
 main {
   display: grid;
-  gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr 0.5fr;
+  /* Adjust the row heights as needed */
+  gap: 2rem;
+  /* Add gap between grid items if desired */
 }
 main #studyingMammoth {
   width: 100%;
@@ -71,9 +78,6 @@ main #studyingMammoth {
 }
 .divThree div {
   margin-left: 50%;
-}
-.divThree li {
-  margin-top: 0.5rem;
 }
 footer {
   display: grid;
@@ -87,6 +91,10 @@ footer span {
 footer span #copyrightDiv {
   display: flex;
   flex-direction: column;
+}
+.divFour ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .noBullets {
   list-style: none;
