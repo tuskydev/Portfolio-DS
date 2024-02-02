@@ -16,6 +16,10 @@ p {
   margin: 0;
   padding: 0;
 }
+h2 {
+  margin: 3rem 0 0 0;
+  color: #a5af9b;
+}
 /*
   Prerequisite CSS ends here and actual CSS starts below!
 */
@@ -27,36 +31,30 @@ a {
   text-decoration: none;
   border-bottom: 1px solid #ccd;
 }
-header {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 7rem;
-}
 h1 {
   margin-bottom: 3rem;
 }
-.divTwo h2 {
-  margin: 3rem 0 0 0;
-  color: #a5af9b;
+header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 7rem;
 }
-.divTwo p {
-  margin: 0 0 2rem;
-  max-width: 37rem;
-}
-#personalSite {
-  border-bottom: 1px solid #ccd;
-}
-nav {
+header nav {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-#cursiveImgDiv {
+header #cursiveImgDiv {
   width: 100%;
 }
-#cursiveImg {
+header #cursiveImg {
   width: 6rem;
   height: 2.2rem;
+}
+.divTwo p {
+  margin: 0 0 2rem;
+  max-width: 37rem;
 }
 main {
   display: grid;
@@ -64,32 +62,34 @@ main {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
-#studyingMammoth {
+main #studyingMammoth {
   width: 100%;
 }
 #divThree {
   display: flex;
 }
-.splitSkillDivs {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+#divThree div {
+  margin-left: 50%;
+}
+#divThree li {
+  margin-top: 0.5rem;
 }
 footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 3rem;
+  gap: 2rem;
   height: 100px;
 }
 footer span {
   padding-top: 2.2rem;
 }
-#copyrightDiv {
+footer span #copyrightDiv {
   display: flex;
   flex-direction: column;
 }
 .noBullets {
   list-style: none;
   padding: 0;
+  margin: 0;
   width: 100%;
 }
