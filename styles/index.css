@@ -1,7 +1,14 @@
 * {
-  outline: 1px solid red;
-  outline-offset: -1px;
   color: #1e2d1d;
+}
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -100px;
+  padding-bottom: 100px;
 }
 body,
 h1,
@@ -9,9 +16,16 @@ p {
   margin: 0;
   padding: 0;
 }
+/*
+  Prerequisite CSS ends here and actual CSS starts below!
+*/
 body {
   background: #f9f7ea;
   margin: 1.5em;
+}
+a {
+  text-decoration: none;
+  border-bottom: 1px solid #ccd;
 }
 header {
   display: flex;
@@ -21,14 +35,19 @@ header {
 h1 {
   margin-bottom: 3rem;
 }
-h2 {
-  /* padding: 0;
-  margin: 0;
-  margin-top: 2rem;
-  margin-bottom: 0.6rem; */
+.divTwo * {
+  color: #515f44;
 }
-.divTwo {
-  /* margin: 0 0 1rem; */
+.divTwo h2 {
+  margin: 3rem 0 0 0;
+  color: #a5af9b;
+}
+.divTwo p {
+  margin: 0 0 2rem;
+  max-width: 37rem;
+}
+#personalSite {
+  border-bottom: 1px solid #ccd;
 }
 nav {
   display: flex;
@@ -44,6 +63,7 @@ nav {
 }
 main {
   display: grid;
+  gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
@@ -60,6 +80,7 @@ main {
 }
 footer {
   display: flex;
+  height: 100px;
 }
 .footerDivs {
   display: flex;
@@ -78,16 +99,4 @@ footer {
 #bulletPoints div {
   display: flex;
   align-items: flex-start;
-}
-html,
-body {
-  height: 100%;
-}
-.wrapper {
-  min-height: 100%;
-  margin-bottom: -100px;
-  padding-bottom: 100px;
-}
-footer {
-  height: 100px;
 }
