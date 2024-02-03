@@ -14,9 +14,9 @@ body {
 }
 
 .wrapper {
-  // min-height: 100%;
-  // margin-bottom: -100px;
-  // padding-bottom: 100px;
+  min-height: 80%;
+  margin-bottom: -100px;
+  padding-bottom: 100px;
 }
 
 body,
@@ -46,13 +46,13 @@ h2 {
 }
 
 h1 {
-  font-size: calc(2 * @unit-font-large) 0 0;
-  margin: 0 0 calc(2 * @unit-line-height);
+  font-size: calc(@unit-font-large) 0 0;
+  margin: 0 0 calc(2 * @unit-line-height) 0;
   letter-spacing: 0;
 }
 
 h2 {
-  margin: calc(2 * @unit-line-height) 0 0;
+  margin: calc(1.7 * @unit-line-height) 0 0;
   font-size: 1.2rem;
   line-height: @unit-line-height;
   color: @highlightColor;
@@ -60,6 +60,10 @@ h2 {
 
 p {
   font-size: 17px;
+}
+
+li {
+  margin-bottom: 0.3rem;
 }
 
 header {
@@ -109,7 +113,7 @@ main {
     #studyingMammoth {
       display: block;
       margin: 0 auto;
-      max-width: 25em;
+      max-width: 28em;
       width: 65%;
     }
   }
@@ -139,18 +143,13 @@ main {
 }
 
 footer {
-  // display: grid;
-  // grid-template-columns: repeat(4, 1fr);
-  // gap: @unit-line-height;
-  // line-height: @unit-line-height;
-  // height: 100px;
-
-  line-height: @unit-line-height;
   display: grid;
-  grid-gap: @unit-line-height;
   grid-template-columns: repeat(2, 1fr);
+  gap: @unit-line-height;
+  line-height: @unit-line-height;
   padding-top: calc(4 * @unit-line-height);
   padding-bottom: @unit-line-height;
+  height: 100px;
   margin-left: 50%;
 
   #copyrightDiv {
