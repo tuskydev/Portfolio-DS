@@ -1,4 +1,6 @@
 * {
+  outline: 1px solid red;
+  outline-offset: -1px;
   color: #515f44;
   box-sizing: border-box;
 }
@@ -6,11 +8,6 @@ html,
 body {
   height: 100%;
   line-height: 1.5em;
-}
-.wrapper {
-  min-height: 100%;
-  margin-bottom: -100px;
-  padding-bottom: 100px;
 }
 body,
 h1,
@@ -29,27 +26,28 @@ a {
   text-decoration: none;
   border-bottom: 1px solid #ccd;
 }
+h1,
+h2 {
+  font-weight: 400;
+}
 h1 {
   font-size: calc(2 * 1.5em);
+  font-size: 16px;
   margin-bottom: 3rem;
   letter-spacing: 0;
-  font-weight: 400;
 }
 h2 {
   margin: calc(2 * 1.5em) 0 0;
   font-size: 1rem;
-  font-weight: 400;
   line-height: 1.5em;
   color: #a5af9b;
-}
-li {
-  margin-top: 0.4rem;
 }
 header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5em;
-  margin-bottom: 7rem;
+  grid-gap: 1.5em;
+  margin-bottom: calc(5 * 1.5em);
+  line-height: 1.5em;
 }
 header nav {
   display: flex;

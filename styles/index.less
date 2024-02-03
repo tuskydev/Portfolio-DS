@@ -1,8 +1,8 @@
 @import "variables.less";
 
 * {
-  // outline: 1px solid red;
-  // outline-offset: -1px;
+  outline: 1px solid red;
+  outline-offset: -1px;
   color: @mainColor;
   box-sizing: border-box;
 }
@@ -13,11 +13,11 @@ body {
   line-height: @unit-line-height;
 }
 
-.wrapper {
-  min-height: 100%;
-  margin-bottom: -100px;
-  padding-bottom: 100px;
-}
+// .wrapper {
+//   min-height: 100%;
+//   margin-bottom: -100px;
+//   padding-bottom: 100px;
+// }
 
 body,
 h1,
@@ -40,30 +40,31 @@ a {
   border-bottom: 1px solid #ccd;
 }
 
+h1,
+h2 {
+  font-weight: 400;
+}
+
 h1 {
   font-size: calc(2 * @unit-line-height);
+  font-size: 16px;
   margin-bottom: 3rem;
   letter-spacing: 0;
-  font-weight: 400;
 }
 
 h2 {
   margin: calc(2 * @unit-line-height) 0 0;
   font-size: 1rem;
-  font-weight: 400;
   line-height: @unit-line-height;
   color: @highlightColor;
-}
-
-li {
-  margin-top: 0.4rem;
 }
 
 header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: @unit-line-height;
-  margin-bottom: 7rem;
+  grid-gap: @unit-line-height;
+  margin-bottom: calc(5 * @unit-line-height);
+  line-height: @unit-line-height;
 
   nav {
     display: flex;
