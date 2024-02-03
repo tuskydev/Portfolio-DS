@@ -1,6 +1,4 @@
 * {
-  outline: 1px solid red;
-  outline-offset: -1px;
   color: #515f44;
   box-sizing: border-box;
 }
@@ -31,16 +29,18 @@ h2 {
   font-weight: 400;
 }
 h1 {
-  font-size: calc(2 * 1.5em);
-  font-size: 16px;
-  margin-bottom: 3rem;
+  font-size: calc(2 * 1.4rem) 0 0;
+  margin: 0 0 calc(2 * 1.5em);
   letter-spacing: 0;
 }
 h2 {
   margin: calc(2 * 1.5em) 0 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5em;
   color: #a5af9b;
+}
+p {
+  font-size: 17px;
 }
 header {
   display: grid;
@@ -82,7 +82,7 @@ main #studyingMammothDiv {
 main #studyingMammothDiv #studyingMammoth {
   display: block;
   margin: 0 auto;
-  max-width: 28em;
+  max-width: 25em;
   width: 65%;
 }
 .divTwo p {
@@ -101,11 +101,13 @@ main #studyingMammothDiv #studyingMammoth {
   grid-template-columns: 1fr 1fr;
 }
 footer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5em;
   line-height: 1.5em;
-  height: 100px;
+  display: grid;
+  grid-gap: 1.5em;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: calc(4 * 1.5em);
+  padding-bottom: 1.5em;
+  margin-left: 50%;
 }
 footer #copyrightDiv {
   display: flex;
