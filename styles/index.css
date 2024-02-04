@@ -2,12 +2,6 @@
 /* Global settings */
 * {
   color: #515f44;
-  box-sizing: border-box;
-}
-@media (max-width: 480px) {
-  * {
-    box-sizing: content-box;
-  }
 }
 /* Resetting some default styles */
 html,
@@ -174,6 +168,9 @@ main #studyingMammothDiv #studyingMammoth {
     margin-right: auto;
   }
 }
+.divThree p {
+  margin: 0.3rem;
+}
 @media (max-width: 1024px) {
   .divFour {
     display: grid;
@@ -203,7 +200,7 @@ footer {
   padding-top: calc(4 * 1.5em);
   padding-bottom: 1.5em;
   height: 100px;
-  margin-left: 50%;
+  margin-left: 51%;
 }
 @media (max-width: 1024px) {
   footer {
@@ -224,7 +221,7 @@ footer #copyrightDiv {
   flex-direction: column;
 }
 footer #copyrightDiv span {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 footer a {
   display: flex;

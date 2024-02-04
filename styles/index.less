@@ -6,11 +6,6 @@
   // outline: 1px solid red;
   // outline-offset: -1px;
   color: @mainColor;
-  box-sizing: border-box;
-
-  @media (max-width: @mobile) {
-    box-sizing: content-box;
-  }
 }
 
 /* Resetting some default styles */
@@ -188,6 +183,10 @@ main {
       margin-right: auto;
     }
   }
+
+  p {
+    margin: 0.3rem;
+  }
 }
 
 .divFour {
@@ -221,7 +220,7 @@ footer {
   padding-top: calc(4 * @unit-line-height);
   padding-bottom: @unit-line-height;
   height: 100px;
-  margin-left: 50%;
+  margin-left: 51%;
 
   @media (max-width: @desktop) {
     text-align: center;
@@ -240,7 +239,7 @@ footer {
     flex-direction: column;
 
     span {
-      margin-top: 1.5rem;
+      margin-top: 2rem;
     }
   }
 
