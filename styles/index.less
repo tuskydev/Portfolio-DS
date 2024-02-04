@@ -38,6 +38,7 @@ body {
 a {
   text-decoration: none;
   border-bottom: 1px solid #ccd;
+  font-size: 17px;
 }
 
 h1,
@@ -110,6 +111,12 @@ main {
     margin: 0 auto;
     width: 100%;
 
+    user-select: none;
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Safari and Chrome */
+    -ms-user-select: none; /* IE 10+ and Edge */
+    pointer-events: none;
+
     #studyingMammoth {
       display: block;
       margin: 0 auto;
@@ -157,12 +164,12 @@ footer {
     flex-direction: column;
 
     span {
-      margin-top: 1.2rem;
+      margin-top: 1.5rem;
     }
   }
 }
 
-#emailColophon a {
+.footerSection a {
   display: flex;
   flex-direction: column;
   border-bottom: none;

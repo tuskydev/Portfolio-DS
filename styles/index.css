@@ -28,6 +28,7 @@ body {
 a {
   text-decoration: none;
   border-bottom: 1px solid #ccd;
+  font-size: 17px;
 }
 h1,
 h2 {
@@ -86,6 +87,14 @@ main {
 main #studyingMammothDiv {
   margin: 0 auto;
   width: 100%;
+  user-select: none;
+  -moz-user-select: none;
+  /* Firefox */
+  -webkit-user-select: none;
+  /* Safari and Chrome */
+  -ms-user-select: none;
+  /* IE 10+ and Edge */
+  pointer-events: none;
 }
 main #studyingMammothDiv #studyingMammoth {
   display: block;
@@ -123,9 +132,9 @@ footer #copyrightDiv {
   flex-direction: column;
 }
 footer #copyrightDiv span {
-  margin-top: 1.2rem;
+  margin-top: 1.5rem;
 }
-#emailColophon a {
+.footerSection a {
   display: flex;
   flex-direction: column;
   border-bottom: none;
