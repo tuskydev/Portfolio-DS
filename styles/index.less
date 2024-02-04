@@ -1,5 +1,7 @@
+/* Import statements and global settings */
 @import "variables.less";
 
+/* Global settings */
 * {
   // outline: 1px solid red;
   // outline-offset: -1px;
@@ -11,29 +13,23 @@
   }
 }
 
+/* Resetting some default styles */
 html,
 body {
   height: 100%;
   line-height: @unit-line-height;
+  margin: 0;
+  padding: 0;
 }
 
+/* General layout and structure */
 .wrapper {
   min-height: 80%;
   margin-bottom: -100px;
   padding-bottom: 100px;
 }
 
-body,
-h1,
-p {
-  margin: 0;
-  padding: 0;
-}
-
-/*
-  Prerequisite CSS ends here and actual CSS starts below!
-*/
-
+/* Typography and links */
 body {
   background: @backgroundColor;
   margin: 1.5em;
@@ -79,6 +75,7 @@ li {
   margin-bottom: 0.3rem;
 }
 
+/* Header styling */
 header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -114,6 +111,7 @@ header {
   }
 }
 
+/* Main content styling */
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -214,6 +212,7 @@ main {
   }
 }
 
+/* Footer styling */
 footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -252,6 +251,7 @@ footer {
   }
 }
 
+/* Utility classes */
 .noBullets {
   list-style: none;
   padding: 0;
