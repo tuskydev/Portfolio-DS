@@ -2,6 +2,11 @@
   color: #515f44;
   box-sizing: border-box;
 }
+@media (max-width: 480px) {
+  * {
+    box-sizing: content-box;
+  }
+}
 html,
 body {
   height: 100%;
@@ -39,11 +44,21 @@ h1 {
   margin: 0 0 calc(2 * 1.5em) 0;
   letter-spacing: 0;
 }
+@media (max-width: 1024px) {
+  h1 {
+    margin-bottom: 1rem;
+  }
+}
 h2 {
   margin: calc(1.7 * 1.5em) 0 0;
   font-size: 1.2rem;
   line-height: 1.5em;
   color: #a5af9b;
+}
+@media (max-width: 480px) {
+  h2 {
+    margin: calc(1.3 * 1.5em) 0 0;
+  }
 }
 p {
   font-size: 17px;
@@ -84,6 +99,17 @@ main {
   grid-template-columns: 1fr 1fr;
   gap: 1.5em;
 }
+@media (max-width: 1024px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  main {
+    gap: 0;
+  }
+}
 main #studyingMammothDiv {
   margin: 0 auto;
   width: 100%;
@@ -102,20 +128,71 @@ main #studyingMammothDiv #studyingMammoth {
   max-width: 28em;
   width: 65%;
 }
+@media (max-width: 1024px) {
+  main #studyingMammothDiv #studyingMammoth {
+    margin-bottom: 5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .divTwo {
+    text-align: center;
+  }
+}
 .divTwo p {
   margin: 0 0 1rem;
   max-width: 35em;
+}
+@media (max-width: 1024px) {
+  .divTwo p {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .divThree {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 1024px) {
+  .divThree {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .divThree {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 .divThree div {
   margin-left: 50%;
+}
+@media (max-width: 1024px) {
+  .divThree div {
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .divFour {
+    display: grid;
+  }
+}
+@media (max-width: 1024px) {
+  .divFour h2 {
+    text-align: center;
+    margin-right: 50%;
+  }
 }
 .divFour ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 1024px) {
+  .divFour ul {
+    text-align: center;
+  }
 }
 footer {
   display: grid;
@@ -127,6 +204,20 @@ footer {
   height: 100px;
   margin-left: 50%;
 }
+@media (max-width: 1024px) {
+  footer {
+    text-align: center;
+    margin: auto;
+  }
+}
+@media (max-width: 480px) {
+  footer {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 5rem;
+    gap: 0;
+  }
+}
 footer #copyrightDiv {
   display: flex;
   flex-direction: column;
@@ -134,7 +225,7 @@ footer #copyrightDiv {
 footer #copyrightDiv span {
   margin-top: 1.5rem;
 }
-.footerSection a {
+footer a {
   display: flex;
   flex-direction: column;
   border-bottom: none;

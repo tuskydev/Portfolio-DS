@@ -5,6 +5,10 @@
   // outline-offset: -1px;
   color: @mainColor;
   box-sizing: border-box;
+
+  @media (max-width: @mobile) {
+    box-sizing: content-box;
+  }
 }
 
 html,
@@ -50,6 +54,10 @@ h1 {
   font-size: calc(@unit-font-large) 0 0;
   margin: 0 0 calc(2 * @unit-line-height) 0;
   letter-spacing: 0;
+
+  @media (max-width: @desktop) {
+    margin-bottom: 1rem;
+  }
 }
 
 h2 {
@@ -57,6 +65,10 @@ h2 {
   font-size: 1.2rem;
   line-height: @unit-line-height;
   color: @highlightColor;
+
+  @media (max-width: @mobile) {
+    margin: calc(1.3 * @unit-line-height) 0 0;
+  }
 }
 
 p {
@@ -107,6 +119,15 @@ main {
   grid-template-columns: 1fr 1fr;
   gap: @unit-line-height;
 
+  @media (max-width: @desktop) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: @mobile) {
+    gap: 0;
+  }
+
   #studyingMammothDiv {
     margin: 0 auto;
     width: 100%;
@@ -122,14 +143,27 @@ main {
       margin: 0 auto;
       max-width: 28em;
       width: 65%;
+
+      @media (max-width: @desktop) {
+        margin-bottom: 5rem;
+      }
     }
   }
 }
 
 .divTwo {
+  @media (max-width: @desktop) {
+    text-align: center;
+  }
+
   p {
     margin: 0 0 1rem;
     max-width: @unit-maxwidth-text;
+
+    @media (max-width: @desktop) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
@@ -137,15 +171,46 @@ main {
   display: flex;
   flex-direction: column;
 
+  @media (max-width: @desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: @mobile) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
   div {
     margin-left: 50%;
+
+    @media (max-width: @desktop) {
+      margin: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
 .divFour {
+  @media (max-width: @desktop) {
+    display: grid;
+  }
+
+  h2 {
+    @media (max-width: @desktop) {
+      text-align: center;
+      margin-right: 50%;
+    }
+  }
+
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @media (max-width: @desktop) {
+      text-align: center;
+    }
   }
 }
 
@@ -159,6 +224,18 @@ footer {
   height: 100px;
   margin-left: 50%;
 
+  @media (max-width: @desktop) {
+    text-align: center;
+    margin: auto;
+  }
+
+  @media (max-width: @mobile) {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 5rem;
+    gap: 0;
+  }
+
   #copyrightDiv {
     display: flex;
     flex-direction: column;
@@ -167,12 +244,12 @@ footer {
       margin-top: 1.5rem;
     }
   }
-}
 
-.footerSection a {
-  display: flex;
-  flex-direction: column;
-  border-bottom: none;
+  a {
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+  }
 }
 
 .noBullets {
