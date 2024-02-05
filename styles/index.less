@@ -3,8 +3,8 @@
 
 /* Global settings */
 * {
-  // outline: 1px solid red;
-  // outline-offset: -1px;
+  outline: 1px solid red;
+  outline-offset: -1px;
   color: @mainColor;
 }
 
@@ -278,19 +278,24 @@ footer {
 
 /* index.html styles below */
 
+.indexHeader {
+  margin-bottom: calc(4 * @unit-line-height);
+}
+
 .projectList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 15px;
-  margin-left: -15rem;
+  margin-left: -18rem;
   // margin-bottom: 2rem;
   margin-bottom: calc(2 * @unit-line-height);
 
   .projectListH1 {
     grid-area: 1 / 2 / 2 / 4;
-    font-size: calc(2.5 * @unit-font-large);
+    font-size: calc(3.6 * @unit-font-large);
     margin: auto 0;
+    margin-bottom: 1rem;
   }
 
   .projectListNumber {
@@ -311,7 +316,7 @@ footer {
     align-items: center;
     margin: auto auto;
     margin-top: 3rem;
-    margin-left: 0;
+    margin-left: -3rem;
     cursor: pointer;
 
     @media (max-width: 1155px) {
@@ -322,15 +327,13 @@ footer {
 
     .curvedArrow {
       font-size: calc(1.5 * @unit-font-large);
-      margin-right: 0.6rem;
+      padding-right: 1rem;
+      border-bottom: none;
     }
 
-    p {
+    a {
       margin: 0 auto;
-
-      a {
-        font-size: calc(1 * @unit-font-large);
-      }
+      font-size: calc(1 * @unit-font-large);
     }
   }
 
