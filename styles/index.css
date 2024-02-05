@@ -1,6 +1,8 @@
 /* Import statements and global settings */
 /* Global settings */
 * {
+  outline: 1px solid red;
+  outline-offset: -1px;
   color: #515f44;
 }
 /* Resetting some default styles */
@@ -259,14 +261,11 @@ footer a {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 15px;
   margin-left: -15rem;
-  margin-bottom: 1.5rem;
-}
-.projectList p {
-  font-size: calc(1 * 1.4rem);
+  margin-bottom: calc(2 * 1.5em);
 }
 .projectList .projectListH1 {
   grid-area: 1 / 2 / 2 / 4;
-  font-size: calc(3.6 * 1.4rem);
+  font-size: calc(2.5 * 1.4rem);
   margin: auto 0;
 }
 .projectList .projectListNumber {
@@ -283,11 +282,28 @@ footer a {
   grid-area: 2 / 3 / 3 / 4;
   display: flex;
   align-items: center;
-  margin: auto;
-  margin-left: 2rem;
+  margin: auto auto;
+  margin-top: 3rem;
+  margin-left: 0;
+  cursor: pointer;
+}
+@media (max-width: 1155px) {
+  .projectList .projectListViewProject {
+    margin-top: 4rem;
+    margin-left: 5rem;
+    max-width: calc(2 * 35em);
+  }
 }
 .projectList .projectListViewProject .curvedArrow {
   font-size: calc(1.5 * 1.4rem);
   margin-right: 0.6rem;
-  cursor: pointer;
+}
+.projectList .projectListViewProject p {
+  margin: 0 auto;
+}
+.projectList .projectListViewProject p a {
+  font-size: calc(1 * 1.4rem);
+}
+.projectList p {
+  font-size: calc(1 * 1.4rem);
 }
