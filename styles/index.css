@@ -1,8 +1,6 @@
 /* Import statements and global settings */
 /* Global settings */
 * {
-  outline: 1px solid red;
-  outline-offset: -1px;
   color: #515f44;
 }
 /* Resetting some default styles */
@@ -183,7 +181,7 @@ header #cursiveImg:hover {
   }
 }
 .divThree p {
-  margin: 0.3rem;
+  margin: 0.3rem 0;
 }
 @media (max-width: 1024px) {
   .divFour {
