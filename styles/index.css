@@ -1,4 +1,5 @@
 /* Import statements and global settings */
+/* Import statements and global settings */
 /* Global settings */
 * {
   color: #515f44;
@@ -81,8 +82,20 @@ header #cursiveImgDiv a {
   border-bottom: none;
 }
 header #cursiveImg {
-  width: 5rem;
+  width: 7rem;
   height: 2rem;
+}
+@media (max-width: 1024px) {
+  header #cursiveImg {
+    width: 6rem;
+    height: 1.8rem;
+  }
+}
+@media (max-width: 480px) {
+  header #cursiveImg {
+    width: 5rem;
+    height: 1.6rem;
+  }
 }
 header #cursiveImg:hover {
   filter: hue-rotate(90deg);
