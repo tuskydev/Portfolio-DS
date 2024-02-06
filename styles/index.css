@@ -406,8 +406,8 @@ footer a {
 }
 .projectList .projectListViewWork .curvedArrow {
   font-size: 2.5rem;
-  padding-right: 8rem;
-  margin-right: -7rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.15rem;
   border-bottom: none;
   cursor: text;
   /* Responsive Font Size and Padding Adjustments */
@@ -415,15 +415,11 @@ footer a {
 @media (max-width: 1500px) {
   .projectList .projectListViewWork .curvedArrow {
     font-size: 1.5rem;
-    padding-right: 7rem;
-    margin-right: -6rem;
   }
 }
 @media (max-width: 1250px) {
   .projectList .projectListViewWork .curvedArrow {
     font-size: 1.5rem;
-    padding-right: 6rem;
-    margin-right: -5rem;
   }
 }
 @media (max-width: 1024px) {
