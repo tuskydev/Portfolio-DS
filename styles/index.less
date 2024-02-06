@@ -277,14 +277,15 @@ footer {
 }
 
 /* index.html styles below */
-
 .projectList {
+  /* Grid Layout for Project List */
   display: grid;
   grid-template-columns: 1fr 1fr 1.5fr;
   grid-template-rows: 0.75fr 1fr;
   grid-column-gap: 25px;
   margin-bottom: 10rem;
 
+  /* Responsive Grid Adjustments */
   @media (max-width: 1500px) {
     grid-template-columns: 1fr 1.25fr 1fr;
   }
@@ -305,10 +306,12 @@ footer {
     margin-bottom: 6rem;
   }
 
+  /* Font Size for Paragraphs and Links */
   p,
   a {
     font-size: 1.7rem;
 
+    /* Responsive Font Size Adjustments */
     @media (max-width: 2000px) {
       font-size: 1.5rem;
     }
@@ -329,12 +332,15 @@ footer {
     }
   }
 
+  /* Project List Heading Styling */
   .projectListH1 {
+    /* Heading Grid Layout */
     display: grid;
     grid-area: 1 / 2 / 2 / 4;
     margin: auto 0;
     font-size: 5.5rem;
 
+    /* Responsive Font Size Adjustments */
     @media (max-width: 2000px) {
       font-size: 4.5rem;
     }
@@ -354,6 +360,7 @@ footer {
     }
   }
 
+  /* Project List Number Styling */
   .projectListNumber {
     grid-area: 2 / 1 / 3 / 2;
     display: flex;
@@ -361,6 +368,7 @@ footer {
     align-items: end;
   }
 
+  /* Project List Description Styling */
   .projectListDescription {
     grid-area: 2 / 2 / 3 / 3;
     max-width: 80%;
@@ -373,15 +381,18 @@ footer {
     }
   }
 
+  /* Project List View Work Styling */
   .projectListViewWork {
     grid-area: 2 / 3 / 3 / 4;
     display: flex;
     align-items: end;
 
+    /* Responsive Font Size and Padding Adjustments */
     @media (max-width: @tablet) {
       grid-area: 3 / 2 / 4 / 3;
     }
 
+    /* Styling for Curved Arrow Icon */
     .curvedArrow {
       font-size: 2.5rem;
       padding-right: 8rem;
@@ -389,6 +400,7 @@ footer {
       border-bottom: none;
       cursor: text;
 
+      /* Responsive Font Size and Padding Adjustments */
       @media (max-width: 1500px) {
         font-size: 1.5rem;
         padding-right: 7rem;

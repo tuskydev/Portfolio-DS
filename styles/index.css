@@ -254,11 +254,18 @@ footer a {
 }
 /* index.html styles below */
 .projectList {
+  /* Grid Layout for Project List */
   display: grid;
   grid-template-columns: 1fr 1fr 1.5fr;
   grid-template-rows: 0.75fr 1fr;
   grid-column-gap: 25px;
   margin-bottom: 10rem;
+  /* Responsive Grid Adjustments */
+  /* Font Size for Paragraphs and Links */
+  /* Project List Heading Styling */
+  /* Project List Number Styling */
+  /* Project List Description Styling */
+  /* Project List View Work Styling */
 }
 @media (max-width: 1500px) {
   .projectList {
@@ -292,6 +299,7 @@ footer a {
 .projectList p,
 .projectList a {
   font-size: 1.7rem;
+  /* Responsive Font Size Adjustments */
 }
 @media (max-width: 2000px) {
   .projectList p,
@@ -330,10 +338,12 @@ footer a {
   }
 }
 .projectList .projectListH1 {
+  /* Heading Grid Layout */
   display: grid;
   grid-area: 1 / 2 / 2 / 4;
   margin: auto 0;
   font-size: 5.5rem;
+  /* Responsive Font Size Adjustments */
 }
 @media (max-width: 2000px) {
   .projectList .projectListH1 {
@@ -386,6 +396,8 @@ footer a {
   grid-area: 2 / 3 / 3 / 4;
   display: flex;
   align-items: end;
+  /* Responsive Font Size and Padding Adjustments */
+  /* Styling for Curved Arrow Icon */
 }
 @media (max-width: 768px) {
   .projectList .projectListViewWork {
@@ -398,6 +410,7 @@ footer a {
   margin-right: -7rem;
   border-bottom: none;
   cursor: text;
+  /* Responsive Font Size and Padding Adjustments */
 }
 @media (max-width: 1500px) {
   .projectList .projectListViewWork .curvedArrow {
