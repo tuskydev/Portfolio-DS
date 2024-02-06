@@ -277,3 +277,47 @@ footer {
 }
 
 /* index.html styles below */
+
+.projectsList {
+  display: grid;
+  grid-template-columns: 0.9fr;
+  grid-template-rows: 100fr 50fr;
+
+  @media (max-width: 2400px) {
+    grid-template-rows: 80fr 50fr;
+  }
+  @media (max-width: @desktop) {
+    grid-template-rows: 60fr 50fr;
+  }
+  @media (max-width: @tablet) {
+    grid-template-rows: 40fr 50fr;
+  }
+  @media (max-width: @mobile) {
+    grid-template-rows: 20fr 50fr;
+  }
+
+  h1 {
+    grid-area: 1 / 1 / 2 / 2;
+    margin: auto;
+    padding: auto;
+    font-size: 7rem;
+
+    @media (max-width: 2400px) {
+      font-size: 5rem;
+    }
+    @media (max-width: @desktop) {
+      font-size: 4rem;
+    }
+    @media (max-width: @tablet) {
+      font-size: 2.5rem;
+    }
+    @media (max-width: @mobile) {
+      font-size: 1.9rem;
+    }
+  }
+
+  .projectsListDiv {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+  }
+}
