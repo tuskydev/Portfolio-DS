@@ -255,24 +255,25 @@ footer a {
 /* index.html styles below */
 .projectList {
   display: grid;
-  grid-template-columns: 0.75fr 1fr 1.5fr;
+  grid-template-columns: 1fr 1fr 1.5fr;
   grid-template-rows: 0.75fr 1fr;
   grid-column-gap: 25px;
-  margin-bottom: 3rem;
+  margin-bottom: 10rem;
 }
 @media (max-width: 1500px) {
   .projectList {
-    grid-template-columns: 0.75fr 1.25fr 1fr;
+    grid-template-columns: 1fr 1.25fr 1fr;
   }
 }
 @media (max-width: 1250px) {
   .projectList {
-    grid-template-columns: 0.75fr 1.25fr 1fr;
+    grid-template-columns: 1fr 1.25fr 1fr;
   }
 }
 @media (max-width: 1024px) {
   .projectList {
     grid-template-columns: 0.1fr 1.25fr 1fr;
+    margin-bottom: 8rem;
   }
 }
 @media (max-width: 768px) {
@@ -284,6 +285,8 @@ footer a {
 @media (max-width: 480px) {
   .projectList {
     grid-template-columns: auto 1.5fr;
+    grid-template-rows: auto auto auto;
+    margin-bottom: 6rem;
   }
 }
 .projectList p,
@@ -330,21 +333,21 @@ footer a {
   display: grid;
   grid-area: 1 / 2 / 2 / 4;
   margin: auto 0;
-  font-size: 7rem;
+  font-size: 5.5rem;
 }
 @media (max-width: 2000px) {
   .projectList .projectListH1 {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 }
 @media (max-width: 1500px) {
   .projectList .projectListH1 {
-    font-size: 4rem;
+    font-size: 4.2rem;
   }
 }
 @media (max-width: 1250px) {
   .projectList .projectListH1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 }
 @media (max-width: 768px) {
