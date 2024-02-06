@@ -279,7 +279,7 @@ footer {
 /* index.html styles below */
 
 .indexHeader {
-  margin-bottom: calc(4 * @unit-line-height);
+  margin-bottom: calc(3.5 * @unit-line-height);
 }
 
 .projectList {
@@ -287,15 +287,25 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 15px;
-  margin-left: -18rem;
-  // margin-bottom: 2rem;
-  margin-bottom: calc(2 * @unit-line-height);
+  // margin-bottom: calc(2 * @unit-line-height);
+  // max-width: calc(3.2 * @unit-maxwidth-text);
+  width: 100;
+  // margin: 0 auto;
+  padding-right: 25%;
+
+  // @media (max-width: 2000px) {
+  //   max-width: ;
+  // }
 
   .projectListH1 {
     grid-area: 1 / 2 / 2 / 4;
     font-size: calc(3.6 * @unit-font-large);
     margin: auto 0;
     margin-bottom: 1rem;
+
+    // @media (max-width: @desktop) {
+    //   font-size: calc(1.5 * @unit-font-large);
+    // }
   }
 
   .projectListNumber {
@@ -307,37 +317,32 @@ footer {
 
   .projectListDescription {
     grid-area: 2 / 2 / 3 / 3;
+    margin: 0 0 1rem;
     max-width: calc(0.6 * @unit-maxwidth-text);
   }
 
-  .projectListViewProject {
+  .projectListViewWork {
     grid-area: 2 / 3 / 3 / 4;
     display: flex;
     align-items: center;
-    margin: auto auto;
-    margin-top: 3rem;
-    margin-left: -3rem;
+    margin: auto;
+    margin-top: 2.5rem;
+    margin-left: 0;
     cursor: pointer;
 
-    @media (max-width: 1155px) {
-      margin-top: 4rem;
-      margin-left: 5rem;
-      max-width: calc(2 * @unit-maxwidth-text);
-    }
-
     .curvedArrow {
-      font-size: calc(1.5 * @unit-font-large);
-      padding-right: 1rem;
+      font-size: calc(1.2 * @unit-font-large);
+      padding-right: 0.8rem;
       border-bottom: none;
     }
 
     a {
       margin: 0 auto;
-      font-size: calc(1 * @unit-font-large);
+      font-size: calc(0.8 * @unit-font-large);
     }
   }
 
   p {
-    font-size: calc(1 * @unit-font-large);
+    font-size: calc(0.8 * @unit-font-large);
   }
 }

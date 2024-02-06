@@ -256,15 +256,15 @@ footer a {
 }
 /* index.html styles below */
 .indexHeader {
-  margin-bottom: calc(4 * 1.5em);
+  margin-bottom: calc(3.5 * 1.5em);
 }
 .projectList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 15px;
-  margin-left: -18rem;
-  margin-bottom: calc(2 * 1.5em);
+  width: 100;
+  padding-right: 25%;
 }
 .projectList .projectListH1 {
   grid-area: 1 / 2 / 2 / 4;
@@ -280,33 +280,27 @@ footer a {
 }
 .projectList .projectListDescription {
   grid-area: 2 / 2 / 3 / 3;
+  margin: 0 0 1rem;
   max-width: calc(0.6 * 35em);
 }
-.projectList .projectListViewProject {
+.projectList .projectListViewWork {
   grid-area: 2 / 3 / 3 / 4;
   display: flex;
   align-items: center;
-  margin: auto auto;
-  margin-top: 3rem;
-  margin-left: -3rem;
+  margin: auto;
+  margin-top: 2.5rem;
+  margin-left: 0;
   cursor: pointer;
 }
-@media (max-width: 1155px) {
-  .projectList .projectListViewProject {
-    margin-top: 4rem;
-    margin-left: 5rem;
-    max-width: calc(2 * 35em);
-  }
-}
-.projectList .projectListViewProject .curvedArrow {
-  font-size: calc(1.5 * 1.4rem);
-  padding-right: 1rem;
+.projectList .projectListViewWork .curvedArrow {
+  font-size: calc(1.2 * 1.4rem);
+  padding-right: 0.8rem;
   border-bottom: none;
 }
-.projectList .projectListViewProject a {
+.projectList .projectListViewWork a {
   margin: 0 auto;
-  font-size: calc(1 * 1.4rem);
+  font-size: calc(0.8 * 1.4rem);
 }
 .projectList p {
-  font-size: calc(1 * 1.4rem);
+  font-size: calc(0.8 * 1.4rem);
 }
