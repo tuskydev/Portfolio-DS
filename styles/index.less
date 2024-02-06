@@ -3,8 +3,8 @@
 
 /* Global settings */
 * {
-  // outline: 1px solid red;
-  // outline-offset: -1px;
+  outline: 1px solid red;
+  outline-offset: -1px;
   color: @mainColor;
 }
 
@@ -334,8 +334,7 @@ footer {
 
   /* Project List Heading Styling */
   .projectListH1 {
-    /* Heading Grid Layout */
-    display: grid;
+    // display: grid;
     grid-area: 1 / 2 / 2 / 4;
     margin: auto 0;
     font-size: 5.5rem;
@@ -387,7 +386,6 @@ footer {
     display: flex;
     align-items: end;
 
-    /* Responsive Font Size and Padding Adjustments */
     @media (max-width: @tablet) {
       grid-area: 3 / 2 / 4 / 3;
     }
@@ -411,5 +409,55 @@ footer {
         font-size: 1.2rem;
       }
     }
+  }
+}
+
+/* detailedProjects styles below */
+.detailedProjectHeader {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.6fr 1fr 1.6fr;
+  max-width: 84%;
+  margin-left: auto;
+  margin-right: 0;
+
+  .detailedProjectH1 {
+    margin: auto 0;
+    font-size: calc(2.5 * @unit-font-large);
+  }
+
+  .detailedProjectDescription {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin: 0;
+  }
+
+  .detailedProjectLinks {
+    display: flex;
+    align-items: end;
+    a,
+    span {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* Summary styles below */
+.detailedProjectDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 100px;
+  width: 60%;
+  margin: auto;
+  margin-top: 5rem;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.45rem;
+    margin: 0;
   }
 }
