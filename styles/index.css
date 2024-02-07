@@ -430,9 +430,29 @@ footer a {
 .detailedProjectMain h2 {
   font-size: 1.6rem;
 }
+@media (max-width: 768px) {
+  .detailedProjectMain h2 {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .detailedProjectMain h2 {
+    font-size: 1.2rem;
+  }
+}
 .detailedProjectMain p {
   font-size: 1.3rem;
   margin: 0;
+}
+@media (max-width: 768px) {
+  .detailedProjectMain p {
+    font-size: 1.15rem;
+  }
+}
+@media (max-width: 480px) {
+  .detailedProjectMain p {
+    font-size: 1rem;
+  }
 }
 .detailedProjectMain .detailedProjectHeader {
   display: grid;
@@ -442,14 +462,55 @@ footer a {
   margin-left: auto;
   margin-right: 0;
 }
+@media (max-width: 2000px) {
+  .detailedProjectMain .detailedProjectHeader {
+    max-width: 95%;
+  }
+}
+@media (max-width: 1500px) {
+  .detailedProjectMain .detailedProjectHeader {
+    max-width: 100%;
+  }
+}
+@media (max-width: 794px) {
+  .detailedProjectMain .detailedProjectHeader {
+    grid-template-rows: 40px 0.5fr 50px;
+  }
+}
+@media (max-width: 480px) {
+  .detailedProjectMain .detailedProjectHeader {
+    grid-template-rows: 1fr 0.5fr 50px;
+  }
+}
 .detailedProjectMain .detailedProjectHeader .detailedProjectH1 {
   margin: auto 0;
   font-size: calc(2.5 * 1.4rem);
+}
+@media (max-width: 768px) {
+  .detailedProjectMain .detailedProjectHeader .detailedProjectH1 {
+    font-size: calc(2 * 1.4rem);
+  }
+}
+@media (max-width: 480px) {
+  .detailedProjectMain .detailedProjectHeader .detailedProjectH1 {
+    font-size: calc(1.5 * 1.4rem);
+    line-height: 30px;
+  }
 }
 .detailedProjectMain .detailedProjectHeader .detailedProjectDescription {
   font-size: 1.5rem;
   font-style: italic;
   margin: 0;
+}
+@media (max-width: 768px) {
+  .detailedProjectMain .detailedProjectHeader .detailedProjectDescription {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .detailedProjectMain .detailedProjectHeader .detailedProjectDescription {
+    font-size: 1.1rem;
+  }
 }
 .detailedProjectMain .detailedProjectHeader .detailedProjectLinks {
   display: flex;
@@ -458,6 +519,12 @@ footer a {
 .detailedProjectMain .detailedProjectHeader .detailedProjectLinks a,
 .detailedProjectMain .detailedProjectHeader .detailedProjectLinks span {
   font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .detailedProjectMain .detailedProjectHeader .detailedProjectLinks a,
+  .detailedProjectMain .detailedProjectHeader .detailedProjectLinks span {
+    font-size: 1.3rem;
+  }
 }
 .detailedProjectMain .detailedProjectDiv {
   display: grid;
@@ -468,20 +535,127 @@ footer a {
   margin: auto;
   margin-top: 4rem;
 }
+@media (max-width: 2000px) {
+  .detailedProjectMain .detailedProjectDiv {
+    width: 80%;
+    grid-column-gap: 125px;
+  }
+}
+@media (max-width: 1500px) {
+  .detailedProjectMain .detailedProjectDiv {
+    width: 85%;
+    grid-column-gap: 75px;
+  }
+}
+@media (max-width: 1250px) {
+  .detailedProjectMain .detailedProjectDiv {
+    width: 98%;
+    grid-column-gap: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .detailedProjectMain .detailedProjectDiv {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+}
+@media (max-width: 768px) {
+  .detailedProjectMain .detailedProjectDiv {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 480px) {
+  .detailedProjectMain .detailedProjectDiv {
+    margin-top: 2rem;
+  }
+}
 .detailedProjectMain .detailedProjectAnalysisDiv {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  max-width: 60%;
+  grid-template-rows: 1fr auto;
+  width: 60%;
   margin: auto;
   margin-top: 4rem;
+}
+@media (max-width: 2000px) {
+  .detailedProjectMain .detailedProjectAnalysisDiv {
+    width: 80%;
+    grid-column-gap: 125px;
+  }
+}
+@media (max-width: 1500px) {
+  .detailedProjectMain .detailedProjectAnalysisDiv {
+    width: 85%;
+    grid-column-gap: 75px;
+  }
+}
+@media (max-width: 1250px) {
+  .detailedProjectMain .detailedProjectAnalysisDiv {
+    width: 98%;
+    grid-column-gap: 50px;
+  }
 }
 .detailedProjectMain .detailedProjectAnalysisDiv p {
-  max-width: 50%;
+  width: 60%;
+}
+@media (max-width: 2000px) {
+  .detailedProjectMain .detailedProjectAnalysisDiv p {
+    width: 60%;
+    grid-column-gap: 125px;
+  }
+}
+@media (max-width: 1500px) {
+  .detailedProjectMain .detailedProjectAnalysisDiv p {
+    width: 80%;
+    grid-column-gap: 125px;
+  }
+}
+@media (max-width: 1250px) {
+  .detailedProjectMain .detailedProjectAnalysisDiv p {
+    width: 85%;
+    grid-column-gap: 100px;
+  }
+}
+@media (max-width: 1024px) {
+  .detailedProjectMain .detailedProjectAnalysisDiv p {
+    width: 90%;
+  }
 }
 .detailedProjectMain .detailedProjectImage {
-  display: grid;
-  margin: auto;
   width: 60%;
+  margin: auto;
   margin-top: 4rem;
+}
+@media (max-width: 2000px) {
+  .detailedProjectMain .detailedProjectImage {
+    width: 80%;
+    grid-column-gap: 125px;
+  }
+}
+@media (max-width: 1500px) {
+  .detailedProjectMain .detailedProjectImage {
+    width: 85%;
+    grid-column-gap: 75px;
+  }
+}
+@media (max-width: 1250px) {
+  .detailedProjectMain .detailedProjectImage {
+    width: 98%;
+    grid-column-gap: 50px;
+  }
+}
+.detailedProjectMain .detailedProjectImage img {
+  width: 75%;
+  height: auto;
+  max-width: 1213px;
+}
+@media (max-width: 1500px) {
+  .detailedProjectMain .detailedProjectImage img {
+    width: 85%;
+  }
+}
+@media (max-width: 1250px) {
+  .detailedProjectMain .detailedProjectImage img {
+    width: 100%;
+  }
 }
