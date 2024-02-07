@@ -333,7 +333,6 @@ footer {
 
   /* Project List Heading Styling */
   .projectListH1 {
-    // display: grid;
     grid-area: 1 / 2 / 2 / 4;
     margin: auto 0;
     font-size: 5.5rem;
@@ -412,45 +411,7 @@ footer {
 }
 
 /* detailedProjects styles below */
-.detailedProjectHeader {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1.6fr 1fr 1.6fr;
-  max-width: 84%;
-  margin-left: auto;
-  margin-right: 0;
-
-  .detailedProjectH1 {
-    margin: auto 0;
-    font-size: calc(2.5 * @unit-font-large);
-  }
-
-  .detailedProjectDescription {
-    font-size: 1.5rem;
-    font-style: italic;
-    margin: 0;
-  }
-
-  .detailedProjectLinks {
-    display: flex;
-    align-items: end;
-    a,
-    span {
-      font-size: 1.5rem;
-    }
-  }
-}
-
-/* Summary styles below */
-.detailedProjectDiv {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 150px;
-  width: 60%;
-  margin: auto;
-  margin-top: 4rem;
-
+.detailedProjectMain {
   h2 {
     font-size: 1.6rem;
   }
@@ -458,5 +419,58 @@ footer {
   p {
     font-size: 1.3rem;
     margin: 0;
+  }
+
+  .detailedProjectHeader {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1fr 1.5fr;
+    max-width: 84%;
+    margin-left: auto;
+    margin-right: 0;
+
+    .detailedProjectH1 {
+      margin: auto 0;
+      font-size: calc(2.5 * @unit-font-large);
+    }
+
+    .detailedProjectDescription {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin: 0;
+    }
+
+    .detailedProjectLinks {
+      display: flex;
+      align-items: end;
+      a,
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  /* Summary styles below */
+  .detailedProjectDiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 150px;
+    width: 60%;
+    margin: auto;
+    margin-top: 4rem;
+  }
+
+  .detailedProjectAnalysisDiv {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 60%;
+    margin: auto;
+    margin-top: 4rem;
+
+    p {
+      max-width: 50%;
+    }
   }
 }

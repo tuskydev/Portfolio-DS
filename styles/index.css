@@ -424,45 +424,58 @@ footer a {
   }
 }
 /* detailedProjects styles below */
-.detailedProjectHeader {
+.detailedProjectMain {
+  /* Summary styles below */
+}
+.detailedProjectMain h2 {
+  font-size: 1.6rem;
+}
+.detailedProjectMain p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+.detailedProjectMain .detailedProjectHeader {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1.6fr 1fr 1.6fr;
+  grid-template-rows: 1.5fr 1fr 1.5fr;
   max-width: 84%;
   margin-left: auto;
   margin-right: 0;
 }
-.detailedProjectHeader .detailedProjectH1 {
+.detailedProjectMain .detailedProjectHeader .detailedProjectH1 {
   margin: auto 0;
   font-size: calc(2.5 * 1.4rem);
 }
-.detailedProjectHeader .detailedProjectDescription {
+.detailedProjectMain .detailedProjectHeader .detailedProjectDescription {
   font-size: 1.5rem;
   font-style: italic;
   margin: 0;
 }
-.detailedProjectHeader .detailedProjectLinks {
+.detailedProjectMain .detailedProjectHeader .detailedProjectLinks {
   display: flex;
   align-items: end;
 }
-.detailedProjectHeader .detailedProjectLinks a,
-.detailedProjectHeader .detailedProjectLinks span {
+.detailedProjectMain .detailedProjectHeader .detailedProjectLinks a,
+.detailedProjectMain .detailedProjectHeader .detailedProjectLinks span {
   font-size: 1.5rem;
 }
-/* Summary styles below */
-.detailedProjectDiv {
+.detailedProjectMain .detailedProjectDiv {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 150px;
   width: 60%;
   margin: auto;
   margin-top: 4rem;
 }
-.detailedProjectDiv h2 {
-  font-size: 1.6rem;
+.detailedProjectMain .detailedProjectAnalysisDiv {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  max-width: 60%;
+  margin: auto;
+  margin-top: 4rem;
 }
-.detailedProjectDiv p {
-  font-size: 1.3rem;
-  margin: 0;
+.detailedProjectMain .detailedProjectAnalysisDiv p {
+  max-width: 50%;
 }
