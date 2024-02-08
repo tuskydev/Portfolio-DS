@@ -1,7 +1,20 @@
 /* Import statements and global settings */
+@font-face {
+  font-family: "Alliance No. 1";
+  src: url("./fonts/degarism_studio_-_alliance_no.1_light-webfont.woff2") format("woff2"), url("./fonts/degarism_studio_-_alliance_no.1_light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Alliance No. 2";
+  src: url("./fonts/degarism_studio_-_alliance_no.2_light-webfont.woff2") format("woff2"), url("./fonts/degarism_studio_-_alliance_no.2_light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /* Global settings */
 * {
   color: #515f44;
+  font-family: "Alliance No. 2";
 }
 /* Resetting some default styles */
 html,
@@ -205,39 +218,59 @@ header #cursiveImg:hover {
 /* Footer styling */
 footer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 1.5em;
+  height: 100px;
   line-height: 1.5em;
   padding-top: calc(4 * 1.5em);
   padding-bottom: 1.5em;
-  height: 100px;
-  margin-left: 51%;
 }
 @media (max-width: 1024px) {
   footer {
-    text-align: center;
-    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
 }
-@media (max-width: 480px) {
-  footer {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-top: 5rem;
-    gap: 0;
-  }
-}
-footer #copyrightDiv {
-  display: flex;
-  flex-direction: column;
-}
-footer #copyrightDiv span {
-  margin-top: 2rem;
-}
-footer a {
-  display: flex;
-  flex-direction: column;
+footer a,
+footer span {
   border-bottom: none;
+}
+footer .infoUpArrow {
+  grid-area: 1 / 1 / 2 / 2;
+}
+@media (max-width: 1024px) {
+  footer .infoUpArrow {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+}
+footer .infoWorkInfo {
+  grid-area: 1 / 3 / 2 / 4;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1024px) {
+  footer .infoWorkInfo {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+}
+footer .infoEmailColophon {
+  grid-area: 1 / 4 / 2 / 5;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1024px) {
+  footer .infoEmailColophon {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+}
+footer .infoC2024TuskyDev {
+  grid-area: 2 / 3 / 3 / 4;
+}
+@media (max-width: 1024px) {
+  footer .infoC2024TuskyDev {
+    grid-area: 3 / 1 / 4 / 2;
+  }
 }
 /* Utility classes */
 .noBullets {

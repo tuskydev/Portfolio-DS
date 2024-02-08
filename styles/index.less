@@ -1,11 +1,33 @@
 /* Import statements and global settings */
 @import "variables.less";
 
+@font-face {
+  font-family: "Alliance No. 1";
+  src: url("./fonts/degarism_studio_-_alliance_no.1_light-webfont.woff2")
+      format("woff2"),
+    url("./fonts/degarism_studio_-_alliance_no.1_light-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alliance No. 2";
+  src: url("./fonts/degarism_studio_-_alliance_no.2_light-webfont.woff2")
+      format("woff2"),
+    url("./fonts/degarism_studio_-_alliance_no.2_light-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Global settings */
 * {
   // outline: 1px solid red;
   // outline-offset: -1px;
   color: @mainColor;
+  // font-family: "Alliance No. 1";
+  font-family: "Alliance No. 2";
 }
 
 /* Resetting some default styles */
@@ -223,40 +245,87 @@ header {
 /* Footer styling */
 footer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: @unit-line-height;
+  height: 100px;
   line-height: @unit-line-height;
   padding-top: calc(4 * @unit-line-height);
   padding-bottom: @unit-line-height;
-  height: 100px;
-  margin-left: 51%;
 
   @media (max-width: @desktop) {
-    text-align: center;
-    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
 
-  @media (max-width: @mobile) {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-top: 5rem;
-    gap: 0;
+  a,
+  span {
+    border-bottom: none;
   }
 
-  #copyrightDiv {
-    display: flex;
-    flex-direction: column;
+  .infoUpArrow {
+    grid-area: 1 / 1 / 2 / 2;
 
-    span {
-      margin-top: 2rem;
+    @media (max-width: @desktop) {
+      grid-area: 1 / 1 / 2 / 2;
     }
   }
 
-  a {
+  .infoWorkInfo {
+    grid-area: 1 / 3 / 2 / 4;
     display: flex;
     flex-direction: column;
-    border-bottom: none;
+
+    @media (max-width: @desktop) {
+      grid-area: 2 / 1 / 3 / 2;
+    }
   }
+
+  .infoEmailColophon {
+    grid-area: 1 / 4 / 2 / 5;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: @desktop) {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+  }
+
+  .infoC2024TuskyDev {
+    grid-area: 2 / 3 / 3 / 4;
+
+    @media (max-width: @desktop) {
+      grid-area: 3 / 1 / 4 / 2;
+    }
+  }
+  // display: grid;
+  // grid-template-columns: repeat(2, 1fr);
+  // gap: @unit-line-height;
+  // line-height: @unit-line-height;
+  // padding-top: calc(4 * @unit-line-height);
+  // padding-bottom: @unit-line-height;
+  // height: 100px;
+  // margin-left: 51%;
+
+  // @media (max-width: @desktop) {
+  //   text-align: center;
+  //   margin: auto;
+  // }
+
+  // #copyrightDiv {
+  // display: flex;
+  // flex-direction: column;
+
+  //   span {
+  //     margin-top: 2rem;
+  //   }
+  // }
+
+  // a {
+  // display: flex;
+  // flex-direction: column;
+  //   border-bottom: none;
+  // }
 }
 
 /* Utility classes */
