@@ -13,7 +13,7 @@
 }
 /* Global settings */
 * {
-  color: #515f44;
+  color: #1e2124;
   font-family: "Alliance No. 2";
 }
 /* Resetting some default styles */
@@ -32,7 +32,7 @@ body {
 }
 /* Typography and links */
 body {
-  background: #f9f7ea;
+  background: #ffffff;
   margin: 1.5em;
 }
 a {
@@ -46,18 +46,16 @@ h2 {
 }
 h1 {
   margin: 0 0 calc(2 * 1.5em) 0;
-  letter-spacing: 0;
-}
-@media (max-width: 1024px) {
-  h1 {
-    margin-bottom: 1rem;
-  }
+  font-family: "Alliance No. 2";
+  font-size: calc(3em);
+  letter-spacing: -0.02em;
+  line-height: 1.15em;
 }
 h2 {
   margin: calc(1.7 * 1.5em) 0 0;
   font-size: 1.2rem;
   line-height: 1.5em;
-  color: #a5af9b;
+  color: #b5b6b7;
 }
 @media (max-width: 480px) {
   h2 {
@@ -282,7 +280,7 @@ footer .infoC2024TuskyDev {
 .hoverHighlightClass:hover {
   transition: opacity 0.1s;
   opacity: 0.7;
-  color: #a5af9b;
+  color: #b5b6b7;
 }
 /* index.html styles below */
 .projectList {
