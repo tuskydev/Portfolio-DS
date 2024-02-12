@@ -50,16 +50,33 @@ h4 {
   font-family: "Alliance No. 1";
 }
 
+h1 {
+  font-size: 5.555rem;
+
+  @media (max-width: 60em) {
+    font-size: 2.777rem;
+  }
+}
+
+h2 {
+  font-size: 3.33rem;
+
+  @media (max-width: 60em) {
+    font-size: 2.777rem;
+  }
+}
+
 section {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   max-width: 1500px;
   padding: 5.555rem 1.111rem;
-  border-bottom: 1px solid @mainColor;
+  padding-bottom: 0;
 
   @media (max-width: 60rem) {
-    padding: 4.444rem 1.111rem;
+    padding: 4.888rem 1.111rem;
+    padding-bottom: 0;
   }
 }
 
@@ -81,15 +98,16 @@ nav {
     // background-color: lightblue;
   }
 
-  ul {
+  .navBarUL {
     list-style: none;
     display: flex;
-    padding-top: 30px;
+    padding-top: 40px;
     font-size: 1rem;
     overflow-x: scroll;
     -ms-scroll-snap-type: x;
     scroll-snap-type: x;
     scrollbar-width: none;
+    transition: padding-top 0.1s ease; /* Smooth transition for padding-top property */
 
     li {
       margin-right: 0.888rem;
@@ -101,22 +119,57 @@ nav {
   }
 }
 
+.separationDiv {
+  border-top: 1px solid @mainColor;
+  margin-top: 6.666rem;
+  margin-bottom: -2.222rem;
+
+  @media (max-width: 60rem) {
+    // margin-top: 4.444rem;
+  }
+}
+
 .sectionFirst {
   h1 {
-    font-size: 5.555rem;
-    width: 70%;
-
-    @media (max-width: 60em) {
-      font-size: 2.777rem;
-    }
+    width: 60%;
   }
 
   video {
     margin-top: 4.444rem;
-    border-bottom: 10px solid @mainColor;
 
     @media (max-width: 60rem) {
-      margin-top: 3.333rem;
+      margin-top: 3.888rem;
+    }
+  }
+}
+
+.sectionSecond {
+  .sectionSecondFirstDiv {
+    p {
+      font-size: 2.222rem;
+      width: 75%;
+    }
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 1.666rem;
+
+    .sectionSecondDescriptionAndLink {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      column-gap: 1.666rem;
+
+      p {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+
+      a {
+        grid-area: 1 / 2 / 2 / 3;
+      }
     }
   }
 }

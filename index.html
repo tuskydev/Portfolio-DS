@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tusky | Home</title>
     <link rel="stylesheet" type="text/css" href="./styles/index.css" />
-    <script src="index.js"></script>
   </head>
   <body>
     <!-- Header section-->
@@ -17,7 +16,7 @@
             alt="Two pristine ivory tusks elegantly intertwined, symbolizing strength, elegance, and timeless beauty."
             class="tuskyLogoBlack"
         /></a>
-        <ul>
+        <ul class="navBarUL">
           <li class="workLink"><a href="#">Work</a></li>
           <li class="aboutLink:"><a href="#">About</a></li>
           <li class="resumeLink"><a href="#">Resume</a></li>
@@ -37,15 +36,29 @@
         <video muted autoplay playsinline controls loop>
           <source src="./content/4 Image TECH.mp4" type="video/mp4" />
         </video>
+
+        <div class="separationDiv"></div>
       </section>
 
-      <section class="sectionFirst">
-        <h1>Hi there, I'm Mario - aka TuskyDev</h1>
-        <video src="./content/4 Image TECH.mp4"></video>
+      <section class="sectionSecond">
+        <div class="sectionSecondFirstDiv">
+          <h2>Work↘</h2>
+          <p>“Comparison is the thief of joy” -Theodore Roosevelt</p>
+        </div>
+        <div class="sectionSecondSecondDiv">
+          <h3>↳ Python Game of Life</h3>
+
+          <div class="sectionSecondDescriptionAndLink"></div>
+          <p>Cells live or die based on their neighbors.</p>
+          <a>Explore Game<span>→</span></a>
+        </div>
       </section>
     </main>
 
     <!-- Footer section -->
     <footer></footer>
+
+    <!-- Linking index.js -->
+    <script src="index.js"></script>
   </body>
 </html>
