@@ -147,7 +147,7 @@ const fadeUpTwoObserver = new IntersectionObserver(
         // Animate the border after a delay
         setTimeout(() => {
           element.classList.add("animationFadeUpTwoDONE");
-        }, 666);
+        }, 555);
 
         fadeUpTwoObserver.unobserve(entry.target); // Stop observing the element after applying the animation
       }
