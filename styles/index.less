@@ -142,6 +142,32 @@ nav {
 // ---
 
 // Navbar Overline Animation
+// .un {
+//   display: inline-block;
+//   position: relative;
+// }
+
+// .un:after {
+//   content: "";
+//   width: 0px;
+//   height: 1px;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   background: @mainColor;
+//   transition: 0.3s ease;
+// }
+
+// .un:hover:after {
+//   width: 100%;
+// }
+
+// .un:not(:hover):after {
+//   right: 0;
+//   left: auto;
+// }
+
+// ATTEMPTING NEW ANIM
 .un {
   display: inline-block;
   position: relative;
@@ -230,6 +256,18 @@ nav {
         font-size: 1.444rem;
         border-bottom: 1px solid @navLinksColor;
 
+        > :nth-child(2) {
+          padding-left: 5rem;
+          margin-right: 0.555rem;
+          transition: padding-left 300ms, margin 300ms;
+        }
+
+        > :nth-child(2) {
+          @media (max-width: @tablet) {
+            padding-bottom: 1.111rem;
+          }
+        }
+
         &:hover {
           a {
             color: #1e2124;
@@ -239,18 +277,7 @@ nav {
           > :nth-child(2) {
             padding-left: 5.555rem;
             margin: 0;
-            transition: padding-left 500ms, margin 500ms;
-          }
-        }
-
-        > :nth-child(2) {
-          padding-left: 5rem;
-          margin-right: 0.555rem;
-        }
-
-        > :nth-child(2) {
-          @media (max-width: @tablet) {
-            padding-bottom: 1.111rem;
+            transition: padding-left 300ms, margin 300ms;
           }
         }
       }
