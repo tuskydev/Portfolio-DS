@@ -25,9 +25,6 @@ a {
   color: #767676;
 }
 a span {
-  font-family: "Alliance No. 2";
-}
-a span {
   padding-top: 0.333rem;
   color: #767676;
   font-family: "Alliance No. 1";
@@ -86,6 +83,9 @@ section {
     padding-bottom: 0;
   }
 }
+#specialArrow {
+  font-family: "Arial Unicode MS", "Consolas";
+}
 header {
   position: sticky;
   top: 0;
@@ -132,10 +132,34 @@ header {
   right: 0;
   left: auto;
 }
-/* Typing effect */
 .hiddenAnimation {
   color: white;
-  /* Initial color set to white */
+}
+.animationBorder {
+  position: relative;
+}
+.animationBorderDONE::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  /* Position at the bottom of the element. Adjust as needed */
+  left: 0;
+  width: 0;
+  /* Start with no width */
+  height: 1px;
+  /* Height of the border line */
+  background: black;
+  /* Replace 'black' with your main color variable or value */
+  animation: drawBorder 2s forwards;
+  /* Animation for the border */
+}
+@keyframes drawBorder {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 /* Non-Preset Styling Starts Here! */
 nav {
@@ -164,16 +188,12 @@ nav .navBarUL {
 nav .navBarUL li {
   margin-right: 0.888rem;
 }
-.separationDiv {
-  border-top: 1px solid #1e2124;
-  margin-top: 6.666rem;
-  margin-bottom: -2.222rem;
-}
 .landingSection h1 {
   width: 60%;
 }
 .landingSection video {
   margin-top: 4.444rem;
+  margin-bottom: 6.666rem;
 }
 @media (max-width: 60em) {
   .landingSection video {
@@ -196,7 +216,6 @@ nav .navBarUL li {
 .projectsSection .projectDiv {
   padding: 3.333rem 0;
   padding-bottom: 6.666rem;
-  border-top: 1px solid #1e2124;
 }
 .projectsSection .projectDiv .projectDescriptionAndLink {
   display: flex;

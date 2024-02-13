@@ -12,10 +12,13 @@ function scrollFunction() {
   }
 }
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    // console.log(entry);
+/* ----------
 
+- typingAnimationFunction
+
+---------- */
+const typingObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const element = entry.target;
       const text = element.textContent; // Get the text content of the element
@@ -33,7 +36,16 @@ const observer = new IntersectionObserver((entries) => {
       const spans = element.querySelectorAll("span");
       spans.forEach((span, index) => {
         setTimeout(() => {
-          span.style.fontFamily = '"Alliance No. 2"';
+          if (
+            (element.tagName.toLowerCase() == "h1") |
+            (element.tagName.toLowerCase() == "h2")
+          ) {
+            span.style.fontFamily = '"Alliance No. 2"';
+          }
+
+          if (element.tagName.toLowerCase() == "h3") {
+            span.style.fontFamily = '"Alliance No. 1"';
+          }
           span.style.opacity = "1"; // Make the character visible
           span.style.color = "#1e2124"; // Change to the desired color
         }, index * 25); // Adjust the delay as needed
@@ -42,13 +54,39 @@ const observer = new IntersectionObserver((entries) => {
       setTimeout(() => {
         element.textContent = text;
         element.style.color = "#1e2124";
-        console.log("Hello world!", text);
-      }, 2000);
+      }, 5000);
 
-      observer.unobserve(entry.target);
+      typingObserver.unobserve(entry.target);
     }
   });
 });
 
-const hiddenElements = document.querySelectorAll(".hiddenAnimation");
-hiddenElements.forEach((el) => observer.observe(el));
+const typingAnimationFunction = document.querySelectorAll(".animationTyping");
+typingAnimationFunction.forEach((el) => typingObserver.observe(el));
+
+/* ----------
+
+- animationBorderFunction selects all the .animationBorder classes in the DOM.
+- Showing the element adds the class 'animated'
+- Happens once per element
+- Allowing for the animation to essentially be 'attached'
+
+---------- */
+const borderObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const element = entry.target;
+
+        // Animate the border
+        element.classList.add("animationBorderDONE");
+
+        borderObserver.unobserve(entry.target); // Stop observing the element after applying the animation
+      }
+    });
+  },
+  { threshold: 0.1 } // How much in page before applying class
+);
+
+const animationBorderFunction = document.querySelectorAll(".animationBorder");
+animationBorderFunction.forEach((el) => borderObserver.observe(el));
