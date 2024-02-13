@@ -102,3 +102,61 @@ const borderObserver = new IntersectionObserver(
 
 const animationBorderFunction = document.querySelectorAll(".animationBorder");
 animationBorderFunction.forEach((el) => borderObserver.observe(el));
+
+/* ----------
+
+- animationFadeUpOneFunction selects all the .animationFadeUpOne classes in the DOM.
+- Showing the element adds the class 'animationFadeUpOneDONE'
+- Happens once per element
+- Allowing for the animation to essentially be 'attached'
+
+---------- */
+const fadeUpOneObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const element = entry.target;
+
+        // Animate the border after a delay
+        setTimeout(() => {
+          element.classList.add("animationFadeUpOneDONE");
+        }, 222);
+
+        fadeUpOneObserver.unobserve(entry.target); // Stop observing the element after applying the animation
+      }
+    });
+  },
+  { threshold: 0.1 } // How much in page before applying class
+);
+
+const animationFadeUpOneFunction = document.querySelectorAll(
+  ".animationFadeUpOne"
+);
+animationFadeUpOneFunction.forEach((el) => fadeUpOneObserver.observe(el));
+
+/* ----------
+
+
+---------- */
+const fadeUpTwoObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const element = entry.target;
+
+        // Animate the border after a delay
+        setTimeout(() => {
+          element.classList.add("animationFadeUpTwoDONE");
+        }, 666);
+
+        fadeUpTwoObserver.unobserve(entry.target); // Stop observing the element after applying the animation
+      }
+    });
+  },
+  { threshold: 0.1 } // How much in page before applying class
+);
+
+const animationFadeUpTwoFunction = document.querySelectorAll(
+  ".animationFadeUpTwo"
+);
+animationFadeUpTwoFunction.forEach((el) => fadeUpTwoObserver.observe(el));

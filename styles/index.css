@@ -151,6 +151,52 @@ header {
     width: 100%;
   }
 }
+.animationFadeUpOne {
+  opacity: 0;
+}
+.animationFadeUpOneDONE {
+  opacity: 0;
+  /* Start fully transparent */
+  transform: translateY(10px);
+  /* Start 20 pixels below its final position */
+  animation: fadeInUpOneAnimation 2s forwards;
+  /* Animation name, duration, fill mode */
+}
+@keyframes fadeInUpOneAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    /* Start from 20 pixels below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* End at its final position */
+  }
+}
+.animationFadeUpTwo {
+  opacity: 0;
+}
+.animationFadeUpTwoDONE {
+  opacity: 0;
+  /* Start fully transparent */
+  transform: translateY(10px);
+  /* Start 20 pixels below its final position */
+  animation: fadeInUpTwoAnimation 1.111s forwards;
+  /* Animation name, duration, fill mode */
+}
+@keyframes fadeInUpTwoAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    /* Start from 20 pixels below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* End at its final position */
+  }
+}
 /* Non-Preset Styling Starts Here! */
 nav {
   display: flex;

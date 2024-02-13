@@ -40,9 +40,6 @@ a {
   color: @navLinksColor;
 
   span {
-  }
-
-  span {
     padding-top: 0.333rem;
     color: @navLinksColor;
     font-family: "Alliance No. 1";
@@ -175,6 +172,48 @@ header {
   }
   to {
     width: 100%;
+  }
+}
+
+// Fade Up ONE Animation Animation
+.animationFadeUpOne {
+  opacity: 0;
+}
+.animationFadeUpOneDONE {
+  opacity: 0; /* Start fully transparent */
+  transform: translateY(10px); /* Start 20 pixels below its final position */
+  animation: fadeInUpOneAnimation 2s forwards; /* Animation name, duration, fill mode */
+}
+
+@keyframes fadeInUpOneAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* Start from 20 pixels below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at its final position */
+  }
+}
+
+// Fade Up TWO Animation Animation
+.animationFadeUpTwo {
+  opacity: 0;
+}
+.animationFadeUpTwoDONE {
+  opacity: 0; /* Start fully transparent */
+  transform: translateY(10px); /* Start 20 pixels below its final position */
+  animation: fadeInUpTwoAnimation 1.111s forwards; /* Animation name, duration, fill mode */
+}
+
+@keyframes fadeInUpTwoAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* Start from 20 pixels below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at its final position */
   }
 }
 
