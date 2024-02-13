@@ -86,12 +86,6 @@ h3 {
   @media (max-width: @tablet) {
     font-size: 1.333rem;
   }
-
-  .flippedArrow {
-    display: inline-block;
-
-    transform: scaleX(-1);
-  }
 }
 
 section {
@@ -106,10 +100,6 @@ section {
     padding: 4.888rem 1.111rem;
     padding-bottom: 0;
   }
-}
-
-#specialArrow {
-  font-family: "Arial Unicode MS", "Consolas";
 }
 
 header {
@@ -181,7 +171,7 @@ header {
   width: 0; /* Start with no width */
   height: 1px; /* Height of the border line */
   background: black; /* Replace 'black' with your main color variable or value */
-  animation: drawBorder 2s forwards; /* Animation for the border */
+  animation: drawBorder 0.555s forwards; /* Animation for the border */
 }
 
 @keyframes drawBorder {
