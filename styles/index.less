@@ -1,25 +1,25 @@
 /* Import fonts, statements and global settings */
 @import "variables.less";
 
-@font-face {
-  font-family: "Alliance No. 1";
-  src: url("../fonts/degarism_studio_-_alliance_no.1_light-webfont.woff2")
-      format("woff2"),
-    url("../fonts/degarism_studio_-_alliance_no.1_light-webfont.woff")
-      format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: "Alliance No. 1";
+//   src: url("../fonts/degarism_studio_-_alliance_no.1_light-webfont.woff2")
+//       format("woff2"),
+//     url("../fonts/degarism_studio_-_alliance_no.1_light-webfont.woff")
+//       format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
-@font-face {
-  font-family: "Alliance No. 2";
-  src: url("../fonts/degarism_studio_-_alliance_no.2_light-webfont.woff2")
-      format("woff2"),
-    url("../fonts/degarism_studio_-_alliance_no.2_light-webfont.woff")
-      format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: "Alliance No. 2";
+//   src: url("../fonts/degarism_studio_-_alliance_no.2_light-webfont.woff2")
+//       format("woff2"),
+//     url("../fonts/degarism_studio_-_alliance_no.2_light-webfont.woff")
+//       format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 /* Universal CSS Reset */
 
@@ -78,9 +78,15 @@ h2 {
 
 h3 {
   font-size: 2.222rem;
-
+  display: inline-block;
   @media (max-width: @tablet) {
     font-size: 1.333rem;
+  }
+
+  .flippedArrow {
+    display: inline-block;
+
+    transform: scaleX(-1);
   }
 }
 

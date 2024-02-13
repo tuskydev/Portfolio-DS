@@ -1,16 +1,4 @@
 /* Import fonts, statements and global settings */
-@font-face {
-  font-family: "Alliance No. 1";
-  src: url("../fonts/degarism_studio_-_alliance_no.1_light-webfont.woff2") format("woff2"), url("../fonts/degarism_studio_-_alliance_no.1_light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Alliance No. 2";
-  src: url("../fonts/degarism_studio_-_alliance_no.2_light-webfont.woff2") format("woff2"), url("../fonts/degarism_studio_-_alliance_no.2_light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 /* Universal CSS Reset */
 * {
   box-sizing: border-box;
@@ -57,11 +45,16 @@ h2 {
 }
 h3 {
   font-size: 2.222rem;
+  display: inline-block;
 }
 @media (max-width: 60em) {
   h3 {
     font-size: 1.333rem;
   }
+}
+h3 .flippedArrow {
+  display: inline-block;
+  transform: scaleX(-1);
 }
 section {
   display: flex;
