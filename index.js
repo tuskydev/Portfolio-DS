@@ -5,9 +5,9 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementsByClassName("navBarUL")[0].style.paddingTop = "15px";
+    document.getElementsByClassName("navBarUL")[0].style.paddingTop = "0px";
   } else {
     // Access the first element with class "navBarUL" and set its padding
-    document.getElementsByClassName("navBarUL")[0].style.paddingTop = "38px";
+    document.getElementsByClassName("navBarUL")[0].style.paddingTop = "30px";
   }
 }

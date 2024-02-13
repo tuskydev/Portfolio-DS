@@ -37,6 +37,15 @@
 a {
   text-decoration: none;
   color: @navLinksColor;
+
+  span {
+    padding-top: 0.333rem;
+    color: @navLinksColor;
+
+    &:hover {
+      color: @mainColor;
+    }
+  }
 }
 
 // ----
@@ -54,7 +63,7 @@ h4 {
 h1 {
   font-size: 5.555rem;
 
-  @media (max-width: 60em) {
+  @media (max-width: @tablet) {
     font-size: 2.777rem;
   }
 }
@@ -62,7 +71,7 @@ h1 {
 h2 {
   font-size: 3.33rem;
 
-  @media (max-width: 60em) {
+  @media (max-width: @tablet) {
     font-size: 2.777rem;
   }
 }
@@ -70,7 +79,7 @@ h2 {
 h3 {
   font-size: 2.222rem;
 
-  @media (max-width: 60em) {
+  @media (max-width: @tablet) {
     font-size: 1.333rem;
   }
 }
@@ -80,10 +89,10 @@ section {
   flex-direction: column;
   margin: 0 auto;
   max-width: 1500px;
-  padding: 5.555rem 1.111rem;
+  padding: 5.555rem 1.666rem;
   padding-bottom: 0;
 
-  @media (max-width: 60rem) {
+  @media (max-width: @tablet) {
     padding: 4.888rem 1.111rem;
     padding-bottom: 0;
   }
@@ -101,59 +110,54 @@ nav {
   flex-direction: column;
   max-width: 1500px;
   margin: 0 auto;
-  padding: 2rem 1.111rem;
-
-  @media (min-width: 1500px) {
-    // background-color: lightblue;
-  }
+  padding: 2rem 1.666rem;
 
   .navBarUL {
     list-style: none;
     display: flex;
     padding-top: 40px;
     font-size: 1rem;
-    overflow-x: scroll;
-    -ms-scroll-snap-type: x;
-    scroll-snap-type: x;
-    scrollbar-width: none;
     transition: padding-top 0.1s ease; /* Smooth transition for padding-top property */
+
+    @media (max-width: @mobile) {
+      overflow-x: scroll;
+      -ms-scroll-snap-type: x;
+      scroll-snap-type: x;
+      scrollbar-width: none;
+    }
 
     li {
       margin-right: 0.888rem;
-      padding-top: 0.333rem;
     }
   }
 }
 
 // ---
 
-nav ul {
+// Navbar Overline Animation
+.un {
   display: inline-block;
   position: relative;
-  color: #000000;
 }
 
-nav a {
-  position: relative;
-  text-decoration: none;
-  color: inherit;
-}
-
-nav a::before {
+.un:after {
   content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
+  width: 0px;
   height: 1px;
-  bottom: -2px;
+  position: absolute;
+  top: 0;
   left: 0;
-  background-color: #000000;
-  transform-origin: bottom left;
-  transition: transform 0.3s ease-out;
+  background: @mainColor;
+  transition: 0.3s ease;
 }
 
-nav a:hover::before {
-  transform: scaleX(1);
+.un:hover:after {
+  width: 100%;
+}
+
+.un:not(:hover):after {
+  right: 0;
+  left: auto;
 }
 
 // ---
@@ -163,7 +167,7 @@ nav a:hover::before {
   margin-top: 6.666rem;
   margin-bottom: -2.222rem;
 
-  @media (max-width: 60rem) {
+  @media (max-width: @tablet) {
     // margin-top: 4.444rem;
   }
 }
@@ -176,7 +180,7 @@ nav a:hover::before {
   video {
     margin-top: 4.444rem;
 
-    @media (max-width: 60rem) {
+    @media (max-width: @tablet) {
       margin-top: 3.888rem;
     }
   }
@@ -208,7 +212,7 @@ nav a:hover::before {
       font-size: 1.222rem;
       column-gap: 2.222rem;
 
-      @media (max-width: 60rem) {
+      @media (max-width: @tablet) {
         flex-direction: column;
         row-gap: 1.333rem;
       }
@@ -220,7 +224,7 @@ nav a:hover::before {
         font-size: 1.444rem;
 
         > :nth-child(2) {
-          @media (max-width: 60rem) {
+          @media (max-width: @tablet) {
             padding-left: 1.666rem;
             padding-bottom: 1.111rem;
           }

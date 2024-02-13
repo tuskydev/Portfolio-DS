@@ -24,6 +24,13 @@ a {
   text-decoration: none;
   color: #767676;
 }
+a span {
+  padding-top: 0.333rem;
+  color: #767676;
+}
+a span:hover {
+  color: #1e2124;
+}
 h1,
 h2 {
   font-family: "Alliance No. 2";
@@ -61,10 +68,10 @@ section {
   flex-direction: column;
   margin: 0 auto;
   max-width: 1500px;
-  padding: 5.555rem 1.111rem;
+  padding: 5.555rem 1.666rem;
   padding-bottom: 0;
 }
-@media (max-width: 60rem) {
+@media (max-width: 60em) {
   section {
     padding: 4.888rem 1.111rem;
     padding-bottom: 0;
@@ -81,48 +88,47 @@ nav {
   flex-direction: column;
   max-width: 1500px;
   margin: 0 auto;
-  padding: 2rem 1.111rem;
+  padding: 2rem 1.666rem;
 }
 nav .navBarUL {
   list-style: none;
   display: flex;
   padding-top: 40px;
   font-size: 1rem;
-  overflow-x: scroll;
-  -ms-scroll-snap-type: x;
-  scroll-snap-type: x;
-  scrollbar-width: none;
   transition: padding-top 0.1s ease;
   /* Smooth transition for padding-top property */
 }
+@media (max-width: 35em) {
+  nav .navBarUL {
+    overflow-x: scroll;
+    -ms-scroll-snap-type: x;
+    scroll-snap-type: x;
+    scrollbar-width: none;
+  }
+}
 nav .navBarUL li {
   margin-right: 0.888rem;
-  padding-top: 0.333rem;
 }
-nav ul {
+.un {
   display: inline-block;
   position: relative;
-  color: #000000;
 }
-nav a {
-  position: relative;
-  text-decoration: none;
-  color: inherit;
-}
-nav a::before {
+.un:after {
   content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
+  width: 0px;
   height: 1px;
-  bottom: -2px;
+  position: absolute;
+  top: 0;
   left: 0;
-  background-color: #000000;
-  transform-origin: bottom left;
-  transition: transform 0.3s ease-out;
+  background: #1e2124;
+  transition: 0.3s ease;
 }
-nav a:hover::before {
-  transform: scaleX(1);
+.un:hover:after {
+  width: 100%;
+}
+.un:not(:hover):after {
+  right: 0;
+  left: auto;
 }
 .separationDiv {
   border-top: 1px solid #1e2124;
@@ -135,7 +141,7 @@ nav a:hover::before {
 .landingSection video {
   margin-top: 4.444rem;
 }
-@media (max-width: 60rem) {
+@media (max-width: 60em) {
   .landingSection video {
     margin-top: 3.888rem;
   }
@@ -164,7 +170,7 @@ nav a:hover::before {
   font-size: 1.222rem;
   column-gap: 2.222rem;
 }
-@media (max-width: 60rem) {
+@media (max-width: 60em) {
   .projectsSection .projectDiv .projectDescriptionAndLink {
     flex-direction: column;
     row-gap: 1.333rem;
@@ -176,7 +182,7 @@ nav a:hover::before {
   border-bottom: 1px solid #767676;
   font-size: 1.444rem;
 }
-@media (max-width: 60rem) {
+@media (max-width: 60em) {
   .projectsSection .projectDiv .projectDescriptionAndLink .projectLink > :nth-child(2) {
     padding-left: 1.666rem;
     padding-bottom: 1.111rem;
