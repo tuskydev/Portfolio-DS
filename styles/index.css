@@ -128,6 +128,14 @@ header {
   right: 0;
   left: auto;
 }
+/* Typing effect */
+.hiddenAnimation {
+  color: white;
+  /* Initial color set to white */
+}
+.showAnimation {
+  opacity: 1;
+}
 /* Non-Preset Styling Starts Here! */
 nav {
   display: flex;
