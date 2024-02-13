@@ -11,3 +11,16 @@ function scrollFunction() {
     document.getElementsByClassName("navBarUL")[0].style.paddingTop = "30px";
   }
 }
+
+const observer = new IntersectionObserver((entries) => {
+  entries.array.forEach((entry) => {
+    console.log(entry);
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add("showAnimation");
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll(".hiddenAnimation");
+hiddenElements.forEach((el) => observer.observe(el));
