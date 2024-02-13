@@ -218,8 +218,8 @@ nav {
   }
 
   video {
-    margin-top: 4.444rem;
-    margin-bottom: 6.666rem;
+    padding-top: 4.444rem;
+    padding-bottom: @unit-unit-bottom-padding;
 
     @media (max-width: @tablet) {
       margin-top: 3.888rem;
@@ -228,6 +228,8 @@ nav {
 }
 
 .projectsSection {
+  padding-top: @unit-unit-top-padding;
+
   .splitGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -235,7 +237,7 @@ nav {
     column-gap: 1.666rem;
   }
   .projectTitle {
-    padding-bottom: 6.666rem;
+    padding-bottom: @unit-unit-bottom-padding;
     p {
       font-size: 2rem;
       width: 73%;
@@ -243,9 +245,8 @@ nav {
   }
 
   .projectDiv {
-    padding: 3.333rem 0;
-    padding-bottom: 6.666rem;
-    // border-top: 1px solid @mainColor;
+    padding-top: @unit-unit-top-padding;
+    padding-bottom: @unit-unit-bottom-padding;
 
     .projectDescriptionAndLink {
       display: flex;

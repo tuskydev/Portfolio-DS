@@ -185,13 +185,16 @@ nav .navBarUL li {
   width: 60%;
 }
 .landingSection video {
-  margin-top: 4.444rem;
-  margin-bottom: 6.666rem;
+  padding-top: 4.444rem;
+  padding-bottom: 6.666rem;
 }
 @media (max-width: 60em) {
   .landingSection video {
     margin-top: 3.888rem;
   }
+}
+.projectsSection {
+  padding-top: 3.333rem;
 }
 .projectsSection .splitGrid {
   display: grid;
@@ -207,7 +210,7 @@ nav .navBarUL li {
   width: 73%;
 }
 .projectsSection .projectDiv {
-  padding: 3.333rem 0;
+  padding-top: 3.333rem;
   padding-bottom: 6.666rem;
 }
 .projectsSection .projectDiv .projectDescriptionAndLink {
