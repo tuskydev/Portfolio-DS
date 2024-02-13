@@ -1,4 +1,4 @@
-/* Import fonts, statements and global settings */
+/* Import files, and fonts */
 @font-face {
   font-family: "Alliance No. 1";
   src: url("../fonts/degarism_studio_-_alliance_no.1_light-webfont.woff2") format("woff2"), url("../fonts/degarism_studio_-_alliance_no.1_light-webfont.woff") format("woff");
@@ -19,7 +19,7 @@
   font-family: "Alliance No. 1";
   color: #1e2124;
 }
-/* Remove default hyperlink styles */
+/* Pre-set Styling Below */
 a {
   text-decoration: none;
   color: #767676;
@@ -88,7 +88,7 @@ header {
   z-index: 1000;
   background: #fff;
 }
-/* Navbar Overline Animation */
+/* Animations */
 .un {
   display: inline-block;
   position: relative;
@@ -110,17 +110,15 @@ header {
   right: 0;
   left: auto;
 }
-/* Button Underline Animation */
 .buttonAnimation {
   position: relative;
 }
 .buttonAnimation::after {
   position: absolute;
   content: "";
-  background: black;
+  background: #767676;
   bottom: 0;
   left: 0;
-  /* Start from the left */
   height: 1px;
   width: 100%;
   transition: 200ms ease-out;
@@ -128,10 +126,9 @@ header {
 .buttonAnimation:hover::after {
   width: 0%;
   right: 0;
-  /* Keep the right property */
   left: auto;
-  /* Reset the left property to allow the line to disappear to the right */
 }
+/* Non-Preset Styling Starts Here! */
 nav {
   display: flex;
   flex-direction: column;
