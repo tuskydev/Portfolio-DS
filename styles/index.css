@@ -100,7 +100,7 @@ nav .navBarUL {
   display: flex;
   padding-top: 40px;
   font-size: 1rem;
-  transition: padding-top 0.1s ease;
+  transition: padding-top 0.1s ease-in-out;
   /* Smooth transition for padding-top property */
 }
 @media (max-width: 35em) {
@@ -114,6 +114,7 @@ nav .navBarUL {
 nav .navBarUL li {
   margin-right: 0.888rem;
 }
+/* Navbar Overline Animation */
 .un {
   display: inline-block;
   position: relative;
@@ -134,6 +135,28 @@ nav .navBarUL li {
 .un:not(:hover):after {
   right: 0;
   left: auto;
+}
+/* Button Underline Animation */
+.buttonAnimation {
+  position: relative;
+}
+.buttonAnimation::after {
+  position: absolute;
+  content: "";
+  background: black;
+  bottom: 0;
+  left: 0;
+  /* Start from the left */
+  height: 1px;
+  width: 100%;
+  transition: 200ms ease-out;
+}
+.buttonAnimation:hover::after {
+  width: 0%;
+  right: 0;
+  /* Keep the right property */
+  left: auto;
+  /* Reset the left property to allow the line to disappear to the right */
 }
 .separationDiv {
   border-top: 1px solid #1e2124;
@@ -185,7 +208,6 @@ nav .navBarUL li {
   display: flex;
   justify-content: space-between;
   font-size: 1.444rem;
-  border-bottom: 1px solid #767676;
 }
 .projectsSection .projectDiv .projectDescriptionAndLink .projectLink > :nth-child(2) {
   padding-left: 5rem;

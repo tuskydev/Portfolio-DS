@@ -124,7 +124,7 @@ nav {
     display: flex;
     padding-top: 40px;
     font-size: 1rem;
-    transition: padding-top 0.1s ease; /* Smooth transition for padding-top property */
+    transition: padding-top 0.1s ease-in-out; /* Smooth transition for padding-top property */
 
     @media (max-width: @mobile) {
       overflow-x: scroll;
@@ -141,33 +141,8 @@ nav {
 
 // ---
 
-// Navbar Overline Animation
-// .un {
-//   display: inline-block;
-//   position: relative;
-// }
+/* Navbar Overline Animation */
 
-// .un:after {
-//   content: "";
-//   width: 0px;
-//   height: 1px;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   background: @mainColor;
-//   transition: 0.3s ease;
-// }
-
-// .un:hover:after {
-//   width: 100%;
-// }
-
-// .un:not(:hover):after {
-//   right: 0;
-//   left: auto;
-// }
-
-// ATTEMPTING NEW ANIM
 .un {
   display: inline-block;
   position: relative;
@@ -191,6 +166,29 @@ nav {
 .un:not(:hover):after {
   right: 0;
   left: auto;
+}
+
+/* Button Underline Animation */
+
+.buttonAnimation {
+  position: relative;
+}
+
+.buttonAnimation::after {
+  position: absolute;
+  content: "";
+  background: black;
+  bottom: 0;
+  left: 0; /* Start from the left */
+  height: 1px;
+  width: 100%;
+  transition: 200ms ease-out;
+}
+
+.buttonAnimation:hover::after {
+  width: 0%;
+  right: 0; /* Keep the right property */
+  left: auto; /* Reset the left property to allow the line to disappear to the right */
 }
 
 // ---
@@ -254,7 +252,7 @@ nav {
         display: flex;
         justify-content: space-between;
         font-size: 1.444rem;
-        border-bottom: 1px solid @navLinksColor;
+        // border-bottom: 1px solid @navLinksColor;
 
         > :nth-child(2) {
           padding-left: 5rem;
