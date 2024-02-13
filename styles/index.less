@@ -36,6 +36,7 @@
 /* Remove default hyperlink styles */
 a {
   text-decoration: none;
+  color: @navLinksColor;
 }
 
 // ----
@@ -63,6 +64,14 @@ h2 {
 
   @media (max-width: 60em) {
     font-size: 2.777rem;
+  }
+}
+
+h3 {
+  font-size: 2.222rem;
+
+  @media (max-width: 60em) {
+    font-size: 1.333rem;
   }
 }
 
@@ -111,13 +120,43 @@ nav {
 
     li {
       margin-right: 0.888rem;
-
-      a {
-        color: @navLinksColor;
-      }
+      padding-top: 0.333rem;
     }
   }
 }
+
+// ---
+
+nav ul {
+  display: inline-block;
+  position: relative;
+  color: #000000;
+}
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-out;
+}
+
+nav a:hover::before {
+  transform: scaleX(1);
+}
+
+// ---
 
 .separationDiv {
   border-top: 1px solid @mainColor;
@@ -129,7 +168,7 @@ nav {
   }
 }
 
-.sectionFirst {
+.landingSection {
   h1 {
     width: 60%;
   }
@@ -143,32 +182,49 @@ nav {
   }
 }
 
-.sectionSecond {
-  .sectionSecondFirstDiv {
-    p {
-      font-size: 2.222rem;
-      width: 75%;
-    }
-  }
-
-  div {
+.projectsSection {
+  .splitGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     column-gap: 1.666rem;
+  }
+  .projectTitle {
+    padding-bottom: 6.666rem;
+    p {
+      font-size: 2rem;
+      width: 73%;
+    }
+  }
 
-    .sectionSecondDescriptionAndLink {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
-      column-gap: 1.666rem;
+  .projectDiv {
+    padding: 3.333rem 0;
+    padding-bottom: 6.666rem;
+    border-top: 1px solid @mainColor;
 
-      p {
-        grid-area: 1 / 1 / 2 / 2;
+    .projectDescriptionAndLink {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.222rem;
+      column-gap: 2.222rem;
+
+      @media (max-width: 60rem) {
+        flex-direction: column;
+        row-gap: 1.333rem;
       }
 
-      a {
-        grid-area: 1 / 2 / 2 / 3;
+      .projectLink {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid @navLinksColor;
+        font-size: 1.444rem;
+
+        > :nth-child(2) {
+          @media (max-width: 60rem) {
+            padding-left: 1.666rem;
+            padding-bottom: 1.111rem;
+          }
+        }
       }
     }
   }

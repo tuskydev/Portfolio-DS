@@ -22,6 +22,7 @@
 /* Remove default hyperlink styles */
 a {
   text-decoration: none;
+  color: #767676;
 }
 h1,
 h2 {
@@ -45,6 +46,14 @@ h2 {
 @media (max-width: 60em) {
   h2 {
     font-size: 2.777rem;
+  }
+}
+h3 {
+  font-size: 2.222rem;
+}
+@media (max-width: 60em) {
+  h3 {
+    font-size: 1.333rem;
   }
 }
 section {
@@ -88,45 +97,88 @@ nav .navBarUL {
 }
 nav .navBarUL li {
   margin-right: 0.888rem;
+  padding-top: 0.333rem;
 }
-nav .navBarUL li a {
-  color: #767676;
+nav ul {
+  display: inline-block;
+  position: relative;
+  color: #000000;
+}
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+nav a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-out;
+}
+nav a:hover::before {
+  transform: scaleX(1);
 }
 .separationDiv {
   border-top: 1px solid #1e2124;
   margin-top: 6.666rem;
   margin-bottom: -2.222rem;
 }
-.sectionFirst h1 {
+.landingSection h1 {
   width: 60%;
 }
-.sectionFirst video {
+.landingSection video {
   margin-top: 4.444rem;
 }
 @media (max-width: 60rem) {
-  .sectionFirst video {
+  .landingSection video {
     margin-top: 3.888rem;
   }
 }
-.sectionSecond .sectionSecondFirstDiv p {
-  font-size: 2.222rem;
-  width: 75%;
-}
-.sectionSecond div {
+.projectsSection .splitGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   column-gap: 1.666rem;
 }
-.sectionSecond div .sectionSecondDescriptionAndLink {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  column-gap: 1.666rem;
+.projectsSection .projectTitle {
+  padding-bottom: 6.666rem;
 }
-.sectionSecond div .sectionSecondDescriptionAndLink p {
-  grid-area: 1 / 1 / 2 / 2;
+.projectsSection .projectTitle p {
+  font-size: 2rem;
+  width: 73%;
 }
-.sectionSecond div .sectionSecondDescriptionAndLink a {
-  grid-area: 1 / 2 / 2 / 3;
+.projectsSection .projectDiv {
+  padding: 3.333rem 0;
+  padding-bottom: 6.666rem;
+  border-top: 1px solid #1e2124;
+}
+.projectsSection .projectDiv .projectDescriptionAndLink {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.222rem;
+  column-gap: 2.222rem;
+}
+@media (max-width: 60rem) {
+  .projectsSection .projectDiv .projectDescriptionAndLink {
+    flex-direction: column;
+    row-gap: 1.333rem;
+  }
+}
+.projectsSection .projectDiv .projectDescriptionAndLink .projectLink {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #767676;
+  font-size: 1.444rem;
+}
+@media (max-width: 60rem) {
+  .projectsSection .projectDiv .projectDescriptionAndLink .projectLink > :nth-child(2) {
+    padding-left: 1.666rem;
+    padding-bottom: 1.111rem;
+  }
 }
