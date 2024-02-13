@@ -1,4 +1,16 @@
 /* Import fonts, statements and global settings */
+@font-face {
+  font-family: "Alliance No. 1";
+  src: url("../fonts/degarism_studio_-_alliance_no.1_light-webfont.woff2") format("woff2"), url("../fonts/degarism_studio_-_alliance_no.1_light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Alliance No. 2";
+  src: url("../fonts/degarism_studio_-_alliance_no.2_light-webfont.woff2") format("woff2"), url("../fonts/degarism_studio_-_alliance_no.2_light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /* Universal CSS Reset */
 * {
   box-sizing: border-box;
@@ -172,12 +184,24 @@ nav .navBarUL li {
 .projectsSection .projectDiv .projectDescriptionAndLink .projectLink {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #767676;
   font-size: 1.444rem;
+  border-bottom: 1px solid #767676;
+}
+.projectsSection .projectDiv .projectDescriptionAndLink .projectLink:hover a {
+  color: #1e2124;
+  opacity: 33%;
+}
+.projectsSection .projectDiv .projectDescriptionAndLink .projectLink:hover > :nth-child(2) {
+  padding-left: 5.555rem;
+  margin: 0;
+  transition: padding-left 500ms, margin 500ms;
+}
+.projectsSection .projectDiv .projectDescriptionAndLink .projectLink > :nth-child(2) {
+  padding-left: 5rem;
+  margin-right: 0.555rem;
 }
 @media (max-width: 60em) {
   .projectsSection .projectDiv .projectDescriptionAndLink .projectLink > :nth-child(2) {
-    padding-left: 1.666rem;
     padding-bottom: 1.111rem;
   }
 }
