@@ -88,32 +88,6 @@ header {
   z-index: 1000;
   background: #fff;
 }
-nav {
-  display: flex;
-  flex-direction: column;
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 2rem 1.666rem;
-}
-nav .navBarUL {
-  list-style: none;
-  display: flex;
-  padding-top: 40px;
-  font-size: 1rem;
-  transition: padding-top 0.1s ease-in-out;
-  /* Smooth transition for padding-top property */
-}
-@media (max-width: 35em) {
-  nav .navBarUL {
-    overflow-x: scroll;
-    -ms-scroll-snap-type: x;
-    scroll-snap-type: x;
-    scrollbar-width: none;
-  }
-}
-nav .navBarUL li {
-  margin-right: 0.888rem;
-}
 /* Navbar Overline Animation */
 .un {
   display: inline-block;
@@ -157,6 +131,32 @@ nav .navBarUL li {
   /* Keep the right property */
   left: auto;
   /* Reset the left property to allow the line to disappear to the right */
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2rem 1.666rem;
+}
+nav .navBarUL {
+  list-style: none;
+  display: flex;
+  padding-top: 40px;
+  font-size: 1rem;
+  transition: padding-top 0.1s ease-in-out;
+  /* Smooth transition for padding-top property */
+}
+@media (max-width: 35em) {
+  nav .navBarUL {
+    overflow-x: scroll;
+    -ms-scroll-snap-type: x;
+    scroll-snap-type: x;
+    scrollbar-width: none;
+  }
+}
+nav .navBarUL li {
+  margin-right: 0.888rem;
 }
 .separationDiv {
   border-top: 1px solid #1e2124;
