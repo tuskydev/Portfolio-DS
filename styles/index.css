@@ -25,8 +25,12 @@ a {
   color: #767676;
 }
 a span {
+  font-family: "Alliance No. 2";
+}
+a span {
   padding-top: 0.333rem;
   color: #767676;
+  font-family: "Alliance No. 1";
 }
 a span:hover {
   color: #1e2124;
@@ -132,9 +136,6 @@ header {
 .hiddenAnimation {
   color: white;
   /* Initial color set to white */
-}
-.showAnimation {
-  opacity: 1;
 }
 /* Non-Preset Styling Starts Here! */
 nav {

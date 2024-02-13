@@ -12,38 +12,43 @@ function scrollFunction() {
   }
 }
 
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     console.log(entry);
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    // console.log(entry);
 
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add("showAnimation");
-//     }
-//   });
-// });
+    if (entry.isIntersecting) {
+      const element = entry.target;
+      const text = element.textContent; // Get the text content of the element
+      element.textContent = ""; // Clear the element content
 
-// const hiddenElements = document.querySelectorAll(".hiddenAnimation");
-// hiddenElements.forEach((el) => observer.observe(el));
+      // Create a span for each character in the text
+      for (let i = 0; i < text.length; i++) {
+        let span = document.createElement("span");
+        span.textContent = text[i];
+        span.style.opacity = "0"; // Start with the character hidden
+        element.appendChild(span);
+      }
 
-window.onload = function () {
-  const h1 = document.querySelector(".hiddenAnimation");
-  const text = h1.textContent; // Get the text content of the h1
-  h1.textContent = ""; // Clear the h1 content
+      // Reveal each character with a delay
+      const spans = element.querySelectorAll("span");
+      spans.forEach((span, index) => {
+        setTimeout(() => {
+          span.style.fontFamily = '"Alliance No. 2"';
+          span.style.opacity = "1"; // Make the character visible
+          span.style.color = "#1e2124"; // Change to the desired color
+        }, index * 25); // Adjust the delay as needed
+      });
 
-  // Create a span for each character in the text
-  for (let i = 0; i < text.length; i++) {
-    let span = document.createElement("span");
-    span.textContent = text[i];
-    span.style.opacity = "0"; // Start with the character hidden
-    h1.appendChild(span);
-  }
+      setTimeout(() => {
+        element.textContent = text;
+        element.style.color = "#1e2124";
+        console.log("Hello world!", text);
+      }, 2000);
 
-  // Reveal each character with a delay
-  const spans = h1.querySelectorAll("span");
-  spans.forEach((span, index) => {
-    setTimeout(() => {
-      span.style.opacity = "1"; // Make the character visible
-      span.style.color = "#1e2124"; // Change to the desired color
-    }, index * 25); // Adjust the delay as needed
+      observer.unobserve(entry.target);
+    }
   });
-};
+});
+
+const hiddenElements = document.querySelectorAll(".hiddenAnimation");
+hiddenElements.forEach((el) => observer.observe(el));
