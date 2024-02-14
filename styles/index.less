@@ -393,9 +393,10 @@ nav {
 
   .aboutDescriptionDiv {
     display: grid;
-    grid-template-columns: 1.222fr 1.888fr;
+    grid-template-columns: 1.333fr 1.888fr;
     grid-template-rows: 1fr;
     padding-bottom: @unit-unit-bottom-padding;
+    font-size: 1.111rem;
 
     > :nth-child(1) {
       margin-left: 6.66em;
@@ -404,4 +405,23 @@ nav {
       margin-left: 9.99em;
     }
   }
+}
+
+.educationSection {
+  .educationSector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-bottom: @unit-unit-bottom-padding;
+
+    .educationSecondHalfDiv {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      font-size: 1.222rem;
+    }
+  }
+}
+
+.skillSection {
 }

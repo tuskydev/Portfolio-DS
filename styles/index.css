@@ -347,13 +347,26 @@ nav .navBarUL li {
 }
 .aboutSection .aboutDescriptionDiv {
   display: grid;
-  grid-template-columns: 1.222fr 1.888fr;
+  grid-template-columns: 1.333fr 1.888fr;
   grid-template-rows: 1fr;
   padding-bottom: 6.666rem;
+  font-size: 1.111rem;
 }
 .aboutSection .aboutDescriptionDiv > :nth-child(1) {
   margin-left: 6.66em;
 }
 .aboutSection .aboutDescriptionDiv > :nth-child(2) {
   margin-left: 9.99em;
+}
+.educationSection .educationSector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-bottom: 6.666rem;
+}
+.educationSection .educationSector .educationSecondHalfDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  font-size: 1.222rem;
 }
