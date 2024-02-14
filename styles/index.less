@@ -24,8 +24,8 @@
 /* Universal CSS Reset */
 
 * {
-  // outline: 1px solid red;
-  // outline-offset: -1px;
+  outline: 1px solid red;
+  outline-offset: -1px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -109,11 +109,11 @@ header {
 /* Animations */
 
 // Navbar Overline Animation
-.un {
+.animationNavBar {
   display: inline-block;
   position: relative;
 }
-.un:after {
+.animationNavBar:after {
   content: "";
   width: 0px;
   height: 1px;
@@ -123,10 +123,10 @@ header {
   background: @mainColor;
   transition: 0.3s ease;
 }
-.un:hover:after {
+.animationNavBar:hover:after {
   width: 100%;
 }
-.un:not(:hover):after {
+.animationNavBar:not(:hover):after {
   right: 0;
   left: auto;
 }
@@ -162,7 +162,7 @@ header {
   left: 0;
   width: 0; /* Start with no width */
   height: 1px; /* Height of the border line */
-  background: black; /* Replace 'black' with your main color variable or value */
+  background: @mainColor; /* Replace 'black' with your main color variable or value */
   animation: drawBorder 0.555s forwards; /* Animation for the border */
 }
 
@@ -323,6 +323,55 @@ nav {
           }
         }
       }
+    }
+  }
+}
+
+.aboutSection {
+  padding-top: @unit-unit-top-padding;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  gap: calc(1.666rem * 2);
+
+  .aboutIntroDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h3 {
+      width: 66%;
+    }
+
+    .downloadResumeDiv {
+      display: flex;
+      // justify-content: space-between;
+      background-color: @mainColor;
+      font-size: 1.222rem;
+      // margin: auto 0;
+      width: 50%;
+
+      a {
+        color: #fff;
+      }
+
+      &:hover {
+        a {
+          color: @mainColor;
+        }
+        background-color: @highlightColor;
+      }
+    }
+  }
+
+  .glassWave3D {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 }
