@@ -13,8 +13,6 @@
 }
 /* Universal CSS Reset */
 * {
-  outline: 1px solid red;
-  outline-offset: -1px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -294,42 +292,68 @@ nav .navBarUL li {
   margin: 0;
   transition: padding-left 300ms, margin 300ms;
 }
-.aboutSection {
-  padding-top: 3.333rem;
+.aboutSection .aboutHeaderDiv {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
-  gap: calc(1.666rem * 2);
+  column-gap: calc(1.666rem * 2);
 }
-.aboutSection .aboutIntroDiv {
+.aboutSection .aboutHeaderDiv .aboutIntroDiv {
+  grid-area: 1 / 1 / 2 / 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  row-gap: calc(2.222rem * 2);
 }
-.aboutSection .aboutIntroDiv h3 {
+.aboutSection .aboutHeaderDiv .aboutIntroDiv h3 {
   width: 66%;
 }
-.aboutSection .aboutIntroDiv .downloadResumeDiv {
-  display: flex;
+.aboutSection .aboutHeaderDiv .aboutIntroDiv .downloadResumeDiv {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr;
+  font-size: 1.111rem;
+  width: 55%;
   background-color: #1e2124;
-  font-size: 1.222rem;
-  width: 50%;
+  cursor: pointer;
+  margin-bottom: 6.666rem;
 }
-.aboutSection .aboutIntroDiv .downloadResumeDiv a {
+.aboutSection .aboutHeaderDiv .aboutIntroDiv .downloadResumeDiv > :nth-child(1) {
+  text-align: left;
+  padding: 1em;
+}
+.aboutSection .aboutHeaderDiv .aboutIntroDiv .downloadResumeDiv > :nth-child(2) {
+  text-align: right;
+  padding: 1em;
+}
+.aboutSection .aboutHeaderDiv .aboutIntroDiv .downloadResumeDiv a {
   color: #fff;
 }
-.aboutSection .aboutIntroDiv .downloadResumeDiv:hover {
+.aboutSection .aboutHeaderDiv .aboutIntroDiv .downloadResumeDiv:hover {
   background-color: #b5b6b7;
 }
-.aboutSection .aboutIntroDiv .downloadResumeDiv:hover a {
+.aboutSection .aboutHeaderDiv .aboutIntroDiv .downloadResumeDiv:hover a {
   color: #1e2124;
 }
-.aboutSection .glassWave3D {
+.aboutSection .aboutHeaderDiv .glassWave3D {
+  grid-area: 1 / 2 / 2 / 3;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
 }
-.aboutSection .glassWave3D img {
+.aboutSection .aboutHeaderDiv .glassWave3D img {
   width: 100%;
   height: auto;
+}
+.aboutSection .aboutDescriptionDiv {
+  display: grid;
+  grid-template-columns: 1.222fr 1.888fr;
+  grid-template-rows: 1fr;
+  padding-bottom: 6.666rem;
+}
+.aboutSection .aboutDescriptionDiv > :nth-child(1) {
+  margin-left: 6.66em;
+}
+.aboutSection .aboutDescriptionDiv > :nth-child(2) {
+  margin-left: 9.99em;
 }

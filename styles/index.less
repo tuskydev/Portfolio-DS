@@ -24,8 +24,8 @@
 /* Universal CSS Reset */
 
 * {
-  outline: 1px solid red;
-  outline-offset: -1px;
+  // outline: 1px solid red;
+  // outline-offset: -1px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -328,50 +328,80 @@ nav {
 }
 
 .aboutSection {
-  padding-top: @unit-unit-top-padding;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr;
-  gap: calc(1.666rem * 2);
+  .aboutHeaderDiv {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    column-gap: calc(1.666rem * 2);
 
-  .aboutIntroDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    h3 {
-      width: 66%;
-    }
-
-    .downloadResumeDiv {
+    .aboutIntroDiv {
+      grid-area: 1 / 1 / 2 / 2;
       display: flex;
-      // justify-content: space-between;
-      background-color: @mainColor;
-      font-size: 1.222rem;
-      // margin: auto 0;
-      width: 50%;
+      flex-direction: column;
+      justify-content: space-between;
+      row-gap: calc(2.222rem * 2);
 
-      a {
-        color: #fff;
+      h3 {
+        width: 66%;
       }
 
-      &:hover {
-        a {
-          color: @mainColor;
+      .downloadResumeDiv {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        grid-template-rows: 1fr;
+        font-size: 1.111rem;
+        width: 55%;
+        background-color: @mainColor;
+        cursor: pointer;
+        margin-bottom: @unit-unit-bottom-padding;
+
+        > :nth-child(1) {
+          text-align: left;
+          padding: 1em;
         }
-        background-color: @highlightColor;
+        > :nth-child(2) {
+          text-align: right;
+          padding: 1em;
+        }
+
+        a {
+          color: #fff;
+        }
+
+        &:hover {
+          background-color: @highlightColor;
+
+          a {
+            color: @mainColor;
+          }
+        }
+      }
+    }
+
+    .glassWave3D {
+      grid-area: 1 / 2 / 2 / 3;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+
+      img {
+        width: 100%;
+        height: auto;
       }
     }
   }
 
-  .glassWave3D {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
+  .aboutDescriptionDiv {
+    display: grid;
+    grid-template-columns: 1.222fr 1.888fr;
+    grid-template-rows: 1fr;
+    padding-bottom: @unit-unit-bottom-padding;
 
-    img {
-      width: 100%;
-      height: auto;
+    > :nth-child(1) {
+      margin-left: 6.66em;
+    }
+    > :nth-child(2) {
+      margin-left: 9.99em;
     }
   }
 }

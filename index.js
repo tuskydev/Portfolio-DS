@@ -64,7 +64,7 @@ const typingObserver = new IntersectionObserver(
         setTimeout(() => {
           element.textContent = text;
           element.style.color = "#1e2124";
-        }, 5000);
+        }, 1111);
 
         typingObserver.unobserve(entry.target);
       }
