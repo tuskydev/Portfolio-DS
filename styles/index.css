@@ -292,23 +292,23 @@ nav .navBarUL li {
   margin: 0;
   transition: padding-left 300ms, margin 300ms;
 }
-.aboutSection .aboutHeaderDiv {
+.aboutSection .aboutSector {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
   column-gap: calc(1.666rem * 2);
 }
-.aboutSection .aboutHeaderDiv .aboutIntroDiv {
+.aboutSection .aboutSector .aboutIntroDiv {
   grid-area: 1 / 1 / 2 / 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   row-gap: calc(2.222rem * 2);
 }
-.aboutSection .aboutHeaderDiv .aboutIntroDiv h3 {
+.aboutSection .aboutSector .aboutIntroDiv h3 {
   width: 66%;
 }
-.aboutSection .aboutHeaderDiv .aboutIntroDiv .downloadResumeDiv {
+.aboutSection .aboutSector .aboutIntroDiv .downloadResumeDiv {
   display: grid;
   grid-template-columns: 4fr 1fr;
   grid-template-rows: 1fr;
@@ -317,31 +317,32 @@ nav .navBarUL li {
   background-color: #1e2124;
   cursor: pointer;
   margin-bottom: 6.666rem;
+  transition: background-color 0.5s ease;
 }
-.aboutSection .aboutHeaderDiv .aboutIntroDiv .downloadResumeDiv > :nth-child(1) {
+.aboutSection .aboutSector .aboutIntroDiv .downloadResumeDiv > :nth-child(1) {
   text-align: left;
   padding: 1em;
 }
-.aboutSection .aboutHeaderDiv .aboutIntroDiv .downloadResumeDiv > :nth-child(2) {
+.aboutSection .aboutSector .aboutIntroDiv .downloadResumeDiv > :nth-child(2) {
   text-align: right;
   padding: 1em;
 }
-.aboutSection .aboutHeaderDiv .aboutIntroDiv .downloadResumeDiv a {
+.aboutSection .aboutSector .aboutIntroDiv .downloadResumeDiv a {
   color: #fff;
 }
-.aboutSection .aboutHeaderDiv .aboutIntroDiv .downloadResumeDiv:hover {
+.aboutSection .aboutSector .aboutIntroDiv .downloadResumeDiv:hover {
   background-color: #b5b6b7;
 }
-.aboutSection .aboutHeaderDiv .aboutIntroDiv .downloadResumeDiv:hover a {
+.aboutSection .aboutSector .aboutIntroDiv .downloadResumeDiv:hover a {
   color: #1e2124;
 }
-.aboutSection .aboutHeaderDiv .glassWave3D {
+.aboutSection .aboutSector .glassWave3D {
   grid-area: 1 / 2 / 2 / 3;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
 }
-.aboutSection .aboutHeaderDiv .glassWave3D img {
+.aboutSection .aboutSector .glassWave3D img {
   width: 100%;
   height: auto;
 }
@@ -369,4 +370,8 @@ nav .navBarUL li {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   font-size: 1.222rem;
+}
+.skillSection .skillSector h1 {
+  width: 60%;
+  padding-bottom: 6.666rem;
 }

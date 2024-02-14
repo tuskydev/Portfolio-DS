@@ -328,7 +328,7 @@ nav {
 }
 
 .aboutSection {
-  .aboutHeaderDiv {
+  .aboutSector {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
@@ -354,6 +354,7 @@ nav {
         background-color: @mainColor;
         cursor: pointer;
         margin-bottom: @unit-unit-bottom-padding;
+        transition: background-color 0.5s ease;
 
         > :nth-child(1) {
           text-align: left;
@@ -424,4 +425,10 @@ nav {
 }
 
 .skillSection {
+  .skillSector {
+    h1 {
+      width: 60%;
+      padding-bottom: @unit-unit-bottom-padding;
+    }
+  }
 }
