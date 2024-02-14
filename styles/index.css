@@ -374,34 +374,49 @@ nav .navBarUL li {
   font-size: 1.222rem;
 }
 .skillSection .skillSector {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
 }
 .skillSection .skillSector h1 {
   width: 60%;
   padding-bottom: 6.666rem;
 }
-.skillSection .skillSector .animationSkillArticle {
+.skillSection .skillSector .animationSkillArticle[data-animated="true"] {
+  border: 5px solid lime;
+  overflow: hidden;
+}
+.skillSection .skillSector .animationSkillArticle[data-animated="true"] .animationSkillArticleINNER {
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: scroll 1s linear infinite;
+}
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+.skillSection .skillSector .animationSkillArticle .animationSkillArticleINNER {
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   gap: 1rem;
 }
-.skillSection .skillSector .animationSkillArticle .skillArticleMain {
+.skillSection .skillSector .animationSkillArticle .animationSkillArticleINNER .skillArticleMain {
   background-color: black;
   width: 200px;
   border-radius: 15px;
 }
-.skillSection .skillSector .animationSkillArticle .skillArticleMain .skillArticleImgDiv {
+.skillSection .skillSector .animationSkillArticle .animationSkillArticleINNER .skillArticleMain .skillArticleImgDiv {
   padding: 1.111rem;
   text-align: center;
   border-bottom: 1px solid #fff;
 }
-.skillSection .skillSector .animationSkillArticle .skillArticleMain .skillArticleImgDiv img {
+.skillSection .skillSector .animationSkillArticle .animationSkillArticleINNER .skillArticleMain .skillArticleImgDiv img {
   width: 100%;
   height: auto;
 }
-.skillSection .skillSector .animationSkillArticle .skillArticleMain .skillArticleTitleDiv h3 {
+.skillSection .skillSector .animationSkillArticle .animationSkillArticleINNER .skillArticleMain .skillArticleTitleDiv h3 {
   color: #fff;
   font-size: 1.222rem;
   padding: 1.111rem;

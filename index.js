@@ -170,4 +170,16 @@ animationFadeUpTwoFunction.forEach((el) => fadeUpTwoObserver.observe(el));
 
 ---------- */
 
-const animationFunction = document.querySelectorAll(".animationSkillArticle");
+const animationSkillArticleFunction = document.querySelectorAll(
+  ".animationSkillArticle"
+);
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+  animationSkillArticleFunction.forEach((el) =>
+    el.setAttribute("data-animated", true)
+  );
+}
