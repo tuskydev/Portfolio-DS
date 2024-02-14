@@ -312,23 +312,17 @@ nav .navBarUL li {
   display: grid;
   grid-template-columns: 4fr 1fr;
   grid-template-rows: 1fr;
-  font-size: 1.111rem;
-  width: 55%;
+  font-size: 1.222rem;
+  width: fit-content;
   background-color: #1e2124;
   cursor: pointer;
   margin-bottom: 6.666rem;
   transition: background-color 0.5s ease;
-}
-.aboutSection .aboutSector .aboutIntroDiv .downloadResumeDiv > :nth-child(1) {
-  text-align: left;
-  padding: 1em;
-}
-.aboutSection .aboutSector .aboutIntroDiv .downloadResumeDiv > :nth-child(2) {
-  text-align: right;
   padding: 1em;
 }
 .aboutSection .aboutSector .aboutIntroDiv .downloadResumeDiv a {
   color: #fff;
+  margin: 0 auto;
 }
 .aboutSection .aboutSector .aboutIntroDiv .downloadResumeDiv:hover {
   background-color: #b5b6b7;
@@ -341,10 +335,13 @@ nav .navBarUL li {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
+  max-width: 100%;
 }
 .aboutSection .aboutSector .glassWave3D img {
+  max-width: 100%;
   width: 100%;
   height: auto;
+  aspect-ratio: auto 1600 / 600;
 }
 .aboutSection .aboutDescriptionDiv {
   display: grid;
@@ -380,6 +377,9 @@ nav .navBarUL li {
   width: 60%;
   padding-bottom: 6.666rem;
 }
+.skillSection .skillSector .animationSkillArticle {
+  padding-bottom: 6.666rem;
+}
 .skillSection .skillSector .animationSkillArticle[data-animated="true"] {
   overflow: hidden;
 }
@@ -402,20 +402,26 @@ nav .navBarUL li {
 .skillSection .skillSector .animationSkillArticle .animationSkillArticleINNER .skillArticleMain {
   background-color: black;
   width: 200px;
+  height: auto;
   border-radius: 15px;
 }
 .skillSection .skillSector .animationSkillArticle .animationSkillArticleINNER .skillArticleMain .skillArticleImgDiv {
-  padding: 1.111rem;
-  text-align: center;
-  border-bottom: 1px solid #fff;
+  overflow: hidden;
+  aspect-ratio: auto 700 / 700;
+  border-bottom: 1px solid #ffffff;
 }
 .skillSection .skillSector .animationSkillArticle .animationSkillArticleINNER .skillArticleMain .skillArticleImgDiv img {
+  max-width: 100%;
+  aspect-ratio: auto 700 / 700;
   width: 100%;
   height: auto;
 }
-.skillSection .skillSector .animationSkillArticle .animationSkillArticleINNER .skillArticleMain .skillArticleTitleDiv h3 {
-  color: #fff;
-  font-size: 1.222rem;
+.skillSection .skillSector .animationSkillArticle .animationSkillArticleINNER .skillArticleMain .skillArticleTitleDiv {
   padding: 1.111rem;
-  padding-bottom: 1.888rem;
+}
+.skillSection .skillSector .animationSkillArticle .animationSkillArticleINNER .skillArticleMain .skillArticleTitleDiv h3 {
+  overflow: visible;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
 }

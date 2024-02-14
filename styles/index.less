@@ -349,24 +349,17 @@ nav {
         display: grid;
         grid-template-columns: 4fr 1fr;
         grid-template-rows: 1fr;
-        font-size: 1.111rem;
-        width: 55%;
+        font-size: 1.222rem;
+        width: fit-content;
         background-color: @mainColor;
         cursor: pointer;
         margin-bottom: @unit-unit-bottom-padding;
         transition: background-color 0.5s ease;
-
-        > :nth-child(1) {
-          text-align: left;
-          padding: 1em;
-        }
-        > :nth-child(2) {
-          text-align: right;
-          padding: 1em;
-        }
+        padding: 1em;
 
         a {
           color: #fff;
+          margin: 0 auto;
         }
 
         &:hover {
@@ -384,10 +377,13 @@ nav {
       display: flex;
       justify-content: flex-end;
       align-items: flex-start;
+      max-width: 100%;
 
       img {
+        max-width: 100%;
         width: 100%;
         height: auto;
+        aspect-ratio: auto 1600 / 600;
       }
     }
   }
@@ -436,6 +432,8 @@ nav {
     }
 
     .animationSkillArticle {
+      padding-bottom: @unit-unit-bottom-padding;
+
       &[data-animated="true"] {
         overflow: hidden;
 
@@ -461,25 +459,30 @@ nav {
         .skillArticleMain {
           background-color: black;
           width: 200px;
+          height: auto;
           border-radius: 15px;
 
           .skillArticleImgDiv {
-            padding: 1.111rem;
-            text-align: center;
-            border-bottom: 1px solid #fff;
+            overflow: hidden;
+            aspect-ratio: auto 700 / 700;
+            border-bottom: 1px solid rgb(255, 255, 255, 10%);
 
             img {
+              max-width: 100%;
+              aspect-ratio: auto 700 / 700;
               width: 100%;
               height: auto;
             }
           }
 
           .skillArticleTitleDiv {
+            padding: 1.111rem;
+
             h3 {
+              overflow: visible;
               color: #fff;
-              font-size: 1.222rem;
-              padding: 1.111rem;
-              padding-bottom: 1.888rem;
+              font-size: 1rem;
+              font-weight: 400;
             }
           }
         }

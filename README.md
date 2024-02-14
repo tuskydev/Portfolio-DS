@@ -32,4 +32,4 @@
 - https://www.palantir.com/
 - https://github.com/elipapa/markdown-cv
 - Credit to this awesome website for visualizing [**CSS Grid**](https://cssgrid-generator.netlify.app/)
-- All the awesome people **who took photography** and uploaded it to ShutterStock and Adobe Stock
+- All the creative people **who took photography** and uploaded it to ShutterStock and Adobe Stock
