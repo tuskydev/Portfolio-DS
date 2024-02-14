@@ -371,6 +371,10 @@ nav .navBarUL li {
   grid-template-rows: 1fr;
   font-size: 1.222rem;
 }
+.skillSection .skillSector {
+  display: flex;
+  flex-direction: column;
+}
 .skillSection .skillSector h1 {
   width: 60%;
   padding-bottom: 6.666rem;
