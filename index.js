@@ -179,7 +179,18 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce").matches) {
 }
 
 function addAnimation() {
-  animationSkillArticleFunction.forEach((el) =>
-    el.setAttribute("data-animated", true)
-  );
+  animationSkillArticleFunction.forEach((el) => {
+    el.setAttribute("data-animated", true);
+
+    const scrollerInner = el.querySelector(".animationSkillArticleINNER");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      console.log(duplicatedItem);
+
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.append(duplicatedItem);
+    });
+  });
 }

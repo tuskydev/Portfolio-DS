@@ -13,8 +13,6 @@
 }
 /* Universal CSS Reset */
 * {
-  outline: 1px solid red;
-  outline-offset: -1px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -383,13 +381,12 @@ nav .navBarUL li {
   padding-bottom: 6.666rem;
 }
 .skillSection .skillSector .animationSkillArticle[data-animated="true"] {
-  border: 5px solid lime;
   overflow: hidden;
 }
 .skillSection .skillSector .animationSkillArticle[data-animated="true"] .animationSkillArticleINNER {
   flex-wrap: nowrap;
   width: max-content;
-  animation: scroll 1s linear infinite;
+  animation: scroll 108s linear infinite;
 }
 @keyframes scroll {
   to {
