@@ -164,3 +164,10 @@ const animationFadeUpTwoFunction = document.querySelectorAll(
   ".animationFadeUpTwo"
 );
 animationFadeUpTwoFunction.forEach((el) => fadeUpTwoObserver.observe(el));
+
+/* ----------
+
+
+---------- */
+
+const animationFunction = document.querySelectorAll(".animationSkillArticle");

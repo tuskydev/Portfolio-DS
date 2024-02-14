@@ -132,10 +132,10 @@ header {
 }
 
 // Button Underline Animation
-.buttonAnimation {
+.animationButton {
   position: relative;
 }
-.buttonAnimation::after {
+.animationButton::after {
   position: absolute;
   content: "";
   background: @navLinksColor;
@@ -145,7 +145,7 @@ header {
   width: 100%;
   transition: 333ms ease-out;
 }
-.buttonAnimation:hover::after {
+.animationButton:hover::after {
   width: 0%;
   right: 0;
   left: auto;
@@ -434,7 +434,7 @@ nav {
       padding-bottom: @unit-unit-bottom-padding;
     }
 
-    .skillArticleScroller {
+    .animationSkillArticle {
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;

@@ -109,10 +109,10 @@ header {
   right: 0;
   left: auto;
 }
-.buttonAnimation {
+.animationButton {
   position: relative;
 }
-.buttonAnimation::after {
+.animationButton::after {
   position: absolute;
   content: "";
   background: #767676;
@@ -122,7 +122,7 @@ header {
   width: 100%;
   transition: 333ms ease-out;
 }
-.buttonAnimation:hover::after {
+.animationButton:hover::after {
   width: 0%;
   right: 0;
   left: auto;
@@ -381,27 +381,27 @@ nav .navBarUL li {
   width: 60%;
   padding-bottom: 6.666rem;
 }
-.skillSection .skillSector .skillArticleScroller {
+.skillSection .skillSector .animationSkillArticle {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 1rem;
 }
-.skillSection .skillSector .skillArticleScroller .skillArticleMain {
+.skillSection .skillSector .animationSkillArticle .skillArticleMain {
   background-color: black;
   width: 200px;
   border-radius: 15px;
 }
-.skillSection .skillSector .skillArticleScroller .skillArticleMain .skillArticleImgDiv {
+.skillSection .skillSector .animationSkillArticle .skillArticleMain .skillArticleImgDiv {
   padding: 1.111rem;
   text-align: center;
   border-bottom: 1px solid #fff;
 }
-.skillSection .skillSector .skillArticleScroller .skillArticleMain .skillArticleImgDiv img {
+.skillSection .skillSector .animationSkillArticle .skillArticleMain .skillArticleImgDiv img {
   width: 100%;
   height: auto;
 }
-.skillSection .skillSector .skillArticleScroller .skillArticleMain .skillArticleTitleDiv h3 {
+.skillSection .skillSector .animationSkillArticle .skillArticleMain .skillArticleTitleDiv h3 {
   color: #fff;
   font-size: 1.222rem;
   padding: 1.111rem;
