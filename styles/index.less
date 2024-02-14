@@ -24,8 +24,8 @@
 /* Universal CSS Reset */
 
 * {
-  // outline: 1px solid red;
-  // outline-offset: -1px;
+  outline: 1px solid red;
+  outline-offset: -1px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -432,6 +432,41 @@ nav {
     h1 {
       width: 60%;
       padding-bottom: @unit-unit-bottom-padding;
+    }
+
+    .skillArticleScroller {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      // overflow: hidden;
+      gap: 1rem;
+
+      .skillArticleMain {
+        background-color: black;
+
+        width: 200px;
+        border-radius: 15px;
+
+        .skillArticleImgDiv {
+          padding: 1.111rem;
+          text-align: center;
+          border-bottom: 1px solid #fff;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .skillArticleTitleDiv {
+          h3 {
+            color: #fff;
+            font-size: 1.222rem;
+            padding: 1.111rem;
+            padding-bottom: 1.888rem;
+          }
+        }
+      }
     }
   }
 }

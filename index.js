@@ -136,6 +136,10 @@ animationFadeUpOneFunction.forEach((el) => fadeUpOneObserver.observe(el));
 
 /* ----------
 
+- animationFadeUpTwoFunction selects all the .animationFadeUpTwo classes in the DOM.
+- Showing the element adds the class 'animationFadeUpTwoDONE'
+- Happens once per element
+- Allowing for the animation to essentially be 'attached'
 
 ---------- */
 const fadeUpTwoObserver = new IntersectionObserver(

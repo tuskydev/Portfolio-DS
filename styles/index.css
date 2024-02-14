@@ -13,6 +13,8 @@
 }
 /* Universal CSS Reset */
 * {
+  outline: 1px solid red;
+  outline-offset: -1px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -378,4 +380,30 @@ nav .navBarUL li {
 .skillSection .skillSector h1 {
   width: 60%;
   padding-bottom: 6.666rem;
+}
+.skillSection .skillSector .skillArticleScroller {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.skillSection .skillSector .skillArticleScroller .skillArticleMain {
+  background-color: black;
+  width: 200px;
+  border-radius: 15px;
+}
+.skillSection .skillSector .skillArticleScroller .skillArticleMain .skillArticleImgDiv {
+  padding: 1.111rem;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+.skillSection .skillSector .skillArticleScroller .skillArticleMain .skillArticleImgDiv img {
+  width: 100%;
+  height: auto;
+}
+.skillSection .skillSector .skillArticleScroller .skillArticleMain .skillArticleTitleDiv h3 {
+  color: #fff;
+  font-size: 1.222rem;
+  padding: 1.111rem;
+  padding-bottom: 1.888rem;
 }
