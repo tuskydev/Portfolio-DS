@@ -114,6 +114,13 @@ header {
   grid-template-rows: 1fr;
   column-gap: 1.666rem;
 }
+.noEmojiArrow {
+  font-family: Arial, sans-serif;
+  /* Specify a font that supports the character */
+  font-feature-settings: "liga" 0;
+  /* Disable ligatures */
+  text-rendering: optimizeLegibility;
+}
 /* Animations */
 .animationNavBar {
   display: inline-block;
@@ -299,7 +306,7 @@ nav .navBarUL li {
 .projectsSection .projectDiv .projectDescriptionAndLink .projectLink {
   display: flex;
   justify-content: space-between;
-  font-size: 1.444rem;
+  font-size: 1.333rem;
 }
 .projectsSection .projectDiv .projectDescriptionAndLink .projectLink > :nth-child(2) {
   padding-left: 5rem;

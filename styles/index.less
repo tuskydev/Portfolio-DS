@@ -140,6 +140,12 @@ header {
   column-gap: 1.666rem;
 }
 
+.noEmojiArrow {
+  font-family: Arial, sans-serif; /* Specify a font that supports the character */
+  font-feature-settings: "liga" 0; /* Disable ligatures */
+  text-rendering: optimizeLegibility;
+}
+
 /* Animations */
 
 // Navbar Overline Animation
@@ -330,7 +336,8 @@ nav {
       .projectLink {
         display: flex;
         justify-content: space-between;
-        font-size: 1.444rem;
+        font-size: 1.333rem;
+        // text-align: center;
 
         > :nth-child(2) {
           padding-left: 5rem;
