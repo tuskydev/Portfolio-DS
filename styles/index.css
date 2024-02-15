@@ -94,13 +94,13 @@ header {
   font-size: 1.222rem;
   text-align: center;
   background-color: #1e2124;
+  margin: auto 0;
   margin-bottom: 6.666rem;
-  padding: 1em;
   transition: background-color 0.5s ease;
 }
 .blackActionButtonGrid a {
+  padding: 1rem;
   color: #fff;
-  margin: 0 auto;
 }
 .blackActionButtonGrid:hover {
   background-color: #b5b6b7;
@@ -332,7 +332,7 @@ nav .navBarUL li {
   row-gap: calc(2.222rem * 2);
 }
 .aboutSection .aboutSector .aboutIntroDiv h3 {
-  width: 66%;
+  width: 70%;
 }
 .aboutSection .aboutSector .glassWave3D {
   grid-area: 1 / 2 / 2 / 3;
@@ -452,7 +452,15 @@ nav .navBarUL li {
 }
 .contactSection .contactSector .contactBlurbAndButtonDiv p {
   font-size: 1.111rem;
+  width: 33.33%;
 }
 .contactSection .contactSector .contactBlurbAndButtonDiv .blackActionButtonGrid {
   margin: 0;
+}
+.contactSection .contactSector .contactBlurbAndButtonDiv .blackActionButtonGrid a {
+  padding: 0.666rem;
+}
+.contactSection .contactSector .contactBlurbAndButtonDiv .blackActionButtonGrid a:nth-child(2) {
+  padding-right: 2.222rem;
+  margin-left: -1.222rem;
 }

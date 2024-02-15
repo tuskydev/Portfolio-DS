@@ -115,13 +115,13 @@ header {
   font-size: 1.222rem;
   text-align: center;
   background-color: @mainColor;
+  margin: auto 0;
   margin-bottom: @unit-unit-bottom-padding;
-  padding: 1em;
   transition: background-color 0.5s ease;
 
   a {
+    padding: 1rem;
     color: #fff;
-    margin: 0 auto;
   }
 
   &:hover {
@@ -372,7 +372,7 @@ nav {
       row-gap: calc(2.222rem * 2);
 
       h3 {
-        width: 66%;
+        width: 70%;
       }
     }
 
@@ -516,10 +516,21 @@ nav {
 
       p {
         font-size: 1.111rem;
+        width: 33.33%;
       }
 
+      // Adjusting class' preset styling
       .blackActionButtonGrid {
-        margin: 0; // Removing class' preset styling
+        margin: 0;
+
+        a {
+          padding: 0.666rem;
+
+          &:nth-child(2) {
+            padding-right: 2.222rem;
+            margin-left: -1.222rem;
+          }
+        }
       }
     }
   }
