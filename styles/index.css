@@ -435,13 +435,14 @@ nav .navBarUL li {
 }
 .contactSection {
   padding-top: 3.333rem;
+  padding-bottom: 6.666rem;
 }
 .contactSection .contactSector {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   column-gap: 1.666rem;
-  padding-bottom: 6.666rem;
+  padding-bottom: 1.111rem;
 }
 .contactSection .contactSector .contactBlurbAndButtonDiv {
   display: flex;
