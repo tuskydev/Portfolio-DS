@@ -85,6 +85,28 @@ header {
   z-index: 1000;
   background: #fff;
 }
+.blackActionButtonGrid {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr;
+  font-size: 1.222rem;
+  width: fit-content;
+  background-color: #1e2124;
+  cursor: pointer;
+  margin-bottom: 6.666rem;
+  transition: background-color 0.5s ease;
+  padding: 1em;
+}
+.blackActionButtonGrid a {
+  color: #fff;
+  margin: 0 auto;
+}
+.blackActionButtonGrid:hover {
+  background-color: #b5b6b7;
+}
+.blackActionButtonGrid:hover a {
+  color: #1e2124;
+}
 /* Animations */
 .animationNavBar {
   display: inline-block;
@@ -292,6 +314,9 @@ nav .navBarUL li {
   margin: 0;
   transition: padding-left 300ms, margin 300ms;
 }
+.aboutSection {
+  padding-top: 3.333rem;
+}
 .aboutSection .aboutSector {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -307,28 +332,6 @@ nav .navBarUL li {
 }
 .aboutSection .aboutSector .aboutIntroDiv h3 {
   width: 66%;
-}
-.aboutSection .aboutSector .aboutIntroDiv .downloadResumeDiv {
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-  grid-template-rows: 1fr;
-  font-size: 1.222rem;
-  width: fit-content;
-  background-color: #1e2124;
-  cursor: pointer;
-  margin-bottom: 6.666rem;
-  transition: background-color 0.5s ease;
-  padding: 1em;
-}
-.aboutSection .aboutSector .aboutIntroDiv .downloadResumeDiv a {
-  color: #fff;
-  margin: 0 auto;
-}
-.aboutSection .aboutSector .aboutIntroDiv .downloadResumeDiv:hover {
-  background-color: #b5b6b7;
-}
-.aboutSection .aboutSector .aboutIntroDiv .downloadResumeDiv:hover a {
-  color: #1e2124;
 }
 .aboutSection .aboutSector .glassWave3D {
   grid-area: 1 / 2 / 2 / 3;
@@ -356,6 +359,9 @@ nav .navBarUL li {
 .aboutSection .aboutDescriptionDiv > :nth-child(2) {
   margin-left: 9.99em;
 }
+.educationSection {
+  padding-top: 3.333rem;
+}
 .educationSection .educationSector {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -367,6 +373,9 @@ nav .navBarUL li {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   font-size: 1.222rem;
+}
+.skillSection {
+  padding-top: 3.333rem;
 }
 .skillSection .skillSector {
   display: grid;
@@ -424,4 +433,22 @@ nav .navBarUL li {
   color: #fff;
   font-size: 1rem;
   font-weight: 400;
+}
+.contactSection {
+  padding-top: 3.333rem;
+}
+.contactSection .contactSector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.contactSection .contactSector .contactBlurbAndButtonDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.contactSection .contactSector .contactBlurbAndButtonDiv .getInTouchDiv {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.444rem;
 }

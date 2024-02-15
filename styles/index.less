@@ -106,6 +106,32 @@ header {
   background: #fff;
 }
 
+.blackActionButtonGrid {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr;
+  font-size: 1.222rem;
+  width: fit-content;
+  background-color: @mainColor;
+  cursor: pointer;
+  margin-bottom: @unit-unit-bottom-padding;
+  transition: background-color 0.5s ease;
+  padding: 1em;
+
+  a {
+    color: #fff;
+    margin: 0 auto;
+  }
+
+  &:hover {
+    background-color: @highlightColor;
+
+    a {
+      color: @mainColor;
+    }
+  }
+}
+
 /* Animations */
 
 // Navbar Overline Animation
@@ -328,6 +354,8 @@ nav {
 }
 
 .aboutSection {
+  padding-top: @unit-unit-top-padding;
+
   .aboutSector {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -343,32 +371,6 @@ nav {
 
       h3 {
         width: 66%;
-      }
-
-      .downloadResumeDiv {
-        display: grid;
-        grid-template-columns: 4fr 1fr;
-        grid-template-rows: 1fr;
-        font-size: 1.222rem;
-        width: fit-content;
-        background-color: @mainColor;
-        cursor: pointer;
-        margin-bottom: @unit-unit-bottom-padding;
-        transition: background-color 0.5s ease;
-        padding: 1em;
-
-        a {
-          color: #fff;
-          margin: 0 auto;
-        }
-
-        &:hover {
-          background-color: @highlightColor;
-
-          a {
-            color: @mainColor;
-          }
-        }
       }
     }
 
@@ -405,6 +407,8 @@ nav {
 }
 
 .educationSection {
+  padding-top: @unit-unit-top-padding;
+
   .educationSector {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -421,6 +425,8 @@ nav {
 }
 
 .skillSection {
+  padding-top: @unit-unit-top-padding;
+
   .skillSector {
     display: grid;
     grid-template-columns: 1fr;
@@ -486,6 +492,28 @@ nav {
             }
           }
         }
+      }
+    }
+  }
+}
+
+.contactSection {
+  padding-top: @unit-unit-top-padding;
+
+  .contactSector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    .contactBlurbAndButtonDiv {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+
+      .getInTouchDiv {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.444rem;
       }
     }
   }
