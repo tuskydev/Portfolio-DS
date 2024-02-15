@@ -24,58 +24,60 @@ function scrollFunction() {
 - After a tiny delay changes the opacity from 0 to 1 of each letter
 - Creates a 'typing' effect
 - Cleans up span tags with the original content for easier load on memory
+- Function will NOT run until all fonts are loaded in
 
 ---------- */
-const typingObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const element = entry.target;
-        const text = element.textContent; // Get the text content of the element
-        element.textContent = ""; // Clear the element content
+document.fonts.ready.then(() => {
+  const typingObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const element = entry.target;
+          const text = element.textContent; // Get the text content of the element
+          element.textContent = ""; // Clear the element content
 
-        // Create a span for each character in the text
-        for (let i = 0; i < text.length; i++) {
-          let span = document.createElement("span");
-          span.textContent = text[i];
-          span.style.opacity = "0"; // Start with the character hidden
-          element.appendChild(span);
-        }
+          // Create a span for each character in the text
+          for (let i = 0; i < text.length; i++) {
+            let span = document.createElement("span");
+            span.textContent = text[i];
+            span.style.opacity = "0"; // Start with the character hidden
+            element.appendChild(span);
+          }
 
-        // Reveal each character with a delay
-        const spans = element.querySelectorAll("span");
-        spans.forEach((span, index) => {
+          // Reveal each character with a delay
+          const spans = element.querySelectorAll("span");
+          spans.forEach((span, index) => {
+            setTimeout(() => {
+              if (
+                (element.tagName.toLowerCase() == "h1") |
+                (element.tagName.toLowerCase() == "h2")
+              ) {
+                span.style.fontFamily = '"Alliance No. 2"';
+              }
+
+              if (element.tagName.toLowerCase() == "h3") {
+                span.style.fontFamily = '"Alliance No. 1"';
+              }
+              span.style.opacity = "1"; // Make the character visible
+              span.style.color = "#1e2124"; // Change to the desired color
+            }, index * 25); // Adjust the delay as needed
+          });
+
           setTimeout(() => {
-            if (
-              (element.tagName.toLowerCase() == "h1") |
-              (element.tagName.toLowerCase() == "h2")
-            ) {
-              span.style.fontFamily = '"Alliance No. 2"';
-            }
+            element.textContent = text;
+            element.style.color = "#1e2124";
+          }, text.length * 25 + 100); // Adjusted to wait until the last character is shown
 
-            if (element.tagName.toLowerCase() == "h3") {
-              span.style.fontFamily = '"Alliance No. 1"';
-            }
-            span.style.opacity = "1"; // Make the character visible
-            span.style.color = "#1e2124"; // Change to the desired color
-          }, index * 25); // Adjust the delay as needed
-        });
+          typingObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
 
-        setTimeout(() => {
-          element.textContent = text;
-          element.style.color = "#1e2124";
-        }, 1111);
-
-        typingObserver.unobserve(entry.target);
-      }
-    });
-  },
-  // How much in page before applying class
-  { threshold: 0.1 }
-);
-
-const typingAnimationFunction = document.querySelectorAll(".animationTyping");
-typingAnimationFunction.forEach((el) => typingObserver.observe(el));
+  const typingAnimationFunction = document.querySelectorAll(".animationTyping");
+  typingAnimationFunction.forEach((el) => typingObserver.observe(el));
+});
 
 /* ----------
 

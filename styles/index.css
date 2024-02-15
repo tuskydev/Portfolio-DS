@@ -129,8 +129,10 @@ header {
   background: #1e2124;
   transition: 0.3s ease;
 }
-.animationNavBar:hover:after {
-  width: 100%;
+@media (hover: hover) {
+  .animationNavBar:hover:after {
+    width: 100%;
+  }
 }
 .animationNavBar:not(:hover):after {
   right: 0;
@@ -227,6 +229,9 @@ header {
   }
 }
 /* Non-Preset Styling Starts Here! */
+@media (max-width: 1500px) {
+  background-color: aqua;
+}
 nav {
   display: flex;
   flex-direction: column;
