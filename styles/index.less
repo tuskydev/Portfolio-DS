@@ -110,13 +110,14 @@ header {
   display: grid;
   grid-template-columns: 4fr 1fr;
   grid-template-rows: 1fr;
-  font-size: 1.222rem;
   width: fit-content;
-  background-color: @mainColor;
   cursor: pointer;
+  font-size: 1.222rem;
+  text-align: center;
+  background-color: @mainColor;
   margin-bottom: @unit-unit-bottom-padding;
-  transition: background-color 0.5s ease;
   padding: 1em;
+  transition: background-color 0.5s ease;
 
   a {
     color: #fff;
@@ -498,18 +499,23 @@ nav {
   .contactSector {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
     column-gap: 1.666rem;
+    padding-bottom: @unit-unit-bottom-padding;
 
     .contactBlurbAndButtonDiv {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
+      display: flex;
+      justify-content: space-between;
+      align-content: flex-end;
+      align-items: flex-end;
+      margin-top: 8.888rem;
 
-      .getInTouchDiv {
-        display: flex;
-        justify-content: space-between;
-        font-size: 1.444rem;
+      p {
+        font-size: 1.111rem;
+      }
+
+      .blackActionButtonGrid {
+        margin: 0; // Removing class' preset styling
       }
     }
   }
