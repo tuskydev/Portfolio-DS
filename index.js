@@ -208,9 +208,12 @@ function addAnimation() {
 
 /* ----------
 
+- navBarAnchorClickFunction adds a 'click' eventListener to all navBar <a>
+- Sending user to the desired page area
+- Clicking on 'Contact' adds the class .animationGlow
+- Adds smooth-scrolling!
 
 ---------- */
-
 function navBarAnchorClickFunction(e) {
   e.preventDefault();
 
