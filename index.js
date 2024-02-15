@@ -211,37 +211,41 @@ function addAnimation() {
 
 ---------- */
 
+function navBarAnchorClickFunction(e) {
+  e.preventDefault();
+
+  const href = this.getAttribute("href");
+  const navbarHeight = document.querySelector("nav").offsetHeight;
+
+  // Determine if the link is meant to scroll to the top
+  if (href === "#") {
+    window.scroll({
+      top: 0, // Scroll to the top of the page
+      behavior: "smooth",
+    });
+  } else {
+    const target = document.querySelector(href);
+    window.scroll({
+      top: target.offsetTop - navbarHeight,
+      behavior: "smooth",
+    });
+
+    // Apply the glow effect if it's the Contact link
+    if (target.id === "contactID") {
+      // Find the closest ancestor which is a section with class 'contactSector'
+      const contactSection = target.closest(".contactSector");
+      contactSection.classList.add("animationGlow");
+
+      // Remove the class after the animation completes (2 seconds)
+      setTimeout(() => {
+        contactSection.classList.remove("animationGlow");
+      }, 2000);
+    }
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      // Determine if the link is meant to scroll to the top
-      if (this.getAttribute("href") === "#") {
-        window.scroll({
-          top: 0, // Scroll to the top of the page
-          behavior: "smooth",
-        });
-      } else {
-        let target = document.querySelector(this.getAttribute("href"));
-        let navbarHeight = document.querySelector("nav").offsetHeight;
-
-        window.scroll({
-          top: target.offsetTop - navbarHeight,
-          behavior: "smooth",
-        });
-
-        // Apply the glow effect if it's the Contact link
-        if (target.id === "contactID") {
-          let contactSection = target.closest(".contactSector"); // Find the closest ancestor which is a section with class 'contactSection'
-          contactSection.classList.add("animationGlow");
-
-          // Remove the class after the animation completes (2 seconds)
-          setTimeout(() => {
-            contactSection.classList.remove("animationGlow");
-          }, 2000);
-        }
-      }
-    });
+    anchor.addEventListener("click", navBarAnchorClickFunction);
   });
 });
