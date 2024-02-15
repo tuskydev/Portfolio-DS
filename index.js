@@ -70,7 +70,8 @@ const typingObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.1 } // How much in page before applying class
+  // How much in page before applying class
+  { threshold: 0.1 }
 );
 
 const typingAnimationFunction = document.querySelectorAll(".animationTyping");
@@ -93,11 +94,13 @@ const borderObserver = new IntersectionObserver(
         // Animate the border
         element.classList.add("animationBorderDONE");
 
-        borderObserver.unobserve(entry.target); // Stop observing the element after applying the animation
+        // Stop observing the element after applying the animation
+        borderObserver.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.1 } // How much in page before applying class
+  // How much in page before applying class
+  { threshold: 0.1 }
 );
 
 const animationBorderFunction = document.querySelectorAll(".animationBorder");
@@ -122,11 +125,13 @@ const fadeUpOneObserver = new IntersectionObserver(
           element.classList.add("animationFadeUpOneDONE");
         }, 222);
 
-        fadeUpOneObserver.unobserve(entry.target); // Stop observing the element after applying the animation
+        // Stop observing the element after applying the animation
+        fadeUpOneObserver.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.1 } // How much in page before applying class
+  // How much in page before applying class
+  { threshold: 0.1 }
 );
 
 const animationFadeUpOneFunction = document.querySelectorAll(
@@ -153,11 +158,13 @@ const fadeUpTwoObserver = new IntersectionObserver(
           element.classList.add("animationFadeUpTwoDONE");
         }, 777);
 
-        fadeUpTwoObserver.unobserve(entry.target); // Stop observing the element after applying the animation
+        // Stop observing the element after applying the animation
+        fadeUpTwoObserver.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.1 } // How much in page before applying class
+  // How much in page before applying class
+  { threshold: 0.1 }
 );
 
 const animationFadeUpTwoFunction = document.querySelectorAll(
@@ -167,6 +174,10 @@ animationFadeUpTwoFunction.forEach((el) => fadeUpTwoObserver.observe(el));
 
 /* ----------
 
+- addAnimation selects all the .animationSkillArticle classes in the DOM.
+- Adding the 'data-animated' attribute to them
+- Happens once per element
+- Allowing for the animation to essentially be 'attached'
 
 ---------- */
 
@@ -174,6 +185,7 @@ const animationSkillArticleFunction = document.querySelectorAll(
   ".animationSkillArticle"
 );
 
+// Adds animation if the user doesn't prefer reduced motion
 if (!window.matchMedia("(prefers-reduced-motion: reduce").matches) {
   addAnimation();
 }
@@ -187,7 +199,6 @@ function addAnimation() {
 
     scrollerContent.forEach((item) => {
       const duplicatedItem = item.cloneNode(true);
-      console.log(duplicatedItem);
 
       duplicatedItem.setAttribute("aria-hidden", true);
       scrollerInner.append(duplicatedItem);
