@@ -231,10 +231,9 @@ document.addEventListener("DOMContentLoaded", function () {
           behavior: "smooth",
         });
 
-        console.log(target);
         // Apply the glow effect if it's the Contact link
         if (target.id === "contactID") {
-          let contactSection = document.querySelector(target);
+          let contactSection = target.closest(".contactSector"); // Find the closest ancestor which is a section with class 'contactSection'
           contactSection.classList.add("animationGlow");
 
           // Remove the class after the animation completes (2 seconds)
