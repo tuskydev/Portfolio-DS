@@ -230,6 +230,18 @@ document.addEventListener("DOMContentLoaded", function () {
           top: target.offsetTop - navbarHeight,
           behavior: "smooth",
         });
+
+        console.log(target);
+        // Apply the glow effect if it's the Contact link
+        if (target.id === "contactID") {
+          let contactSection = document.querySelector(target);
+          contactSection.classList.add("animationGlow");
+
+          // Remove the class after the animation completes (2 seconds)
+          setTimeout(() => {
+            contactSection.classList.remove("animationGlow");
+          }, 2000);
+        }
       }
     });
   });

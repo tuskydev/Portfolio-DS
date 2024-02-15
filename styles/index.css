@@ -464,3 +464,14 @@ nav .navBarUL li {
   padding-right: 2.222rem;
   margin-left: -1.222rem;
 }
+.animationGlow {
+  animation: glow 2s ease-out forwards;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0);
+  }
+}
