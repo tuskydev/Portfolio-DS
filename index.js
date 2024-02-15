@@ -176,8 +176,8 @@ animationFadeUpTwoFunction.forEach((el) => fadeUpTwoObserver.observe(el));
 
 - addAnimation selects all the .animationSkillArticle classes in the DOM.
 - Adding the 'data-animated' attribute to them
-- Happens once per element
-- Allowing for the animation to essentially be 'attached'
+- Cloning each <article> and appending it to the existing list once only
+- Creating an infinite scroll!
 
 ---------- */
 
