@@ -205,3 +205,32 @@ function addAnimation() {
     });
   });
 }
+
+/* ----------
+
+
+---------- */
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Determine if the link is meant to scroll to the top
+      if (this.getAttribute("href") === "#") {
+        window.scroll({
+          top: 0, // Scroll to the top of the page
+          behavior: "smooth",
+        });
+      } else {
+        let target = document.querySelector(this.getAttribute("href"));
+        let navbarHeight = document.querySelector("nav").offsetHeight;
+
+        window.scroll({
+          top: target.offsetTop - navbarHeight,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+});
