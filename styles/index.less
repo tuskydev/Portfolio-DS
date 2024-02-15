@@ -132,6 +132,13 @@ header {
   }
 }
 
+.splitGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 1.666rem;
+}
+
 /* Animations */
 
 // Navbar Overline Animation
@@ -290,12 +297,6 @@ nav {
 .projectsSection {
   padding-top: @unit-unit-top-padding;
 
-  .splitGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    column-gap: 1.666rem;
-  }
   .projectTitle {
     padding-bottom: @unit-unit-bottom-padding;
     p {
@@ -410,15 +411,9 @@ nav {
   padding-top: @unit-unit-top-padding;
 
   .educationSector {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
     padding-bottom: @unit-unit-bottom-padding;
 
     .educationSecondHalfDiv {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
       font-size: 1.222rem;
     }
   }
@@ -504,6 +499,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    column-gap: 1.666rem;
 
     .contactBlurbAndButtonDiv {
       display: grid;

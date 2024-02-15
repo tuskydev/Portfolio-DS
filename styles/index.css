@@ -107,6 +107,12 @@ header {
 .blackActionButtonGrid:hover a {
   color: #1e2124;
 }
+.splitGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 1.666rem;
+}
 /* Animations */
 .animationNavBar {
   display: inline-block;
@@ -261,12 +267,6 @@ nav .navBarUL li {
 .projectsSection {
   padding-top: 3.333rem;
 }
-.projectsSection .splitGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  column-gap: 1.666rem;
-}
 .projectsSection .projectTitle {
   padding-bottom: 6.666rem;
 }
@@ -363,15 +363,9 @@ nav .navBarUL li {
   padding-top: 3.333rem;
 }
 .educationSection .educationSector {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
   padding-bottom: 6.666rem;
 }
 .educationSection .educationSector .educationSecondHalfDiv {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
   font-size: 1.222rem;
 }
 .skillSection {
@@ -441,6 +435,7 @@ nav .navBarUL li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  column-gap: 1.666rem;
 }
 .contactSection .contactSector .contactBlurbAndButtonDiv {
   display: grid;
