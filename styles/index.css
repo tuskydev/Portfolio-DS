@@ -290,6 +290,10 @@ nav {
   margin: 0 auto;
   padding: 2rem 1.666rem;
 }
+nav .tuskyLogoBlack {
+  width: 111px;
+  height: auto;
+}
 nav .navBarUL {
   list-style: none;
   display: flex;
