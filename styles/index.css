@@ -45,7 +45,7 @@ h1 {
 }
 @media (max-width: 60em) {
   h1 {
-    font-size: 3.333rem;
+    font-size: 3rem;
   }
 }
 h2 {
@@ -62,6 +62,14 @@ h3 {
 }
 @media (max-width: 60em) {
   h3 {
+    font-size: 1.333rem;
+  }
+}
+p {
+  font-size: 2rem;
+}
+@media (max-width: 60em) {
+  p {
     font-size: 1.333rem;
   }
 }
@@ -97,6 +105,11 @@ header {
   margin: auto 0;
   margin-bottom: 6.666rem;
   transition: background-color 0.5s ease;
+}
+@media (max-width: 60em) {
+  .blackActionButtonGrid {
+    margin-bottom: 1rem;
+  }
 }
 .blackActionButtonGrid a {
   padding: 1rem;
@@ -280,21 +293,40 @@ nav .navBarUL li {
 @media (max-width: 60em) {
   .landingSection video {
     margin-top: 0;
+    padding-bottom: 4.444rem;
   }
 }
 .projectsSection {
   padding-top: 3.333rem;
 }
+@media (max-width: 60em) {
+  .projectsSection {
+    padding-top: 2.222rem;
+  }
+}
 .projectsSection .projectTitle {
   padding-bottom: 6.666rem;
 }
+@media (max-width: 60em) {
+  .projectsSection .projectTitle {
+    padding-bottom: 4.444rem;
+  }
+  .projectsSection .projectTitle p {
+    margin-top: 6.666rem;
+  }
+}
 .projectsSection .projectTitle p {
-  font-size: 2rem;
   width: 73%;
 }
 .projectsSection .projectDiv {
   padding-top: 3.333rem;
   padding-bottom: 6.666rem;
+}
+@media (max-width: 60em) {
+  .projectsSection .projectDiv {
+    padding-top: 2.222rem;
+    padding-bottom: 4.444rem;
+  }
 }
 .projectsSection .projectDiv .projectDescriptionAndLink {
   display: flex;
@@ -335,11 +367,22 @@ nav .navBarUL li {
 .aboutSection {
   padding-top: 3.333rem;
 }
+@media (max-width: 60em) {
+  .aboutSection {
+    padding-top: 2.222rem;
+  }
+}
 .aboutSection .aboutSector {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
   column-gap: calc(1.666rem * 2);
+}
+@media (max-width: 60em) {
+  .aboutSection .aboutSector {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .aboutSection .aboutSector .aboutIntroDiv {
   grid-area: 1 / 1 / 2 / 2;
@@ -347,6 +390,11 @@ nav .navBarUL li {
   flex-direction: column;
   justify-content: space-between;
   row-gap: calc(2.222rem * 2);
+}
+@media (max-width: 60em) {
+  .aboutSection .aboutSector .aboutIntroDiv {
+    row-gap: 1rem;
+  }
 }
 .aboutSection .aboutSector .aboutIntroDiv h3 {
   width: 70%;
@@ -377,17 +425,37 @@ nav .navBarUL li {
 .aboutSection .aboutDescriptionDiv > :nth-child(2) {
   margin-left: 9.99em;
 }
+@media (max-width: 60em) {
+  .aboutSection .aboutDescriptionDiv {
+    padding-bottom: 4.444rem;
+  }
+}
 .educationSection {
   padding-top: 3.333rem;
 }
+@media (max-width: 60em) {
+  .educationSection {
+    padding-top: 2.222rem;
+  }
+}
 .educationSection .educationSector {
   padding-bottom: 6.666rem;
+}
+@media (max-width: 60em) {
+  .educationSection .educationSector {
+    padding-bottom: 4.444rem;
+  }
 }
 .educationSection .educationSector .educationSecondHalfDiv {
   font-size: 1.222rem;
 }
 .skillSection {
   padding-top: 3.333rem;
+}
+@media (max-width: 60em) {
+  .skillSection {
+    padding-top: 2.222rem;
+  }
 }
 .skillSection .skillSector {
   display: grid;
@@ -397,6 +465,11 @@ nav .navBarUL li {
 .skillSection .skillSector h1 {
   width: 60%;
   padding-bottom: 6.666rem;
+}
+@media (max-width: 60em) {
+  .skillSection .skillSector h1 {
+    padding-bottom: 4.444rem;
+  }
 }
 .skillSection .skillSector .animationSkillArticle {
   max-width: 1200px;
@@ -416,6 +489,11 @@ nav .navBarUL li {
 @keyframes scroll {
   to {
     transform: translate(calc(-50% - 0.5rem));
+  }
+}
+@media (max-width: 60em) {
+  .skillSection .skillSector .animationSkillArticle {
+    padding-bottom: 4.444rem;
   }
 }
 .skillSection .skillSector .animationSkillArticle .animationSkillArticleINNER {
@@ -453,6 +531,12 @@ nav .navBarUL li {
 .contactSection {
   padding-top: 3.333rem;
   padding-bottom: 6.666rem;
+}
+@media (max-width: 60em) {
+  .contactSection {
+    padding-top: 3.333rem;
+    padding-bottom: 4.444rem;
+  }
 }
 .contactSection .contactSector {
   display: grid;

@@ -64,7 +64,7 @@ h1 {
   font-size: 5.555rem;
 
   @media (max-width: @tablet) {
-    font-size: 3.333rem;
+    font-size: 3rem;
   }
 }
 
@@ -79,6 +79,14 @@ h2 {
 h3 {
   font-size: 2.222rem;
   display: inline-block;
+
+  @media (max-width: @tablet) {
+    font-size: 1.333rem;
+  }
+}
+
+p {
+  font-size: 2rem;
 
   @media (max-width: @tablet) {
     font-size: 1.333rem;
@@ -116,8 +124,12 @@ header {
   text-align: center;
   background-color: @mainColor;
   margin: auto 0;
-  margin-bottom: @unit-unit-bottom-padding;
+  margin-bottom: @unit-bottom-padding;
   transition: background-color 0.5s ease;
+
+  @media (max-width: @tablet) {
+    margin-bottom: 1rem;
+  }
 
   a {
     padding: 1rem;
@@ -303,28 +315,46 @@ nav {
 
   video {
     padding-top: 4.444rem;
-    padding-bottom: @unit-unit-bottom-padding;
+    padding-bottom: @unit-bottom-padding;
 
     @media (max-width: @tablet) {
       margin-top: 0;
+      padding-bottom: @unit-bottom-paddingTABLET;
     }
   }
 }
 
 .projectsSection {
-  padding-top: @unit-unit-top-padding;
+  padding-top: @unit-top-padding;
+
+  @media (max-width: @tablet) {
+    padding-top: @unit-top-paddingTABLET;
+  }
 
   .projectTitle {
-    padding-bottom: @unit-unit-bottom-padding;
+    padding-bottom: @unit-bottom-padding;
+
+    @media (max-width: @tablet) {
+      padding-bottom: @unit-bottom-paddingTABLET;
+
+      p {
+        margin-top: 6.666rem;
+      }
+    }
+
     p {
-      font-size: 2rem;
       width: 73%;
     }
   }
 
   .projectDiv {
-    padding-top: @unit-unit-top-padding;
-    padding-bottom: @unit-unit-bottom-padding;
+    padding-top: @unit-top-padding;
+    padding-bottom: @unit-bottom-padding;
+
+    @media (max-width: @tablet) {
+      padding-top: @unit-top-paddingTABLET;
+      padding-bottom: @unit-bottom-paddingTABLET;
+    }
 
     .projectDescriptionAndLink {
       display: flex;
@@ -373,7 +403,11 @@ nav {
 }
 
 .aboutSection {
-  padding-top: @unit-unit-top-padding;
+  padding-top: @unit-top-padding;
+
+  @media (max-width: @tablet) {
+    padding-top: @unit-top-paddingTABLET;
+  }
 
   .aboutSector {
     display: grid;
@@ -381,12 +415,21 @@ nav {
     grid-template-rows: 1fr;
     column-gap: calc(1.666rem * 2);
 
+    @media (max-width: @tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+
     .aboutIntroDiv {
       grid-area: 1 / 1 / 2 / 2;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       row-gap: calc(2.222rem * 2);
+
+      @media (max-width: @tablet) {
+        row-gap: 1rem;
+      }
 
       h3 {
         width: 70%;
@@ -413,7 +456,7 @@ nav {
     display: grid;
     grid-template-columns: 1.333fr 1.888fr;
     grid-template-rows: 1fr;
-    padding-bottom: @unit-unit-bottom-padding;
+    padding-bottom: @unit-bottom-padding;
     font-size: 1.111rem;
 
     > :nth-child(1) {
@@ -422,14 +465,26 @@ nav {
     > :nth-child(2) {
       margin-left: 9.99em;
     }
+
+    @media (max-width: @tablet) {
+      padding-bottom: @unit-bottom-paddingTABLET;
+    }
   }
 }
 
 .educationSection {
-  padding-top: @unit-unit-top-padding;
+  padding-top: @unit-top-padding;
+
+  @media (max-width: @tablet) {
+    padding-top: @unit-top-paddingTABLET;
+  }
 
   .educationSector {
-    padding-bottom: @unit-unit-bottom-padding;
+    padding-bottom: @unit-bottom-padding;
+
+    @media (max-width: @tablet) {
+      padding-bottom: @unit-bottom-paddingTABLET;
+    }
 
     .educationSecondHalfDiv {
       font-size: 1.222rem;
@@ -438,7 +493,11 @@ nav {
 }
 
 .skillSection {
-  padding-top: @unit-unit-top-padding;
+  padding-top: @unit-top-padding;
+
+  @media (max-width: @tablet) {
+    padding-top: @unit-top-paddingTABLET;
+  }
 
   .skillSector {
     display: grid;
@@ -447,13 +506,17 @@ nav {
 
     h1 {
       width: 60%;
-      padding-bottom: @unit-unit-bottom-padding;
+      padding-bottom: @unit-bottom-padding;
+
+      @media (max-width: @tablet) {
+        padding-bottom: @unit-bottom-paddingTABLET;
+      }
     }
 
     .animationSkillArticle {
       max-width: 1200px;
       margin: auto;
-      padding-bottom: @unit-unit-bottom-padding;
+      padding-bottom: @unit-bottom-padding;
 
       &[data-animated="true"] {
         overflow: hidden;
@@ -471,6 +534,10 @@ nav {
         to {
           transform: translate(calc(-50% - 0.5rem));
         }
+      }
+
+      @media (max-width: @tablet) {
+        padding-bottom: @unit-bottom-paddingTABLET;
       }
 
       .animationSkillArticleINNER {
@@ -515,8 +582,13 @@ nav {
 }
 
 .contactSection {
-  padding-top: @unit-unit-top-padding;
-  padding-bottom: @unit-unit-bottom-padding;
+  padding-top: @unit-top-padding;
+  padding-bottom: @unit-bottom-padding;
+
+  @media (max-width: @tablet) {
+    padding-top: @unit-top-padding;
+    padding-bottom: @unit-bottom-paddingTABLET;
+  }
 
   .contactSector {
     display: grid;
