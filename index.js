@@ -1,5 +1,39 @@
 /* ----------
 
+- PWA RELATED:
+
+---------- */
+document.addEventListener("visibilitychange", function () {
+  if (document.visibilityState === "hidden") {
+    navigator.sendBeacon("/log", analyticsData);
+  }
+});
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("/sw.js").then(
+      (registration) => {
+        console.log(
+          "ServiceWorker registration successful with scope: ",
+          registration.scope
+        );
+      },
+      (err) => {
+        console.log("ServiceWorker registration failed: ", err);
+      }
+    );
+  });
+}
+
+let deferredPrompt;
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  // Update UI to notify the user they can add to the home screen
+});
+
+/* ----------
+
 - scrollFunction runs everytime the user scrolls
 - Scrolling down 30px resizes the navbar's padding
 
@@ -280,15 +314,4 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".projectLink").forEach((link) => {
     link.addEventListener("click", projectLinkClickFunction);
   });
-});
-
-/* ----------
-
-
-
----------- */
-document.addEventListener("visibilitychange", function () {
-  if (document.visibilityState === "hidden") {
-    navigator.sendBeacon("/log", analyticsData);
-  }
 });
