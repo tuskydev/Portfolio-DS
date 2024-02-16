@@ -66,11 +66,12 @@ h3 {
   }
 }
 p {
-  font-size: 2rem;
+  font-size: 1.222rem;
+  font-weight: 600;
 }
-@media (max-width: 60em) {
+@media (max-width: 35em) {
   p {
-    font-size: 1.333rem;
+    font-size: 1.111rem;
   }
 }
 section {
@@ -108,7 +109,7 @@ header {
 }
 @media (max-width: 60em) {
   .blackActionButtonGrid {
-    margin-bottom: 1rem;
+    margin-bottom: 1.111rem;
   }
 }
 .blackActionButtonGrid a {
@@ -393,7 +394,7 @@ nav .navBarUL li {
 }
 @media (max-width: 60em) {
   .aboutSection .aboutSector .aboutIntroDiv {
-    row-gap: 1rem;
+    row-gap: 1.111rem;
   }
 }
 .aboutSection .aboutSector .aboutIntroDiv h3 {
@@ -417,16 +418,34 @@ nav .navBarUL li {
   grid-template-columns: 1.333fr 1.888fr;
   grid-template-rows: 1fr;
   padding-bottom: 6.666rem;
+}
+.aboutSection .aboutDescriptionDiv p {
   font-size: 1.111rem;
+  line-height: 1.333;
 }
 .aboutSection .aboutDescriptionDiv > :nth-child(1) {
   margin-left: 6.66em;
+}
+@media (max-width: 60em) {
+  .aboutSection .aboutDescriptionDiv > :nth-child(1) {
+    margin-left: 50%;
+  }
 }
 .aboutSection .aboutDescriptionDiv > :nth-child(2) {
   margin-left: 9.99em;
 }
 @media (max-width: 60em) {
+  .aboutSection .aboutDescriptionDiv > :nth-child(2) {
+    margin-left: 50%;
+  }
+}
+@media (max-width: 60em) {
   .aboutSection .aboutDescriptionDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 6.666rem;
+    row-gap: 4.444rem;
     padding-bottom: 4.444rem;
   }
 }

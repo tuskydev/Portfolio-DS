@@ -86,10 +86,11 @@ h3 {
 }
 
 p {
-  font-size: 2rem;
+  font-size: 1.222rem;
+  font-weight: 600;
 
-  @media (max-width: @tablet) {
-    font-size: 1.333rem;
+  @media (max-width: @mobile) {
+    font-size: 1.111rem;
   }
 }
 
@@ -128,7 +129,7 @@ header {
   transition: background-color 0.5s ease;
 
   @media (max-width: @tablet) {
-    margin-bottom: 1rem;
+    margin-bottom: 1.111rem;
   }
 
   a {
@@ -428,7 +429,7 @@ nav {
       row-gap: calc(2.222rem * 2);
 
       @media (max-width: @tablet) {
-        row-gap: 1rem;
+        row-gap: 1.111rem;
       }
 
       h3 {
@@ -457,16 +458,33 @@ nav {
     grid-template-columns: 1.333fr 1.888fr;
     grid-template-rows: 1fr;
     padding-bottom: @unit-bottom-padding;
-    font-size: 1.111rem;
+
+    p {
+      font-size: 1.111rem;
+      line-height: 1.333;
+    }
 
     > :nth-child(1) {
       margin-left: 6.66em;
+
+      @media (max-width: @tablet) {
+        margin-left: 50%;
+      }
     }
     > :nth-child(2) {
       margin-left: 9.99em;
+
+      @media (max-width: @tablet) {
+        margin-left: 50%;
+      }
     }
 
     @media (max-width: @tablet) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-top: 6.666rem;
+      row-gap: 4.444rem;
       padding-bottom: @unit-bottom-paddingTABLET;
     }
   }
