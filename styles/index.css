@@ -702,12 +702,30 @@ nav .navBarUL li {
   column-gap: 1.666rem;
   padding-bottom: 1.111rem;
 }
+@media (max-width: 35em) {
+  .contactSection .contactSector {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+}
 .contactSection .contactSector .contactBlurbAndButtonDiv {
   display: flex;
   justify-content: space-between;
-  align-content: flex-end;
   align-items: flex-end;
   margin-top: 8.888rem;
+}
+@media (max-width: 60em) {
+  .contactSection .contactSector .contactBlurbAndButtonDiv {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media (max-width: 60em) and (max-width: 35em) {
+  .contactSection .contactSector .contactBlurbAndButtonDiv {
+    margin-top: 2.222rem;
+    width: 80%;
+    margin-left: auto;
+  }
 }
 .contactSection .contactSector .contactBlurbAndButtonDiv p {
   font-size: 1.111rem;
@@ -715,16 +733,20 @@ nav .navBarUL li {
 }
 @media (max-width: 60em) {
   .contactSection .contactSector .contactBlurbAndButtonDiv p {
-    width: 55.55%;
+    width: 100%;
+    padding-bottom: 1.666rem;
   }
 }
 .contactSection .contactSector .contactBlurbAndButtonDiv .blackActionButtonGrid {
+  grid-template-columns: 1fr;
+  width: 44%;
   margin: 0;
+}
+@media (max-width: 60em) {
+  .contactSection .contactSector .contactBlurbAndButtonDiv .blackActionButtonGrid {
+    width: 100%;
+  }
 }
 .contactSection .contactSector .contactBlurbAndButtonDiv .blackActionButtonGrid a {
   padding: 0.666rem;
-}
-.contactSection .contactSector .contactBlurbAndButtonDiv .blackActionButtonGrid a:nth-child(2) {
-  padding-right: 2.222rem;
-  margin-left: -1.222rem;
 }

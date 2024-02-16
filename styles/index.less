@@ -483,10 +483,6 @@ nav {
 
   @media (max-width: @tablet) {
     padding-top: @unit-top-paddingTABLET;
-
-    @media (max-width: @mobile) {
-      // padding-top: @unit-top-paddingMOBILE;
-    }
   }
 
   .aboutSector {
@@ -739,33 +735,50 @@ nav {
     column-gap: 1.666rem;
     padding-bottom: 1.111rem;
 
+    @media (max-width: @mobile) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+    }
+
     .contactBlurbAndButtonDiv {
       display: flex;
       justify-content: space-between;
-      align-content: flex-end;
       align-items: flex-end;
       margin-top: 8.888rem;
+
+      @media (max-width: @tablet) {
+        flex-direction: column;
+        width: 100%;
+
+        @media (max-width: @mobile) {
+          margin-top: 2.222rem;
+          width: 80%;
+          margin-left: auto;
+        }
+      }
 
       p {
         font-size: 1.111rem;
         width: 33.33%;
 
         @media (max-width: @tablet) {
-          width: 55.55%;
+          width: 100%;
+          padding-bottom: 1.666rem;
         }
       }
 
       // Adjusting class' preset styling
       .blackActionButtonGrid {
+        grid-template-columns: 1fr;
+        width: 44%;
         margin: 0;
+
+        @media (max-width: @tablet) {
+          width: 100%;
+        }
 
         a {
           padding: 0.666rem;
-
-          &:nth-child(2) {
-            padding-right: 2.222rem;
-            margin-left: -1.222rem;
-          }
         }
       }
     }
