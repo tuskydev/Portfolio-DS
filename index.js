@@ -95,7 +95,7 @@ document.fonts.ready.then(() => {
     const typingAnimationFunction =
       document.querySelectorAll(".animationTyping");
     typingAnimationFunction.forEach((el) => typingObserver.observe(el));
-  }, 1000);
+  }, 333);
 });
 
 /* ----------
