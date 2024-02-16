@@ -1,0 +1,21 @@
+{
+  "short_name": "Tusky",
+  "name": "Tusky | Home",
+  "icons": [
+    {
+      "src": "./content/ivoryTusksWhite.svg",
+      "type": "image/svg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./content/ivoryTusksWhite.svg",
+      "type": "image/svg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#000000"
+}
