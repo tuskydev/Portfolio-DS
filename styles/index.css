@@ -48,12 +48,22 @@ h1 {
     font-size: 3rem;
   }
 }
+@media (max-width: 60em) and (max-width: 35em) {
+  h1 {
+    font-size: 2.222rem;
+  }
+}
 h2 {
   font-size: 3.33rem;
 }
 @media (max-width: 60em) {
   h2 {
     font-size: 2.777rem;
+  }
+}
+@media (max-width: 60em) and (max-width: 35em) {
+  h2 {
+    font-size: 2rem;
   }
 }
 h3 {
@@ -84,7 +94,13 @@ section {
 }
 @media (max-width: 60em) {
   section {
-    padding: 4.888rem 1.111rem;
+    padding: 4.444rem 1.111rem;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 60em) and (max-width: 35em) {
+  section {
+    padding: 3.333rem 1.111rem;
     padding-bottom: 0;
   }
 }
@@ -297,6 +313,11 @@ nav .navBarUL li {
     padding-bottom: 4.444rem;
   }
 }
+@media (max-width: 60em) and (max-width: 35em) {
+  .landingSection video {
+    padding-top: 1.111rem;
+  }
+}
 .projectsSection {
   padding-top: 3.333rem;
 }
@@ -314,6 +335,14 @@ nav .navBarUL li {
   }
   .projectsSection .projectTitle p {
     margin-top: 6.666rem;
+  }
+}
+.projectsSection .projectTitle h3 {
+  width: 73%;
+}
+@media (max-width: 60em) {
+  .projectsSection .projectTitle h3 {
+    width: 100%;
   }
 }
 .projectsSection .projectTitle p {
@@ -574,6 +603,11 @@ nav .navBarUL li {
 .contactSection .contactSector .contactBlurbAndButtonDiv p {
   font-size: 1.111rem;
   width: 33.33%;
+}
+@media (max-width: 60em) {
+  .contactSection .contactSector .contactBlurbAndButtonDiv p {
+    width: 55.55%;
+  }
 }
 .contactSection .contactSector .contactBlurbAndButtonDiv .blackActionButtonGrid {
   margin: 0;

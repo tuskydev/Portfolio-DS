@@ -65,6 +65,10 @@ h1 {
 
   @media (max-width: @tablet) {
     font-size: 3rem;
+
+    @media (max-width: @mobile) {
+      font-size: 2.222rem;
+    }
   }
 }
 
@@ -73,6 +77,10 @@ h2 {
 
   @media (max-width: @tablet) {
     font-size: 2.777rem;
+
+    @media (max-width: @mobile) {
+      font-size: 2rem;
+    }
   }
 }
 
@@ -103,8 +111,13 @@ section {
   padding-bottom: 0;
 
   @media (max-width: @tablet) {
-    padding: 4.888rem 1.111rem;
+    padding: 4.444rem 1.111rem;
     padding-bottom: 0;
+
+    @media (max-width: @mobile) {
+      padding: 3.333rem 1.111rem;
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -321,6 +334,10 @@ nav {
     @media (max-width: @tablet) {
       margin-top: 0;
       padding-bottom: @unit-bottom-paddingTABLET;
+
+      @media (max-width: @mobile) {
+        padding-top: 1.111rem;
+      }
     }
   }
 }
@@ -340,6 +357,14 @@ nav {
 
       p {
         margin-top: 6.666rem;
+      }
+    }
+
+    h3 {
+      width: 73%;
+
+      @media (max-width: @tablet) {
+        width: 100%;
       }
     }
 
@@ -625,6 +650,10 @@ nav {
       p {
         font-size: 1.111rem;
         width: 33.33%;
+
+        @media (max-width: @tablet) {
+          width: 55.55%;
+        }
       }
 
       // Adjusting class' preset styling
