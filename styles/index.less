@@ -61,7 +61,7 @@ h4 {
 }
 
 h1 {
-  font-size: 5.555rem;
+  font-size: 6rem;
 
   @media (max-width: @tablet) {
     font-size: 3rem;
@@ -337,6 +337,7 @@ nav {
 
       @media (max-width: @mobile) {
         padding-top: @unit-top-paddingMOBILE;
+        // padding-bottom: @unit-bottom-paddingMOBILE;
       }
     }
   }
@@ -364,6 +365,8 @@ nav {
       }
 
       @media (max-width: @mobile) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
         padding-bottom: @unit-bottom-paddingMOBILE;
       }
     }
@@ -373,6 +376,13 @@ nav {
 
       @media (max-width: @tablet) {
         width: 100%;
+
+        @media (max-width: @mobile) {
+          width: 66.666%;
+          margin: 0 auto;
+          padding-top: @unit-bottom-paddingMOBILE;
+          padding-bottom: @unit-bottom-paddingMOBILE;
+        }
       }
     }
 
@@ -410,7 +420,6 @@ nav {
         display: flex;
         justify-content: space-between;
         font-size: 1.333rem;
-        // text-align: center;
 
         > :nth-child(2) {
           padding-left: 5rem;

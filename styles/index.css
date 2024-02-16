@@ -41,7 +41,7 @@ h4 {
   font-family: "Alliance No. 1";
 }
 h1 {
-  font-size: 5.555rem;
+  font-size: 6rem;
 }
 @media (max-width: 60em) {
   h1 {
@@ -344,6 +344,8 @@ nav .navBarUL li {
 }
 @media (max-width: 60em) and (max-width: 35em) {
   .projectsSection .projectTitle {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
     padding-bottom: 2.222rem;
   }
 }
@@ -353,6 +355,14 @@ nav .navBarUL li {
 @media (max-width: 60em) {
   .projectsSection .projectTitle h3 {
     width: 100%;
+  }
+}
+@media (max-width: 60em) and (max-width: 35em) {
+  .projectsSection .projectTitle h3 {
+    width: 66.666%;
+    margin: 0 auto;
+    padding-top: 2.222rem;
+    padding-bottom: 2.222rem;
   }
 }
 .projectsSection .projectTitle p {
