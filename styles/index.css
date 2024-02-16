@@ -45,7 +45,7 @@ h1 {
 }
 @media (max-width: 60em) {
   h1 {
-    font-size: 2.777rem;
+    font-size: 3.333rem;
   }
 }
 h2 {
@@ -268,13 +268,18 @@ nav .navBarUL li {
 .landingSection h1 {
   width: 60%;
 }
+@media (max-width: 60em) {
+  .landingSection h1 {
+    width: 80%;
+  }
+}
 .landingSection video {
   padding-top: 4.444rem;
   padding-bottom: 6.666rem;
 }
 @media (max-width: 60em) {
   .landingSection video {
-    margin-top: 3.888rem;
+    margin-top: 0;
   }
 }
 .projectsSection {
