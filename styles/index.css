@@ -326,6 +326,11 @@ nav .navBarUL li {
     padding-top: 2.222rem;
   }
 }
+@media (max-width: 60em) and (max-width: 35em) {
+  .projectsSection {
+    padding-top: 1.111rem;
+  }
+}
 .projectsSection .projectTitle {
   padding-bottom: 6.666rem;
 }
@@ -335,6 +340,11 @@ nav .navBarUL li {
   }
   .projectsSection .projectTitle p {
     margin-top: 6.666rem;
+  }
+}
+@media (max-width: 60em) and (max-width: 35em) {
+  .projectsSection .projectTitle {
+    padding-bottom: 2.222rem;
   }
 }
 .projectsSection .projectTitle h3 {
@@ -356,6 +366,12 @@ nav .navBarUL li {
   .projectsSection .projectDiv {
     padding-top: 2.222rem;
     padding-bottom: 4.444rem;
+  }
+}
+@media (max-width: 60em) and (max-width: 35em) {
+  .projectsSection .projectDiv {
+    padding-top: 1.111rem;
+    padding-bottom: 2.222rem;
   }
 }
 .projectsSection .projectDiv .projectDescriptionAndLink {
@@ -400,6 +416,11 @@ nav .navBarUL li {
 @media (max-width: 60em) {
   .aboutSection {
     padding-top: 2.222rem;
+  }
+}
+@media (max-width: 60em) and (max-width: 35em) {
+  .aboutSection {
+    padding-top: 1.111rem;
   }
 }
 .aboutSection .aboutSector {
@@ -478,6 +499,11 @@ nav .navBarUL li {
     padding-bottom: 4.444rem;
   }
 }
+@media (max-width: 60em) and (max-width: 35em) {
+  .aboutSection .aboutDescriptionDiv {
+    padding-bottom: 2.222rem;
+  }
+}
 .educationSection {
   padding-top: 3.333rem;
 }
@@ -486,12 +512,22 @@ nav .navBarUL li {
     padding-top: 2.222rem;
   }
 }
+@media (max-width: 60em) and (max-width: 35em) {
+  .educationSection {
+    padding-top: 1.111rem;
+  }
+}
 .educationSection .educationSector {
   padding-bottom: 6.666rem;
 }
 @media (max-width: 60em) {
   .educationSection .educationSector {
     padding-bottom: 4.444rem;
+  }
+}
+@media (max-width: 60em) and (max-width: 35em) {
+  .educationSection .educationSector {
+    padding-bottom: 2.222rem;
   }
 }
 .educationSection .educationSector .educationSecondHalfDiv {
@@ -503,6 +539,11 @@ nav .navBarUL li {
 @media (max-width: 60em) {
   .skillSection {
     padding-top: 2.222rem;
+  }
+}
+@media (max-width: 60em) and (max-width: 35em) {
+  .skillSection {
+    padding-top: 1.111rem;
   }
 }
 .skillSection .skillSector {
@@ -517,6 +558,11 @@ nav .navBarUL li {
 @media (max-width: 60em) {
   .skillSection .skillSector h1 {
     padding-bottom: 4.444rem;
+  }
+}
+@media (max-width: 60em) and (max-width: 35em) {
+  .skillSection .skillSector h1 {
+    padding-bottom: 2.222rem;
   }
 }
 .skillSection .skillSector .animationSkillArticle {
@@ -542,6 +588,11 @@ nav .navBarUL li {
 @media (max-width: 60em) {
   .skillSection .skillSector .animationSkillArticle {
     padding-bottom: 4.444rem;
+  }
+}
+@media (max-width: 60em) and (max-width: 35em) {
+  .skillSection .skillSector .animationSkillArticle {
+    padding-bottom: 2.222rem;
   }
 }
 .skillSection .skillSector .animationSkillArticle .animationSkillArticleINNER {
@@ -584,6 +635,12 @@ nav .navBarUL li {
   .contactSection {
     padding-top: 3.333rem;
     padding-bottom: 4.444rem;
+  }
+}
+@media (max-width: 60em) and (max-width: 35em) {
+  .contactSection {
+    padding-top: 1.111rem;
+    padding-bottom: 2.222rem;
   }
 }
 .contactSection .contactSector {
