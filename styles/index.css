@@ -380,8 +380,8 @@ nav .navBarUL li {
 }
 @media (max-width: 60em) and (max-width: 35em) {
   .projectsSection .projectDiv {
-    padding-top: 1.111rem;
-    padding-bottom: 2.222rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
   }
 }
 .projectsSection .projectDiv .projectDescriptionAndLink {
@@ -394,6 +394,13 @@ nav .navBarUL li {
   .projectsSection .projectDiv .projectDescriptionAndLink {
     flex-direction: column;
     row-gap: 1.333rem;
+  }
+}
+@media (max-width: 60em) and (max-width: 35em) {
+  .projectsSection .projectDiv .projectDescriptionAndLink {
+    width: 80%;
+    margin-left: auto;
+    padding-top: 3.333rem;
   }
 }
 .projectsSection .projectDiv .projectDescriptionAndLink .projectLink {
@@ -426,11 +433,6 @@ nav .navBarUL li {
 @media (max-width: 60em) {
   .aboutSection {
     padding-top: 2.222rem;
-  }
-}
-@media (max-width: 60em) and (max-width: 35em) {
-  .aboutSection {
-    padding-top: 1.111rem;
   }
 }
 .aboutSection .aboutSector {
@@ -491,12 +493,22 @@ nav .navBarUL li {
     margin-left: 50%;
   }
 }
+@media (max-width: 60em) and (max-width: 35em) {
+  .aboutSection .aboutDescriptionDiv > :nth-child(1) {
+    margin-left: 15%;
+  }
+}
 .aboutSection .aboutDescriptionDiv > :nth-child(2) {
   margin-left: 9.99em;
 }
 @media (max-width: 60em) {
   .aboutSection .aboutDescriptionDiv > :nth-child(2) {
     margin-left: 50%;
+  }
+}
+@media (max-width: 60em) and (max-width: 35em) {
+  .aboutSection .aboutDescriptionDiv > :nth-child(2) {
+    margin-left: 15%;
   }
 }
 @media (max-width: 60em) {
@@ -511,6 +523,7 @@ nav .navBarUL li {
 }
 @media (max-width: 60em) and (max-width: 35em) {
   .aboutSection .aboutDescriptionDiv {
+    margin-top: 3.333rem;
     padding-bottom: 2.222rem;
   }
 }
@@ -537,10 +550,13 @@ nav .navBarUL li {
 }
 @media (max-width: 60em) and (max-width: 35em) {
   .educationSection .educationSector {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
     padding-bottom: 2.222rem;
   }
 }
 .educationSection .educationSector .educationSecondHalfDiv {
+  padding-top: 2.222rem;
   font-size: 1.222rem;
 }
 .skillSection {
