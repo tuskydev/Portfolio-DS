@@ -20,6 +20,9 @@
   color: #1e2124;
 }
 /* Pre-set Styling Below */
+body {
+  opacity: 0;
+}
 a {
   text-decoration: none;
   color: #767676;
@@ -150,6 +153,9 @@ header {
   font-feature-settings: "liga" 0;
   /* Disable ligatures */
   text-rendering: optimizeLegibility;
+}
+.animationTyping {
+  opacity: 0;
 }
 /* Animations */
 .animationNavBar {
@@ -303,6 +309,7 @@ nav .navBarUL {
 }
 @media (max-width: 35em) {
   nav .navBarUL {
+    padding-top: 20px;
     flex-wrap: nowrap;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;

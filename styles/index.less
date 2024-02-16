@@ -35,6 +35,11 @@
 
 /* Pre-set Styling Below */
 
+body {
+  opacity: 0;
+  // transition: opacity 0.333s ease; /* Optional: smooth transition to visible */
+}
+
 a {
   text-decoration: none;
   color: @navLinksColor;
@@ -170,6 +175,10 @@ header {
   font-family: Arial, sans-serif; /* Specify a font that supports the character */
   font-feature-settings: "liga" 0; /* Disable ligatures */
   text-rendering: optimizeLegibility;
+}
+
+.animationTyping {
+  opacity: 0;
 }
 
 /* Animations */
@@ -327,6 +336,8 @@ nav {
     transition: padding-top 0.1s ease-in-out; // Smooth transition for padding-top property
 
     @media (max-width: @mobile) {
+      padding-top: 20px;
+
       flex-wrap: nowrap;
       overflow-x: scroll;
       scroll-snap-type: x mandatory;
@@ -364,7 +375,6 @@ nav {
 
       @media (max-width: @mobile) {
         padding-top: @unit-top-paddingMOBILE;
-        // padding-bottom: @unit-bottom-paddingMOBILE;
       }
     }
   }

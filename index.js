@@ -1,33 +1,5 @@
 /* ----------
 
-- PWA RELATED:
-
----------- */
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function () {
-    navigator.serviceWorker.register("/sw.js").then(
-      (registration) => {
-        console.log(
-          "ServiceWorker registration successful with scope: ",
-          registration.scope
-        );
-      },
-      (err) => {
-        console.log("ServiceWorker registration failed: ", err);
-      }
-    );
-  });
-}
-
-let deferredPrompt;
-window.addEventListener("beforeinstallprompt", (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  // Update UI to notify the user they can add to the home screen
-});
-
-/* ----------
-
 - scrollFunction runs everytime the user scrolls
 - Scrolling down 30px resizes the navbar's padding
 
@@ -47,6 +19,15 @@ function scrollFunction() {
 
 /* ----------
 
+- Initially, all content except the video is visible, reassuring users that the page is loading.
+
+---------- */
+document.fonts.ready.then(() => {
+  document.body.style.opacity = "1";
+});
+
+/* ----------
+
 - typingAnimationFunction reconstructs the element with <spans> of the element's length
 - Checking header type to assign font-family and CSS
 - After a tiny delay changes the opacity from 0 to 1 of each letter
@@ -56,55 +37,62 @@ function scrollFunction() {
 
 ---------- */
 document.fonts.ready.then(() => {
-  const typingObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const element = entry.target;
-          const text = element.textContent; // Get the text content of the element
-          element.textContent = ""; // Clear the element content
+  setTimeout(() => {
+    const typingObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const element = entry.target;
+            const text = element.textContent; // Get the text content of the element
+            element.textContent = ""; // Clear the element content
 
-          // Create a span for each character in the text
-          for (let i = 0; i < text.length; i++) {
-            let span = document.createElement("span");
-            span.textContent = text[i];
-            span.style.opacity = "0"; // Start with the character hidden
-            element.appendChild(span);
-          }
+            // Create a span for each character in the text
+            for (let i = 0; i < text.length; i++) {
+              let span = document.createElement("span");
+              span.textContent = text[i];
+              span.style.opacity = "0"; // Start with the character hidden
+              element.appendChild(span);
+            }
 
-          // Reveal each character with a delay
-          const spans = element.querySelectorAll("span");
-          spans.forEach((span, index) => {
+            document.querySelectorAll(".animationTyping").forEach((el) => {
+              el.style.opacity = "1";
+            });
+
+            // Reveal each character with a delay
+            const spans = element.querySelectorAll("span");
+            spans.forEach((span, index) => {
+              setTimeout(() => {
+                if (
+                  (element.tagName.toLowerCase() == "h1") |
+                  (element.tagName.toLowerCase() == "h2")
+                ) {
+                  span.style.fontFamily = '"Alliance No. 2"';
+                }
+
+                if (element.tagName.toLowerCase() == "h3") {
+                  span.style.fontFamily = '"Alliance No. 1"';
+                }
+                span.style.opacity = "1"; // Make the character visible
+                span.style.color = "#1e2124"; // Change to the desired color
+              }, index * 25); // Adjust the delay as needed
+            });
+
             setTimeout(() => {
-              if (
-                (element.tagName.toLowerCase() == "h1") |
-                (element.tagName.toLowerCase() == "h2")
-              ) {
-                span.style.fontFamily = '"Alliance No. 2"';
-              }
+              element.textContent = text;
+              element.style.color = "#1e2124";
+            }, text.length * 25 + 100); // Adjusted to wait until the last character is shown
 
-              if (element.tagName.toLowerCase() == "h3") {
-                span.style.fontFamily = '"Alliance No. 1"';
-              }
-              span.style.opacity = "1"; // Make the character visible
-              span.style.color = "#1e2124"; // Change to the desired color
-            }, index * 25); // Adjust the delay as needed
-          });
+            typingObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-          setTimeout(() => {
-            element.textContent = text;
-            element.style.color = "#1e2124";
-          }, text.length * 25 + 100); // Adjusted to wait until the last character is shown
-
-          typingObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-
-  const typingAnimationFunction = document.querySelectorAll(".animationTyping");
-  typingAnimationFunction.forEach((el) => typingObserver.observe(el));
+    const typingAnimationFunction =
+      document.querySelectorAll(".animationTyping");
+    typingAnimationFunction.forEach((el) => typingObserver.observe(el));
+  }, 1000);
 });
 
 /* ----------
@@ -306,4 +294,32 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".projectLink").forEach((link) => {
     link.addEventListener("click", projectLinkClickFunction);
   });
+});
+
+/* ----------
+
+- PWA RELATED:
+
+---------- */
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("/sw.js").then(
+      (registration) => {
+        console.log(
+          "ServiceWorker registration successful with scope: ",
+          registration.scope
+        );
+      },
+      (err) => {
+        console.log("ServiceWorker registration failed: ", err);
+      }
+    );
+  });
+}
+
+let deferredPrompt;
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  // Update UI to notify the user they can add to the home screen
 });
