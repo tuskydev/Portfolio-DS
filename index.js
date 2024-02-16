@@ -3,12 +3,6 @@
 - PWA RELATED:
 
 ---------- */
-document.addEventListener("visibilitychange", function () {
-  if (document.visibilityState === "hidden") {
-    navigator.sendBeacon("/log", analyticsData);
-  }
-});
-
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
     navigator.serviceWorker.register("/sw.js").then(
