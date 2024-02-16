@@ -24,8 +24,8 @@
 /* Universal CSS Reset */
 
 * {
-  outline: 1px solid red;
-  outline-offset: -1px;
+  // outline: 1px solid red;
+  // outline-offset: -1px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -285,6 +285,22 @@ header {
   }
 }
 
+// Contact Section Glow Animation
+.animationGlow {
+  animation: glow 2s ease-out forwards;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 8px rgba(255, 255, 0, 0.7), 0 0 10px rgba(255, 255, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.8), 0 0 20px rgba(255, 255, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.5), 0 0 10px rgba(255, 255, 0, 0.3);
+  }
+}
+
 /* Non-Preset Styling Starts Here! */
 
 @media (max-width: 1500px) {
@@ -427,6 +443,7 @@ nav {
         display: flex;
         justify-content: space-between;
         font-size: 1.333rem;
+        cursor: pointer;
 
         @media (max-width: @mobile) {
           font-size: 1.111rem;
@@ -668,6 +685,10 @@ nav {
           height: auto;
           border-radius: 15px;
 
+          @media (max-width: 45em) {
+            width: 150px;
+          }
+
           .skillArticleImgDiv {
             overflow: hidden;
             aspect-ratio: auto 700 / 700;
@@ -748,21 +769,5 @@ nav {
         }
       }
     }
-  }
-}
-
-.animationGlow {
-  animation: glow 2s ease-out forwards;
-}
-
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 8px rgba(255, 255, 0, 0.7), 0 0 10px rgba(255, 255, 0, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 15px rgba(255, 255, 0, 0.8), 0 0 20px rgba(255, 255, 0, 0.6);
-  }
-  100% {
-    box-shadow: 0 0 5px rgba(255, 255, 0, 0.5), 0 0 10px rgba(255, 255, 0, 0.3);
   }
 }

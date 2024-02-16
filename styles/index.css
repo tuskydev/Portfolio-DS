@@ -13,8 +13,6 @@
 }
 /* Universal CSS Reset */
 * {
-  outline: 1px solid red;
-  outline-offset: -1px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -267,6 +265,20 @@ header {
     /* End at its final position */
   }
 }
+.animationGlow {
+  animation: glow 2s ease-out forwards;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 8px rgba(255, 255, 0, 0.7), 0 0 10px rgba(255, 255, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.8), 0 0 20px rgba(255, 255, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.5), 0 0 10px rgba(255, 255, 0, 0.3);
+  }
+}
 /* Non-Preset Styling Starts Here! */
 @media (max-width: 1500px) {
   background-color: aqua;
@@ -410,6 +422,7 @@ nav .navBarUL li {
   display: flex;
   justify-content: space-between;
   font-size: 1.333rem;
+  cursor: pointer;
 }
 @media (max-width: 35em) {
   .projectsSection .projectDiv .projectDescriptionAndLink .projectLink {
@@ -641,6 +654,11 @@ nav .navBarUL li {
   height: auto;
   border-radius: 15px;
 }
+@media (max-width: 45em) {
+  .skillSection .skillSector .animationSkillArticle .animationSkillArticleINNER .skillArticleMain {
+    width: 150px;
+  }
+}
 .skillSection .skillSector .animationSkillArticle .animationSkillArticleINNER .skillArticleMain .skillArticleImgDiv {
   overflow: hidden;
   aspect-ratio: auto 700 / 700;
@@ -709,18 +727,4 @@ nav .navBarUL li {
 .contactSection .contactSector .contactBlurbAndButtonDiv .blackActionButtonGrid a:nth-child(2) {
   padding-right: 2.222rem;
   margin-left: -1.222rem;
-}
-.animationGlow {
-  animation: glow 2s ease-out forwards;
-}
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 8px rgba(255, 255, 0, 0.7), 0 0 10px rgba(255, 255, 0, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 15px rgba(255, 255, 0, 0.8), 0 0 20px rgba(255, 255, 0, 0.6);
-  }
-  100% {
-    box-shadow: 0 0 5px rgba(255, 255, 0, 0.5), 0 0 10px rgba(255, 255, 0, 0.3);
-  }
 }

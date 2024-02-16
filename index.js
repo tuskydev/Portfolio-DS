@@ -254,3 +254,30 @@ document.addEventListener("DOMContentLoaded", function () {
     anchor.addEventListener("click", navBarAnchorClickFunction);
   });
 });
+
+/* ----------
+
+- projectLinkClickFunction adds a 'click' eventListener to all projectLinks
+- Grabs the url from html attrbute 'data-url'
+- Sending user to the desired website page
+- Adds smooth-scrolling!
+
+---------- */
+function projectLinkClickFunction(e) {
+  e.preventDefault(); // Prevent the default link behavior
+
+  const url = this.getAttribute("data-url");
+
+  if (url) {
+    // Check if the URL is present
+    window.open(url, "_blank");
+  } else {
+    console.log("No project matched.");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".projectLink").forEach((link) => {
+    link.addEventListener("click", projectLinkClickFunction);
+  });
+});
