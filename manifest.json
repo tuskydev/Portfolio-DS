@@ -3,21 +3,21 @@
   "name": "Tusky | Home",
   "icons": [
     {
-      "src": "./content/tusksBlack192.png",
+      "src": "./content/tusksWhite192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any"
     },
     {
-      "src": "./content/tusksBlack512.png",
+      "src": "./content/tusksWhite512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any"
     }
   ],
   "start_url": "/",
-  "background_color": "#FFFFFF",
+  "background_color": "#1e2124",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#000000"
+  "theme_color": "#1e2124"
 }
