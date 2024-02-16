@@ -281,3 +281,14 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", projectLinkClickFunction);
   });
 });
+
+/* ----------
+
+
+
+---------- */
+document.addEventListener("visibilitychange", function () {
+  if (document.visibilityState === "hidden") {
+    navigator.sendBeacon("/log", analyticsData);
+  }
+});

@@ -300,18 +300,22 @@ nav .navBarUL {
   padding-top: 40px;
   font-size: 1rem;
   transition: padding-top 0.1s ease-in-out;
-  /* Smooth transition for padding-top property */
 }
 @media (max-width: 35em) {
   nav .navBarUL {
+    flex-wrap: nowrap;
     overflow-x: scroll;
-    -ms-scroll-snap-type: x;
-    scroll-snap-type: x;
+    scroll-snap-type: x mandatory;
     scrollbar-width: none;
+    scroll-behavior: smooth;
+  }
+  nav .navBarUL::-webkit-scrollbar {
+    display: none;
   }
 }
 nav .navBarUL li {
   margin-right: 0.888rem;
+  flex: 0 0 auto;
 }
 .landingSection h1 {
   width: 60%;

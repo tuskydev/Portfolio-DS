@@ -324,17 +324,23 @@ nav {
     display: flex;
     padding-top: 40px;
     font-size: 1rem;
-    transition: padding-top 0.1s ease-in-out; /* Smooth transition for padding-top property */
+    transition: padding-top 0.1s ease-in-out; // Smooth transition for padding-top property
 
     @media (max-width: @mobile) {
+      flex-wrap: nowrap;
       overflow-x: scroll;
-      -ms-scroll-snap-type: x;
-      scroll-snap-type: x;
+      scroll-snap-type: x mandatory;
       scrollbar-width: none;
+      scroll-behavior: smooth;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
 
     li {
       margin-right: 0.888rem;
+      flex: 0 0 auto; // Forces the elements to pop out as intended!
     }
   }
 }
