@@ -19,7 +19,7 @@ function scrollFunction() {
 
 /* ----------
 
-- Initially, all content except the video is visible, reassuring users that the page is loading.
+- Initially, all content is invisible
 
 ---------- */
 document.fonts.ready.then(() => {
@@ -38,6 +38,7 @@ document.fonts.ready.then(() => {
 ---------- */
 document.fonts.ready.then(() => {
   setTimeout(() => {
+    // One second delay
     const typingObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -53,6 +54,8 @@ document.fonts.ready.then(() => {
               span.style.opacity = "0"; // Start with the character hidden
               element.appendChild(span);
             }
+
+            // - Initially, all elements with this class are invisible
 
             document.querySelectorAll(".animationTyping").forEach((el) => {
               el.style.opacity = "1";
