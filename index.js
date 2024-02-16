@@ -299,8 +299,6 @@ function projectLinkClickFunction(e) {
   if (url) {
     // Check if the URL is present
     window.open(url, "_blank");
-  } else {
-    console.log("No project matched.");
   }
 }
 
