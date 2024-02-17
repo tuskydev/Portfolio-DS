@@ -135,11 +135,13 @@ header {
   padding: 1rem;
   color: #fff;
 }
-.blackActionButtonGrid:hover {
-  background-color: #b5b6b7;
-}
-.blackActionButtonGrid:hover a {
-  color: #1e2124;
+@media (hover: hover) {
+  .blackActionButtonGrid:hover {
+    background-color: #b5b6b7;
+  }
+  .blackActionButtonGrid:hover a {
+    color: #1e2124;
+  }
 }
 .splitGrid {
   display: grid;
@@ -180,14 +182,14 @@ header {
   background: #1e2124;
   transition: 0.3s ease;
 }
+.animationNavBar:not(:hover):after {
+  right: 0;
+  left: auto;
+}
 @media (hover: hover) {
   .animationNavBar:hover:after {
     width: 100%;
   }
-}
-.animationNavBar:not(:hover):after {
-  right: 0;
-  left: auto;
 }
 .animationButton {
   position: relative;
@@ -202,10 +204,12 @@ header {
   width: 100%;
   transition: 333ms ease-out;
 }
-.animationButton:hover::after {
-  width: 0%;
-  right: 0;
-  left: auto;
+@media (hover: hover) {
+  .animationButton:hover::after {
+    width: 0%;
+    right: 0;
+    left: auto;
+  }
 }
 .animationBorder {
   position: relative;
@@ -294,9 +298,6 @@ header {
   }
 }
 /* Non-Preset Styling Starts Here! */
-@media (max-width: 1500px) {
-  background-color: aqua;
-}
 nav {
   display: flex;
   flex-direction: column;

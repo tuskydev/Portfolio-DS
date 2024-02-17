@@ -155,11 +155,14 @@ header {
     color: #fff;
   }
 
-  &:hover {
-    background-color: @highlightColor;
+  // Apply hover styles only for devices that support hover
+  @media (hover: hover) {
+    &:hover {
+      background-color: @highlightColor;
 
-    a {
-      color: @mainColor;
+      a {
+        color: @mainColor;
+      }
     }
   }
 }
@@ -194,45 +197,51 @@ header {
 .animationNavBar {
   display: inline-block;
   position: relative;
-}
-.animationNavBar:after {
-  content: "";
-  width: 0px;
-  height: 1px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: @mainColor;
-  transition: 0.3s ease;
-}
-@media (hover: hover) {
-  .animationNavBar:hover:after {
-    width: 100%;
+
+  &:after {
+    content: "";
+    width: 0px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: @mainColor;
+    transition: 0.3s ease;
   }
-}
-.animationNavBar:not(:hover):after {
-  right: 0;
-  left: auto;
+  &:not(:hover):after {
+    right: 0;
+    left: auto;
+  }
+  // This targets devices with hover capabilities
+  @media (hover: hover) {
+    &:hover:after {
+      width: 100%;
+    }
+  }
 }
 
 // Button Underline Animation
 .animationButton {
   position: relative;
-}
-.animationButton::after {
-  position: absolute;
-  content: "";
-  background: @navLinksColor;
-  bottom: 0;
-  left: 0;
-  height: 1px;
-  width: 100%;
-  transition: 333ms ease-out;
-}
-.animationButton:hover::after {
-  width: 0%;
-  right: 0;
-  left: auto;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background: @navLinksColor;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    transition: 333ms ease-out;
+  }
+  @media (hover: hover) {
+    // This targets devices with hover capabilities
+    &:hover::after {
+      width: 0%;
+      right: 0;
+      left: auto;
+    }
+  }
 }
 
 // Border Animation Animation
@@ -318,10 +327,6 @@ header {
 }
 
 /* Non-Preset Styling Starts Here! */
-
-@media (max-width: 1500px) {
-  background-color: aqua;
-}
 
 nav {
   display: flex;
