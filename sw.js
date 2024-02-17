@@ -1,5 +1,5 @@
 // Increment "v1" to "v2", "v3", etc., when you update your assets or content
-const CACHE_NAME = "v1";
+const CACHE_NAME = "v1.001";
 const urlsToCache = [
   "/",
   "/index.html",

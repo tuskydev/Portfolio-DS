@@ -147,12 +147,20 @@ header {
   grid-template-rows: 1fr;
   column-gap: 1.666rem;
 }
-.noEmojiArrow {
-  font-family: Arial, sans-serif;
-  /* Specify a font that supports the character */
-  font-feature-settings: "liga" 0;
-  /* Disable ligatures */
-  text-rendering: optimizeLegibility;
+.downwardRightArrow {
+  margin-right: 0.333rem;
+}
+@media (max-width: 60em) {
+  .downwardRightArrow {
+    width: 20px;
+    height: auto;
+  }
+}
+@media (max-width: 35em) {
+  .downwardRightArrow {
+    width: 15px;
+    height: auto;
+  }
 }
 .animationTyping {
   opacity: 0;
@@ -519,6 +527,7 @@ nav .navBarUL li {
 }
 .aboutSection .aboutDescriptionDiv p {
   font-size: 1.111rem;
+  font-weight: 400;
   line-height: 1.333;
 }
 .aboutSection .aboutDescriptionDiv > :nth-child(1) {

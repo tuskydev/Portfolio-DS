@@ -171,10 +171,17 @@ header {
   column-gap: 1.666rem;
 }
 
-.noEmojiArrow {
-  font-family: Arial, sans-serif; /* Specify a font that supports the character */
-  font-feature-settings: "liga" 0; /* Disable ligatures */
-  text-rendering: optimizeLegibility;
+.downwardRightArrow {
+  margin-right: 0.333rem;
+
+  @media (max-width: @tablet) {
+    width: 20px;
+    height: auto;
+  }
+  @media (max-width: @mobile) {
+    width: 15px;
+    height: auto;
+  }
 }
 
 .animationTyping {
@@ -557,6 +564,7 @@ nav {
 
     p {
       font-size: 1.111rem;
+      font-weight: 400;
       line-height: 1.333;
     }
 
