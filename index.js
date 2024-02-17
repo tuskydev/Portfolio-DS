@@ -48,14 +48,13 @@ function triggerRepaint() {
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      const img = entry.target;
-      img.src = img.dataset.src;
-      observer.unobserve(img);
+      triggerRepaint(); // Attempt to trigger a repaint for iOS
+      observer.unobserve(entry.target); // Stop observing the entry if needed
     }
   });
 });
 
-document.querySelectorAll("img[data-src]").forEach((img) => {
+document.querySelectorAll(".skillArticleImgDiv img").forEach((img) => {
   observer.observe(img);
 });
 
