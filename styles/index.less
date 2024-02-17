@@ -207,10 +207,14 @@ header {
     width: 0px;
     height: 1px;
     position: absolute;
+    background: @mainColor;
     top: 0;
     left: 0;
-    background: @mainColor;
     transition: 0.3s ease;
+
+    @media (prefers-color-scheme: dark) {
+      background: @highlightColor;
+    }
   }
   &:not(:hover):after {
     right: 0;

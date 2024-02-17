@@ -13,7 +13,7 @@ function scrollFunction() {
     document.getElementsByClassName("navBarUL")[0].style.paddingTop = "10px";
   } else {
     // Access the first element with class "navBarUL" and set its padding
-    document.getElementsByClassName("navBarUL")[0].style.paddingTop = "30px";
+    document.getElementsByClassName("navBarUL")[0].style.paddingTop = "33px";
   }
 }
 

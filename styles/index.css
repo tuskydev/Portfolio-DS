@@ -180,10 +180,15 @@ header {
   width: 0px;
   height: 1px;
   position: absolute;
+  background: #1e2124;
   top: 0;
   left: 0;
-  background: #1e2124;
   transition: 0.3s ease;
+}
+@media (prefers-color-scheme: dark) {
+  .animationNavBar:after {
+    background: #b5b6b7;
+  }
 }
 .animationNavBar:not(:hover):after {
   right: 0;
