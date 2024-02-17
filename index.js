@@ -26,6 +26,39 @@ document.fonts.ready.then(() => {
   document.body.style.opacity = "1";
 });
 
+function triggerRepaint() {
+  document.body.style.overflow = "hidden";
+  setTimeout(() => {
+    document.body.style.overflow = "";
+  }, 10);
+}
+
+/* ----------
+
+- TESTING FOR iOS INFINITE SCROLLER
+
+---------- */
+function triggerRepaint() {
+  document.body.style.overflow = "hidden";
+  setTimeout(() => {
+    document.body.style.overflow = "";
+  }, 10);
+}
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      img.src = img.dataset.src;
+      observer.unobserve(img);
+    }
+  });
+});
+
+document.querySelectorAll("img[data-src]").forEach((img) => {
+  observer.observe(img);
+});
+
 /* ----------
 
 - typingAnimationFunction reconstructs the element with <spans> of the element's length
@@ -201,7 +234,6 @@ animationFadeUpTwoFunction.forEach((el) => fadeUpTwoObserver.observe(el));
 - Creating an infinite scroll!
 
 ---------- */
-
 const animationSkillArticleFunction = document.querySelectorAll(
   ".animationSkillArticle"
 );

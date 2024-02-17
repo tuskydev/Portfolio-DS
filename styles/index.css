@@ -23,6 +23,9 @@
 body {
   opacity: 0;
 }
+img {
+  backface-visibility: hidden;
+}
 a {
   text-decoration: none;
   color: #767676;
@@ -650,7 +653,7 @@ nav .navBarUL li {
 .skillSection .skillSector .animationSkillArticle[data-animated="true"] .animationSkillArticleINNER {
   flex-wrap: nowrap;
   width: max-content;
-  animation: scroll 108s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 @keyframes scroll {
   to {

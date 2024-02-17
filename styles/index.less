@@ -40,6 +40,10 @@ body {
   // transition: opacity 0.333s ease; /* Optional: smooth transition to visible */
 }
 
+img {
+  backface-visibility: hidden;
+}
+
 a {
   text-decoration: none;
   color: @navLinksColor;
@@ -685,7 +689,7 @@ nav {
         .animationSkillArticleINNER {
           flex-wrap: nowrap;
           width: max-content;
-          animation: scroll 108s linear infinite;
+          animation: scroll 20s linear infinite;
         }
       }
 
