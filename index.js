@@ -35,31 +35,6 @@ function triggerRepaint() {
 
 /* ----------
 
-- TESTING FOR iOS INFINITE SCROLLER
-
----------- */
-function triggerRepaint() {
-  document.body.style.overflow = "hidden";
-  setTimeout(() => {
-    document.body.style.overflow = "";
-  }, 10);
-}
-
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      triggerRepaint(); // Attempt to trigger a repaint for iOS
-      observer.unobserve(entry.target); // Stop observing the entry if needed
-    }
-  });
-});
-
-document.querySelectorAll(".skillArticleImgDiv img").forEach((img) => {
-  observer.observe(img);
-});
-
-/* ----------
-
 - typingAnimationFunction reconstructs the element with <spans> of the element's length
 - Checking header type to assign font-family and CSS
 - After a tiny delay changes the opacity from 0 to 1 of each letter
@@ -127,7 +102,7 @@ document.fonts.ready.then(() => {
     const typingAnimationFunction =
       document.querySelectorAll(".animationTyping");
     typingAnimationFunction.forEach((el) => typingObserver.observe(el));
-  }, 333);
+  }, 111);
 });
 
 /* ----------
