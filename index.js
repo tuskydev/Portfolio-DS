@@ -10,10 +10,10 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-    document.getElementsByClassName("navBarUL")[0].style.paddingTop = "10px";
+    document.getElementsByClassName("navBarUL")[0].style.paddingTop = ".777rem";
   } else {
     // Access the first element with class "navBarUL" and set its padding
-    document.getElementsByClassName("navBarUL")[0].style.paddingTop = "33px";
+    document.getElementsByClassName("navBarUL")[0].style.paddingTop = "1rem";
   }
 }
 
