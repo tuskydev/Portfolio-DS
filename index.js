@@ -62,11 +62,8 @@ document.fonts.ready.then(() => {
               element.appendChild(span);
             }
 
-            // - Initially, all elements with this class are invisible
-
-            document.querySelectorAll(".animationTyping").forEach((el) => {
-              el.style.opacity = "1";
-            });
+            // Make the element visible just before starting the animation
+            element.style.opacity = "1";
 
             // Reveal each character with a delay
             const spans = element.querySelectorAll("span");
@@ -96,7 +93,7 @@ document.fonts.ready.then(() => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 1 }
     );
 
     const typingAnimationFunction =
@@ -128,7 +125,7 @@ const borderObserver = new IntersectionObserver(
     });
   },
   // How much in page before applying class
-  { threshold: 0.1 }
+  { threshold: 1 }
 );
 
 const animationBorderFunction = document.querySelectorAll(".animationBorder");
@@ -159,7 +156,7 @@ const fadeUpOneObserver = new IntersectionObserver(
     });
   },
   // How much in page before applying class
-  { threshold: 0.1 }
+  { threshold: 1 }
 );
 
 const animationFadeUpOneFunction = document.querySelectorAll(
@@ -192,7 +189,7 @@ const fadeUpTwoObserver = new IntersectionObserver(
     });
   },
   // How much in page before applying class
-  { threshold: 0.1 }
+  { threshold: 1 }
 );
 
 const animationFadeUpTwoFunction = document.querySelectorAll(
